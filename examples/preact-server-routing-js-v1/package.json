@@ -15,15 +15,15 @@
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "preact": "^10.10.0",
-    "preact-render-to-string": "^5.2.1"
+    "preact": "^10.16.0",
+    "preact-render-to-string": "^6.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
     "prettier": "3.0.1",
     "vite": "^4.4.9",
-    "@preact/preset-vite": "^2.3.0",
+    "@preact/preset-vite": "^2.5.0",
     "vite-plugin-ssr": "0.4.135"
   }
 }

@@ -15,14 +15,14 @@
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "@vue/compiler-sfc": "^3.2.33",
-    "@vue/server-renderer": "^3.2.33",
-    "vue": "^3.2.33"
+    "@vue/compiler-sfc": "^3.3.4",
+    "@vue/server-renderer": "^3.3.4",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "prettier": "3.0.1",
     "vite": "^4.4.9",
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "vite-plugin-ssr": "0.4.135"
   },
   "type": "module"

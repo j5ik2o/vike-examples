@@ -15,12 +15,12 @@
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/plugin-transform-react-jsx": "^7.17.3",
-    "@preact/preset-vite": "^2.3.0",
-    "preact": "^10.10.0",
-    "preact-render-to-string": "^5.2.1",
-    "vite": "^4.0.3",
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@preact/preset-vite": "^2.5.0",
+    "preact": "^10.16.0",
+    "preact-render-to-string": "^6.2.1",
+    "vite": "^4.4.9",
     "vite-plugin-ssr": "0.4.135"
   },
   "devDependencies": {

@@ -33,6 +33,7 @@ const Links = () => {
 };
 
 const UserInfo = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pageContext: any = usePageContext();
   const { userFullName } = pageContext;
   let content;
