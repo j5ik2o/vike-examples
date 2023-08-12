@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint:eslint": "eslint .",
+    "fix:eslint": "eslint --fix .",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite build && wrangler dev",
+    "deploy": "vite build && wrangler publish"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "wrangler": "^2.9.1"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1",
+    "vite": "^4.1.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite-plugin-ssr": "0.4.135"
+  }
+}

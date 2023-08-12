@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint:eslint": "eslint .",
+    "fix:eslint": "eslint --fix .",
+    "prod": "npm run lint && npm run build && npm run server:prod",
+    "server:dev": "node ./server",
+    "server:prod": "cross-env NODE_ENV=production node ./server",
+    "dev:node": "npm run server:dev",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1",
+    "vite": "^4.0.3",
+    "@vitejs/plugin-react": "^3.0.0",
+    "vite-plugin-ssr": "0.4.135"
+  }
+}

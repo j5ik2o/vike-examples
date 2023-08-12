@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint:eslint": "eslint .",
+    "fix:eslint": "eslint --fix .",
+    "dev": "vite dev",
+    "preview": "vite build && vite preview"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^4.0.3",
+    "vite-plugin-ssr": "0.4.135"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1"
+  }
+}

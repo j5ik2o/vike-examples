@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint:eslint": "eslint .",
+    "fix:eslint": "eslint --fix .",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview"
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.4",
+    "svelte": "^3.58.0",
+    "vite": "^4.0.3",
+    "vite-plugin-ssr": "0.4.135"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1"
+  },
+  "type": "module"
+}

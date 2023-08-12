@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint:eslint": "eslint .",
+    "fix:eslint": "eslint --fix .",
+    "dev": "vite",
+    "build": "npm run build:vite && npm run build:webpack",
+    "build:vite": "vite build",
+    "build:webpack": "cp server/main.mjs dist/server/main.mjs && webpack -c ./webpack.config.js && rimraf dist/server",
+    "server:dev": "node dist/main.mjs",
+    "server:prod": "cross-env NODE_ENV=production node dist/main.mjs",
+    "preview": "npm run build && npm run server:prod",
+    "prod": "npm run lint && npm run build && npm run server:prod",
+    "dev:node": "npm run server:dev"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "rimraf": "^5.0.0"
+  },
+  "type": "module"
+}
