@@ -1,23 +1,25 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml
+export default onRenderHtml;
 
-import renderToString from 'preact-render-to-string'
-import { PageShell } from './PageShell'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
-import logoUrl from './logo.svg'
+import renderToString from "preact-render-to-string";
+import { PageShell } from "./PageShell";
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import logoUrl from "./logo.svg";
 
 async function onRenderHtml(pageContext) {
-  const { Page, pageProps } = pageContext
+  const { Page, pageProps } = pageContext;
   const pageHtml = renderToString(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
-  )
+    </PageShell>,
+  );
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps } = pageContext
-  const title = (documentProps && documentProps.title) || 'Vite SSR app'
-  const desc = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr'
+  const { documentProps } = pageContext;
+  const title = (documentProps && documentProps.title) || "Vite SSR app";
+  const desc =
+    (documentProps && documentProps.description) ||
+    "App using Vite + vite-plugin-ssr";
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -31,12 +33,12 @@ async function onRenderHtml(pageContext) {
       <body>
         ${dangerouslySkipEscape(pageHtml)}
       </body>
-    </html>`
+    </html>`;
 
   return {
     documentHtml,
     pageContext: {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
-    }
-  }
+    },
+  };
 }

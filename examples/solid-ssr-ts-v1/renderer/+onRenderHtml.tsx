@@ -1,20 +1,28 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml
+export default onRenderHtml;
 
-import { generateHydrationScript, renderToStream } from 'solid-js/web'
-import { PageLayout } from './PageLayout'
-import { escapeInject, dangerouslySkipEscape, stampPipe } from 'vite-plugin-ssr/server'
-import { PageContext } from './types'
-import logoUrl from './logo.svg'
+import { generateHydrationScript, renderToStream } from "solid-js/web";
+import { PageLayout } from "./PageLayout";
+import {
+  escapeInject,
+  dangerouslySkipEscape,
+  stampPipe,
+} from "vite-plugin-ssr/server";
+import { PageContext } from "./types";
+import logoUrl from "./logo.svg";
 
 function onRenderHtml(pageContext: PageContext) {
-  const { pipe } = renderToStream(() => <PageLayout pageContext={pageContext} />)
-  stampPipe(pipe, 'node-stream')
+  const { pipe } = renderToStream(() => (
+    <PageLayout pageContext={pageContext} />
+  ));
+  stampPipe(pipe, "node-stream");
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps } = pageContext
-  const title = (documentProps && documentProps.title) || 'Vite SSR app'
-  const description = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr'
+  const { documentProps } = pageContext;
+  const title = (documentProps && documentProps.title) || "Vite SSR app";
+  const description =
+    (documentProps && documentProps.description) ||
+    "App using Vite + vite-plugin-ssr";
 
   return escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -29,5 +37,5 @@ function onRenderHtml(pageContext: PageContext) {
       <body>
         <div id="page-view">${pipe}</div>
       </body>
-    </html>`
+    </html>`;
 }

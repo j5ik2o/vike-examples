@@ -1,7 +1,7 @@
-export default Page
+export default Page;
 
-import React from 'react'
-import { LocaleText } from '../../renderer/LocaleText'
+import React from "react";
+import { LocaleText } from "../../renderer/LocaleText";
 
 function Page() {
   return (
@@ -13,5 +13,5 @@ function Page() {
         <LocaleText>Another page</LocaleText>.
       </p>
     </>
-  )
+  );
 }

@@ -1,6 +1,4 @@
-export default Page;
-
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "../../renderer/usePageContext";
 import { Counter } from "../../components/Counter";
@@ -45,6 +43,8 @@ type Movie = {
   title: string;
   release_date: string;
 };
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function getMovies(response: any): Promise<Movie[]> {
   const moviesFromApi = (await response.json()).results as MovieFromApi[];
   const movies = cleanApiResult(moviesFromApi);
@@ -68,3 +68,5 @@ function cleanApiResult(moviesFromApi: MovieFromApi[]): Movie[] {
   });
   return movies;
 }
+
+export default Page;

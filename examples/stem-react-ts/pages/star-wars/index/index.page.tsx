@@ -1,7 +1,7 @@
-import React from 'react'
-import type { Movie } from '../types'
+import React from "react";
+import type { Movie } from "../types";
 
-export { Page }
+export { Page };
 
 function Page({ movies }: { movies: Movie[] }) {
   return (
@@ -15,8 +15,9 @@ function Page({ movies }: { movies: Movie[] }) {
         ))}
       </ol>
       <p>
-        Source: <a href="https://star-wars.brillout.com">star-wars.brillout.com</a>.
+        Source:{" "}
+        <a href="https://star-wars.brillout.com">star-wars.brillout.com</a>.
       </p>
     </>
-  )
+  );
 }

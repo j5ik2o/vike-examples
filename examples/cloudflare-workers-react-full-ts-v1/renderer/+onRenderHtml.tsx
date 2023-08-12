@@ -1,11 +1,10 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
 
-import React from "react";
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function onRenderHtml(pageContext: any) {
   const { Page, pageProps } = pageContext;
 
@@ -27,3 +26,5 @@ async function onRenderHtml(pageContext: any) {
       </body>
     </html>`;
 }
+
+export default onRenderHtml;

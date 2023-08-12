@@ -1,18 +1,18 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml
+export default onRenderHtml;
 
-import ReactDOMServer from 'react-dom/server'
-import React from 'react'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
-import { PageShell } from './PageShell'
+import ReactDOMServer from "react-dom/server";
+import React from "react";
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { PageShell } from "./PageShell";
 
 function onRenderHtml(pageContext) {
-  const { Page, pageProps } = pageContext
+  const { Page, pageProps } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
-  )
+    </PageShell>,
+  );
 
   return escapeInject`<!DOCTYPE html>
     <html>
@@ -22,5 +22,5 @@ function onRenderHtml(pageContext) {
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
-    </html>`
+    </html>`;
 }

@@ -1,12 +1,9 @@
 // We use a Express.js server for development
-
 const express = require("express");
 const { renderPage } = require("vite-plugin-ssr/server");
 const vite = require("vite");
 const fetch = require("node-fetch");
 const compression = require("compression");
-
-startServer();
 
 async function startServer() {
   const app = express();
@@ -45,3 +42,5 @@ async function startServer() {
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
 }
+
+startServer();

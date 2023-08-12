@@ -1,2 +1,2 @@
-import { testRun } from '../../boilerplates/.testRun'
-testRun('npm run preview', { uiFramewok: 'solid' })
+import { testRun } from "../../boilerplates/.testRun";
+testRun("npm run preview", { uiFramewok: "solid" });

@@ -1,22 +1,22 @@
-export { render }
-export { passToClient }
-export { onBeforePrerender }
+export { render };
+export { passToClient };
+export { onBeforePrerender };
 
-import ReactDOMServer from 'react-dom/server'
-import React from 'react'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
-import { PageShell } from './PageShell'
-import { locales, localeDefault } from '../locales'
+import ReactDOMServer from "react-dom/server";
+import React from "react";
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { PageShell } from "./PageShell";
+import { locales, localeDefault } from "../locales";
 
-const passToClient = ['pageProps', 'locale']
+const passToClient = ["pageProps", "locale"];
 
 function render(pageContext) {
-  const { Page, pageProps } = pageContext
+  const { Page, pageProps } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
-  )
+    </PageShell>,
+  );
 
   return escapeInject`<!DOCTYPE html>
     <html>
@@ -26,31 +26,31 @@ function render(pageContext) {
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
-    </html>`
+    </html>`;
 }
 
 // We only need this for pre-rendered apps https://vite-plugin-ssr.com/pre-rendering
 function onBeforePrerender(prerenderContext) {
-  const pageContexts = []
+  const pageContexts = [];
   prerenderContext.pageContexts.forEach((pageContext) => {
     // Duplicate pageContext for each locale
     locales.forEach((locale) => {
       // Localize URL
-      let { urlOriginal } = pageContext
+      let { urlOriginal } = pageContext;
       if (locale !== localeDefault) {
-        urlOriginal = `/${locale}${pageContext.urlOriginal}`
+        urlOriginal = `/${locale}${pageContext.urlOriginal}`;
       }
       pageContexts.push({
         ...pageContext,
         urlOriginal,
         // Set pageContext.locale
-        locale
-      })
-    })
-  })
+        locale,
+      });
+    });
+  });
   return {
     prerenderContext: {
-      pageContexts
-    }
-  }
+      pageContexts,
+    },
+  };
 }

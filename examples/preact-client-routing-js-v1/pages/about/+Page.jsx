@@ -1,6 +1,6 @@
-export default Page
+export default Page;
 
-import './code.css'
+import "./code.css";
 
 function Page() {
   return (
@@ -10,5 +10,5 @@ function Page() {
         Demo using <code>vite-plugin-ssr</code>.
       </p>
     </>
-  )
+  );
 }

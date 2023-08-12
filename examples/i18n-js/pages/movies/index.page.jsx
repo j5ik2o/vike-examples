@@ -1,7 +1,7 @@
-export { Page }
+export { Page };
 
-import React from 'react'
-import { LocaleText } from '../../renderer/LocaleText'
+import React from "react";
+import { LocaleText } from "../../renderer/LocaleText";
 
 function Page(pageProps) {
   return (
@@ -11,7 +11,7 @@ function Page(pageProps) {
       </h1>
       <MovieList movies={pageProps.movies} />
     </>
-  )
+  );
 }
 
 function MovieList({ movies }) {
@@ -23,5 +23,5 @@ function MovieList({ movies }) {
         </li>
       ))}
     </ol>
-  )
+  );
 }

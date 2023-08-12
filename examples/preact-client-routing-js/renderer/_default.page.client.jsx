@@ -1,24 +1,24 @@
-export { render }
-export const clientRouting = true
+export { render };
+export const clientRouting = true;
 
-import { hydrate, render as render_ } from 'preact'
-import { PageShell } from './PageShell'
+import { hydrate, render as render_ } from "preact";
+import { PageShell } from "./PageShell";
 
 async function render(pageContext) {
-  const { Page, pageProps } = pageContext
+  const { Page, pageProps } = pageContext;
   const page = (
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
     </PageShell>
-  )
-  const container = document.querySelector('body')
+  );
+  const container = document.querySelector("body");
 
   if (pageContext.isHydration) {
-    hydrate(page, container)
+    hydrate(page, container);
   } else {
-    render_(page, container)
+    render_(page, container);
   }
-  document.title = getPageTitle(pageContext)
+  document.title = getPageTitle(pageContext);
 }
 
 function getPageTitle(pageContext) {
@@ -27,6 +27,6 @@ function getPageTitle(pageContext) {
     (pageContext.exports.documentProps || {}).title ||
     // For dynamic tiles (defined in the `export addContextProps()` of the page's `.page.server.js`)
     (pageContext.documentProps || {}).title ||
-    'Demo'
-  return title
+    "Demo";
+  return title;
 }

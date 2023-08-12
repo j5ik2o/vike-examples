@@ -1,8 +1,6 @@
-export default Page;
-
 import React, { useState } from "react";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Welcome</h1>
@@ -15,13 +13,15 @@ function Page() {
       </ul>
     </>
   );
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
   return (
     <button onClick={() => setCount((count) => count + 1)}>
       Counter {count}
     </button>
   );
-}
+};
+
+export default Page;

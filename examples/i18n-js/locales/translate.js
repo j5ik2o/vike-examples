@@ -1,15 +1,15 @@
-export { translate }
+export { translate };
 
-import { translations } from './translations'
-import { localeDefault } from './locales'
+import { translations } from "./translations";
+import { localeDefault } from "./locales";
 
 function translate(text, locale) {
   if (locale === localeDefault) {
-    return text
+    return text;
   }
-  const textTranslations = translations[text]
+  const textTranslations = translations[text];
   if (!textTranslations) {
-    throw new Error('No translation found for: `' + text + '`')
+    throw new Error("No translation found for: `" + text + "`");
   }
-  return textTranslations[locale]
+  return textTranslations[locale];
 }

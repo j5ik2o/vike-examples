@@ -1,22 +1,22 @@
-export { render }
+export { render };
 
-import ReactDOMServer from 'react-dom/server'
-import React from 'react'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
-import { PageLayout } from './PageLayout'
-import type { PageContext } from '#root/types'
+import ReactDOMServer from "react-dom/server";
+import React from "react";
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { PageLayout } from "./PageLayout";
+import type { PageContext } from "#root/types";
 
 function render(pageContext: PageContext) {
-  const { Page } = pageContext
+  const { Page } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageLayout>
       <Page />
-    </PageLayout>
-  )
+    </PageLayout>,
+  );
   return escapeInject`<!DOCTYPE html>
     <html>
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
-    </html>`
+    </html>`;
 }

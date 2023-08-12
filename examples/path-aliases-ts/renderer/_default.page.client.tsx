@@ -1,16 +1,16 @@
-export { render }
+export { render };
 
-import React from 'react'
-import { hydrateRoot } from 'react-dom/client'
-import { PageLayout } from './PageLayout'
-import type { PageContext } from '#root/types'
+import React from "react";
+import { hydrateRoot } from "react-dom/client";
+import { PageLayout } from "./PageLayout";
+import type { PageContext } from "#root/types";
 
 async function render(pageContext: PageContext) {
-  const { Page } = pageContext
+  const { Page } = pageContext;
   hydrateRoot(
-    document.getElementById('page-view')!,
+    document.getElementById("page-view")!,
     <PageLayout>
       <Page />
-    </PageLayout>
-  )
+    </PageLayout>,
+  );
 }

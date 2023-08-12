@@ -21,10 +21,17 @@
     "react-streaming": "^0.3.14"
   },
   "devDependencies": {
+    "@types/react": "^18.2.20",
     "prettier": "3.0.1",
     "vite": "^4.4.9",
     "@vitejs/plugin-react": "^4.0.4",
     "vite-plugin-ssr": "0.4.135",
-    "wrangler": "^3.5.0"
+    "wrangler": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
   }
 }

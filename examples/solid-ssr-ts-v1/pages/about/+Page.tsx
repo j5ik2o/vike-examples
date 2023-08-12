@@ -1,5 +1,5 @@
-import type { Component } from 'solid-js'
-import './code.css'
+import type { Component } from "solid-js";
+import "./code.css";
 
 const Page: Component = () => {
   return (
@@ -9,6 +9,6 @@ const Page: Component = () => {
         Demo using <code>vite-plugin-ssr</code> with Solid.
       </p>
     </>
-  )
-}
-export default Page
+  );
+};
+export default Page;

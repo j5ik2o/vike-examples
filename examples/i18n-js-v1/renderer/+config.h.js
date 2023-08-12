@@ -1,6 +1,6 @@
 // https://vite-plugin-ssr.com/config
 export default {
-  passToClient: ['pageProps', 'locale'],
+  passToClient: ["pageProps", "locale"],
   clientRouting: true,
-  hydrationCanBeAborted: true
-}
+  hydrationCanBeAborted: true,
+};

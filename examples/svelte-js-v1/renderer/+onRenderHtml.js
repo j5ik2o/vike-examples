@@ -1,15 +1,15 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml
+export default onRenderHtml;
 
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 
-const base = import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL;
 
-import Layout from './Layout.svelte'
+import Layout from "./Layout.svelte";
 
 async function onRenderHtml(pageContext) {
-  const app = Layout.render(pageContext)
-  const { html, head, css } = app
+  const app = Layout.render(pageContext);
+  const { html, head, css } = app;
 
   return escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -25,5 +25,5 @@ async function onRenderHtml(pageContext) {
           ${dangerouslySkipEscape(html)}
         </div>
       </body>
-    </html>`
+    </html>`;
 }

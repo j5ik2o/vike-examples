@@ -1,6 +1,4 @@
-export { Page };
-
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "../renderer/usePageContext";
 import { Counter } from "../components/Counter";
@@ -17,7 +15,7 @@ function Page() {
   );
 }
 
-function MovieList() {
+const MovieList = () => {
   const pageContext = usePageContext();
   const movies = useAsync(["star-wars-movies"], async () => {
     const fetch = pageContext.fetch ?? globalThis.fetch;
@@ -38,13 +36,15 @@ function MovieList() {
       ))}
     </ol>
   );
-}
+};
 
 type Movie = {
   id: string;
   title: string;
   release_date: string;
 };
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function getMovies(response: any): Promise<Movie[]> {
   const moviesFromApi = (await response.json()).results as MovieFromApi[];
   const movies = cleanApiResult(moviesFromApi);
@@ -57,6 +57,7 @@ type MovieFromApi = {
   director: string;
   producer: string;
 };
+
 function cleanApiResult(moviesFromApi: MovieFromApi[]): Movie[] {
   const movies = moviesFromApi.map((movie, i) => {
     const { title, release_date } = movie;
@@ -68,3 +69,5 @@ function cleanApiResult(moviesFromApi: MovieFromApi[]): Movie[] {
   });
   return movies;
 }
+
+export { Page };

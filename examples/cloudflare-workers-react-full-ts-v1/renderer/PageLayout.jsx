@@ -2,8 +2,6 @@ import React from "react";
 import "./PageLayout.css";
 import { PageContextProvider } from "./usePageContext";
 
-export { PageLayout };
-
 function PageLayout({ pageContext, children }) {
   return (
     <React.StrictMode>
@@ -73,3 +71,5 @@ function Content({ children }) {
     </div>
   );
 }
+
+export { PageLayout };
