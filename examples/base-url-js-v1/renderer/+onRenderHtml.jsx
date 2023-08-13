@@ -36,4 +36,4 @@ const normalize = (url) => {
   return "/" + url.split("/").filter(Boolean).join("/");
 };
 
-export { Link };
+export { onRenderHtml };

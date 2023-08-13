@@ -1,0 +1,12 @@
+{
+  "name": "examples",
+  "vesrsion": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "*"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "lerna": "^7.1.5"
+  }
+}
