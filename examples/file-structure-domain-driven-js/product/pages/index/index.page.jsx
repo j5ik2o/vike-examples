@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export { Page }
+const Page = ({ routeParams }) => {
+  return <>Product {routeParams.productId}</>;
+};
 
-function Page({ routeParams }) {
-  return <>Product {routeParams.productId}</>
-}
+export { Page };

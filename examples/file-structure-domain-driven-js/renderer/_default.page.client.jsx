@@ -1,28 +1,30 @@
-export { render }
-export const clientRouting = true
-export const hydrationCanBeAborted = true
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { PageLayout } from "./PageLayout";
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { PageLayout } from './PageLayout'
+let root;
 
-let root
-async function render(pageContext) {
-  const { Page, routeParams } = pageContext
+const render = async (pageContext) => {
+  const { Page, routeParams } = pageContext;
 
   const page = (
     <PageLayout>
       <Page routeParams={routeParams} />
     </PageLayout>
-  )
+  );
 
-  const container = document.getElementById('page-view')
+  const container = document.getElementById("page-view");
   if (pageContext.isHydration) {
-    root = ReactDOM.hydrateRoot(container, page)
+    root = ReactDOM.hydrateRoot(container, page);
   } else {
     if (!root) {
-      root = ReactDOM.createRoot(container)
+      root = ReactDOM.createRoot(container);
     }
-    root.render(page)
+    root.render(page);
   }
-}
+};
+
+const clientRouting = true;
+const hydrationCanBeAborted = true;
+
+export { render, clientRouting, hydrationCanBeAborted };

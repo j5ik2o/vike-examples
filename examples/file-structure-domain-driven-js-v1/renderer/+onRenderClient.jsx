@@ -1,11 +1,10 @@
-export default onRenderClient;
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
 let root;
-async function onRenderClient(pageContext) {
+
+const onRenderClient = async (pageContext) => {
   const { Page, routeParams } = pageContext;
 
   const page = (
@@ -23,4 +22,6 @@ async function onRenderClient(pageContext) {
     }
     root.render(page);
   }
-}
+};
+
+export default onRenderClient;

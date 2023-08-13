@@ -1,8 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export { Page }
-
-function Page() {
+const Page = () => {
   return (
     <>
       <div>Product list:</div>
@@ -18,5 +16,7 @@ function Page() {
         </li>
       </ul>
     </>
-  )
-}
+  );
+};
+
+export { Page };

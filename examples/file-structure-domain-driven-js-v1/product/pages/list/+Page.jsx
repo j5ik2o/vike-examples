@@ -1,8 +1,6 @@
-export default Page;
-
 import React from "react";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <div>Product list:</div>
@@ -19,4 +17,6 @@ function Page() {
       </ul>
     </>
   );
-}
+};
+
+export default Page;

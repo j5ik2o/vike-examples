@@ -1,13 +1,17 @@
-export { prerender }
-
-function prerender() {
+const prerender = () => {
   return [
     {
-      url: '/product/starship',
+      url: "/product/starship",
+    },
+    {
       // eslint-disable-next-line no-dupe-keys
-      url: '/product/mac-studio',
+      url: "/product/mac-studio",
+    },
+    {
       // eslint-disable-next-line no-dupe-keys
-      url: '/product/แจ็คเก็ตเดนิม'
-    }
-  ]
-}
+      url: "/product/แจ็คเก็ตเดนิม",
+    },
+  ];
+};
+
+export { prerender };

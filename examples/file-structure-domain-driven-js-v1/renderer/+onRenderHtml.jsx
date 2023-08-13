@@ -1,11 +1,9 @@
-export default onRenderHtml;
-
 import ReactDOMServer from "react-dom/server";
 import React from "react";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
-function onRenderHtml(pageContext) {
+const onRenderHtml = (pageContext) => {
   const { Page, routeParams } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageLayout>
@@ -22,4 +20,6 @@ function onRenderHtml(pageContext) {
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
+
+export default onRenderHtml;

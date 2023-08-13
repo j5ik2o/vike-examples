@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export { Page }
+const Page = () => {
+  return <>About page</>;
+};
 
-function Page() {
-  return <>About page</>
-}
+export { Page };
