@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const Page = ({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) => {
   if (is404) {

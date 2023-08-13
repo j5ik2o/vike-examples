@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import type { MovieDetails } from "../types";
 
 const Page = ({ movie }: { movie: MovieDetails }) => {

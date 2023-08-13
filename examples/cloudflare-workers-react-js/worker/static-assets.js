@@ -61,6 +61,6 @@ const handleStaticAssets = async (event) => {
 
     return new Response(e.message || e.toString(), { status: 500 });
   }
-}
+};
 
 export { handleStaticAssets };

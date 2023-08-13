@@ -22,9 +22,9 @@ const handleFetchEvent = async (event) => {
   }
   const response = await handleStaticAssets(event);
   return response;
-}
+};
 
 const isAssetUrl = (url) => {
   const { pathname } = new URL(url);
   return pathname.startsWith("/assets/");
-}
+};

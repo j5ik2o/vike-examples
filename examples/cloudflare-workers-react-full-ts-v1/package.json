@@ -1,16 +1,17 @@
 {
   "scripts": {
-    "fix": "npm run fix:prettier && npm run fix:eslint",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
-    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint:eslint": "eslint .",
-    "fix:eslint": "eslint --fix .",
     "build": "vite build",
-    "dev:vite": "vite",
-    "dev:node": "node ./dev-server",
+    "clean": "rimraf ./dist",
+    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish",
     "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
-    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish"
+    "dev:node": "node ./dev-server",
+    "dev:vite": "vite",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\""
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
@@ -33,6 +34,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.1",
     "prettier-plugin-organize-imports": "^3.2.3",
+    "rimraf": "^5.0.1",
     "vite": "^4.4.9",
     "vite-plugin-ssr": "0.4.135",
     "wrangler": "^3.5.0"

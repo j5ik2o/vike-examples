@@ -10,6 +10,7 @@ export { passToClient };
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps"];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function render(pageContext: any) {
   const app = createApp(pageContext);
 

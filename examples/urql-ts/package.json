@@ -1,13 +1,11 @@
 {
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "clean": "rimraf ./dist",
+    "dev": "vite",
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.4",
     "graphql": "^16.7.1",
     "isomorphic-fetch": "^3.0.0",
     "node-fetch": "^3.3.2",
@@ -15,11 +13,22 @@
     "react-dom": "^18.2.0",
     "react-ssr-prepass": "^1.5.0",
     "typescript": "^5.1.6",
-    "urql": "^4.0.5",
-    "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135"
+    "urql": "^4.0.5"
   },
   "devDependencies": {
-    "prettier-plugin-organize-imports": "^3.2.3"
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "rimraf": "^5.0.1",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135"
   }
 }

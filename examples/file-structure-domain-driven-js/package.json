@@ -1,13 +1,14 @@
 {
   "scripts": {
-    "fix": "npm run fix:prettier && npm run fix:eslint",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
-    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint:eslint": "eslint .",
-    "fix:eslint": "eslint --fix .",
-    "dev": "vite",
     "build": "vite build",
+    "clean": "rimraf ./dist",
+    "dev": "vite",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "preview": "vite build && vite preview"
   },
   "dependencies": {
@@ -15,13 +16,14 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier-plugin-organize-imports": "^3.2.3",
-    "vite": "^4.4.9",
     "@vitejs/plugin-react": "^4.0.4",
-    "vite-plugin-ssr": "0.4.135",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3"
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "rimraf": "^5.0.1",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135"
   }
 }
