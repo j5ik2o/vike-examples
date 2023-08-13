@@ -1,8 +1,4 @@
-export default Page;
-
-import React from "react";
-
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Preload Disabled</h1>
@@ -12,4 +8,6 @@ function Page() {
       </p>
     </>
   );
-}
+};
+
+export default Page;

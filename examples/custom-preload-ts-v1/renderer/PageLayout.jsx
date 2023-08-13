@@ -2,9 +2,7 @@ import React from "react";
 import "./PageLayout.css";
 import logoUrl from "./logo.svg";
 
-export { PageLayout };
-
-function PageLayout({ children }) {
+const PageLayout = ({ children }) => {
   return (
     <React.StrictMode>
       <Layout>
@@ -24,9 +22,9 @@ function PageLayout({ children }) {
       </Layout>
     </React.StrictMode>
   );
-}
+};
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div
       style={{
@@ -38,9 +36,9 @@ function Layout({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Sidebar({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -56,9 +54,9 @@ function Sidebar({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Content({ children }) {
+const Content = ({ children }) => {
   return (
     <div
       style={{
@@ -71,9 +69,9 @@ function Content({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Logo() {
+const Logo = () => {
   return (
     <div
       style={{
@@ -86,4 +84,6 @@ function Logo() {
       </a>
     </div>
   );
-}
+};
+
+export { PageLayout };

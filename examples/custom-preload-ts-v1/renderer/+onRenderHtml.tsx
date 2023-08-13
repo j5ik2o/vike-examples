@@ -1,13 +1,12 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
-
-import React from "react";
 import { renderToString } from "react-dom/server";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import type { InjectFilterEntry } from "vite-plugin-ssr/types";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { PageLayout } from "./PageLayout";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function onRenderHtml(pageContext: any) {
   const { Page, pageProps } = pageContext;
   // The config 'preloadStrategy' is a custom config we defined at ./+config.ts
@@ -55,3 +54,5 @@ async function onRenderHtml(pageContext: any) {
     },
   };
 }
+
+export default onRenderHtml;

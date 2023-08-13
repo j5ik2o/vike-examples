@@ -50,8 +50,10 @@ const render = async (pageContext: PageContextClient) => {
 function removeUnmergableInternals<T>(pageContext: T): T {
   // Remove pageContext properties that cannot be reassigned by reconcile()
   const pageContextFixed = { ...pageContext };
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   delete pageContextFixed._pageFilesAll;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   delete pageContextFixed._pageFilesLoaded;
   return pageContextFixed;
