@@ -13,7 +13,7 @@ import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
  */
 const DEBUG = true;
 
-async function handleStaticAssets(event) {
+const handleStaticAssets = async (event) => {
   let options = {};
 
   /**

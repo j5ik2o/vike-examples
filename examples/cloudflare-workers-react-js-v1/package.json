@@ -6,10 +6,11 @@
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint:eslint": "eslint .",
     "fix:eslint": "eslint --fix .",
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite build && wrangler dev",
-    "deploy": "vite build && wrangler publish"
+    "dev:vite": "vite",
+    "dev:node": "node ./dev-server",
+    "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
+    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",

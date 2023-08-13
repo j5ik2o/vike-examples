@@ -6,23 +6,24 @@
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint:eslint": "eslint .",
     "fix:eslint": "eslint --fix .",
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite build && wrangler dev",
-    "deploy": "vite build && wrangler publish"
+    "dev:vite": "vite",
+    "dev:node": "node ./dev-server",
+    "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
+    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
-    "@vitejs/plugin-vue": "^4.2.3",
     "@vue/compiler-sfc": "^3.3.4",
     "@vue/server-renderer": "^3.3.4",
-    "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135",
-    "vue": "^3.3.4",
-    "wrangler": "^3.5.0"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "prettier": "3.0.1",
-    "prettier-plugin-organize-imports": "^3.2.3"
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "wrangler": "^3.5.0"
   }
 }

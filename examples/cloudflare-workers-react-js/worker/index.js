@@ -15,7 +15,7 @@ addEventListener("fetch", (event) => {
   }
 });
 
-async function handleFetchEvent(event) {
+const handleFetchEvent = async (event) => {
   if (!isAssetUrl(event.request.url)) {
     const response = await handleSsr(event.request.url);
     if (response !== null) return response;
@@ -24,7 +24,7 @@ async function handleFetchEvent(event) {
   return response;
 }
 
-function isAssetUrl(url) {
+const isAssetUrl = (url) => {
   const { pathname } = new URL(url);
   return pathname.startsWith("/assets/");
 }

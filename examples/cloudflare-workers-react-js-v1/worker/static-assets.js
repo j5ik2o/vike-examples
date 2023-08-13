@@ -13,7 +13,7 @@ export { handleStaticAssets };
  * 2. we will return an error message on exception in your Response rather
  *    than the default 404.html page.
  */
-const DEBUG = false;
+const DEBUG = true;
 
 async function handleStaticAssets(event) {
   let options = {};

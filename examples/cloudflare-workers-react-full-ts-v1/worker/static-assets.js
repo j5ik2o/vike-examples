@@ -1,10 +1,7 @@
 // ********************************************
 // This code was provided by Cloudflare Workers
 // ********************************************
-
 import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
-
-export { handleStaticAssets };
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -64,3 +61,5 @@ async function handleStaticAssets(event) {
     return new Response(e.message || e.toString(), { status: 500 });
   }
 }
+
+export { handleStaticAssets };

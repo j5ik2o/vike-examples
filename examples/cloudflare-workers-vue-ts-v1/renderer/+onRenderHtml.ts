@@ -1,13 +1,12 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
-
 import { pipeToWebWritable, pipeToNodeWritable } from "@vue/server-renderer";
 
 import { escapeInject, stampPipe } from "vite-plugin-ssr/server";
 import { createApp } from "./app";
 import type { Writable } from "stream";
 
-async function onRenderHtml(pageContext: any) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const onRenderHtml = async (pageContext: any) => {
   const app = createApp(pageContext);
 
   // Streaming is optional: we can use renderToString() instead.
@@ -34,14 +33,16 @@ async function onRenderHtml(pageContext: any) {
       enableEagerStreaming: true,
     },
   };
-}
+};
 
 // https://github.com/cloudflare/wrangler2/issues/1481
 // https://community.cloudflare.com/t/how-to-detect-the-cloudflare-worker-runtime/293715
-function isWorker() {
+const isWorker = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     typeof WebSocketPair !== "undefined" || typeof caches !== "undefined"
   );
-}
+};
+
+export default onRenderHtml;

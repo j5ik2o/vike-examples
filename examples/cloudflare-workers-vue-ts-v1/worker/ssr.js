@@ -1,8 +1,6 @@
 import { renderPage } from "vite-plugin-ssr/server";
 
-export { handleSsr };
-
-async function handleSsr(url) {
+const handleSsr = async (url) => {
   const pageContextInit = {
     urlOriginal: url,
   };
@@ -15,4 +13,6 @@ async function handleSsr(url) {
     httpResponse.pipe(writable);
     return new Response(readable);
   }
-}
+};
+
+export { handleSsr };
