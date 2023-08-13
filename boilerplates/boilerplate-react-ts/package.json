@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "clean": "rimraf ./dist",
     "build": "vite build",
     "dev": "vite",
     "dev:node": "npm run server:dev",
@@ -22,6 +23,7 @@
     "sirv": "^2.0.3"
   },
   "devDependencies": {
+    "rimraf": "^5.0.1",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.10",
