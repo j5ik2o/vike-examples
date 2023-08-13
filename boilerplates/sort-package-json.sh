@@ -1,0 +1,1 @@
+./all-cmd.sh sort-package-json

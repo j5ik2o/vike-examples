@@ -8,19 +8,21 @@
     "fix:eslint": "eslint --fix .",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite build && wrangler dev",
+    "preview": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
     "deploy": "vite build && wrangler publish"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "wrangler": "^3.5.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "3.0.1",
-    "vite": "^4.4.9",
     "@vitejs/plugin-react": "^4.0.4",
-    "vite-plugin-ssr": "0.4.135"
+    "better-sqlite3": "^8.5.0",
+    "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135",
+    "wrangler": "^3.5.0"
   }
 }

@@ -25,6 +25,9 @@ const render = async (pageContext: any) => {
 
   return escapeInject`<!DOCTYPE html>
     <html>
+      <head>
+        <link rel="icon" href="data:,">
+      </head>  
       <body>
         <div id="page-view">${stream}</div>
       </body>

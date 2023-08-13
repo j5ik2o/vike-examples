@@ -8,7 +8,7 @@
     "fix:eslint": "eslint --fix .",
     "dev": "node ./dev-server",
     "build": "vite build",
-    "preview": "vite build && wrangler dev",
+    "preview": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
     "deploy": "vite build && wrangler publish"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
     "vite": "^4.4.9",
     "vite-plugin-ssr": "0.4.135",
     "wrangler": "^3.5.0"

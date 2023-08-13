@@ -15,10 +15,10 @@
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "@types/express": "^4.17.17",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@mdx-js/rollup": "^2.3.0",
+    "@types/express": "^4.17.17",
     "@types/node": "^20.4.10",
     "@types/node-fetch": "^2.6.4",
     "@types/react": "^18.2.20",
@@ -31,16 +31,17 @@
     "react-streaming": "^0.3.14"
   },
   "devDependencies": {
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135",
-    "@vitejs/plugin-react": "^4.0.4",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
+    "@vitejs/plugin-react": "^4.0.4",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.1",
-    "prettier": "3.0.1"
+    "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135"
   },
   "type": "module"
 }

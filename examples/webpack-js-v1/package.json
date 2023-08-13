@@ -23,11 +23,12 @@
   },
   "devDependencies": {
     "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "rimraf": "^5.0.1",
     "vite": "^4.4.9",
     "vite-plugin-ssr": "0.4.135",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "rimraf": "^5.0.1"
+    "webpack-cli": "^5.1.4"
   },
   "type": "module"
 }

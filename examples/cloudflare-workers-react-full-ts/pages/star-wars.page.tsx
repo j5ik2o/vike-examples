@@ -58,7 +58,7 @@ type MovieFromApi = {
   producer: string;
 };
 
-function cleanApiResult(moviesFromApi: MovieFromApi[]): Movie[] {
+const cleanApiResult = (moviesFromApi: MovieFromApi[]): Movie[] => {
   const movies = moviesFromApi.map((movie, i) => {
     const { title, release_date } = movie;
     return {
@@ -68,6 +68,6 @@ function cleanApiResult(moviesFromApi: MovieFromApi[]): Movie[] {
     };
   });
   return movies;
-}
+};
 
 export { Page };

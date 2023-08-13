@@ -19,6 +19,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "prettier": "3.0.1"
+    "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3"
   }
 }

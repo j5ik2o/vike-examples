@@ -11,7 +11,7 @@ import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
  * 2. we will return an error message on exception in your Response rather
  *    than the default 404.html page.
  */
-const DEBUG = false;
+const DEBUG = true;
 
 async function handleStaticAssets(event) {
   let options = {};
@@ -54,7 +54,9 @@ async function handleStaticAssets(event) {
           ...notFoundResponse,
           status: 404,
         });
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     return new Response(e.message || e.toString(), { status: 500 });

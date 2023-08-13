@@ -14,7 +14,7 @@ addEventListener("fetch", (event) => {
   }
 });
 
-async function handleFetchEvent(event) {
+const handleFetchEvent = async (event) => {
   const { url } = event.request;
   if (!isAssetUrl(url)) {
     const userAgent = event.request.headers.get("User-Agent");
@@ -24,9 +24,9 @@ async function handleFetchEvent(event) {
   }
   const response = await handleStaticAssets(event);
   return response;
-}
+};
 
-function isAssetUrl(url) {
+const isAssetUrl = (url) => {
   const { pathname } = new URL(url);
   return pathname.startsWith("/assets/");
-}
+};

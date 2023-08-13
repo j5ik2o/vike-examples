@@ -22,6 +22,7 @@
     "wrangler": "^3.5.0"
   },
   "devDependencies": {
-    "prettier": "3.0.1"
+    "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3"
   }
 }

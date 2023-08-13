@@ -2,10 +2,13 @@
 const express = require("express");
 const { renderPage } = require("vite-plugin-ssr/server");
 const vite = require("vite");
-const fetch = require("node-fetch");
+let fetch;
+import("node-fetch").then((module) => {
+  fetch = module.default;
+});
 const compression = require("compression");
 
-async function startServer() {
+const startServer = async () => {
   const app = express();
 
   // We don't need gzip compression for dev. We use compression just to show
@@ -41,6 +44,6 @@ async function startServer() {
   const port = 3000;
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
-}
+};
 
 startServer();

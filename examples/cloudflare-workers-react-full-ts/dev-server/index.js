@@ -3,7 +3,10 @@
 const express = require("express");
 const { renderPage } = require("vite-plugin-ssr/server");
 const vite = require("vite");
-const fetch = require("node-fetch");
+let fetch;
+import("node-fetch").then((module) => {
+  fetch = module.default;
+});
 const compression = require("compression");
 
 const startServer = async () => {

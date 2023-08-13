@@ -16,6 +16,9 @@ const render = (pageContext) => {
 
   return escapeInject`<!DOCTYPE html>
     <html>
+      <head>
+        <link rel="icon" href="data:,">
+      </head>  
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
