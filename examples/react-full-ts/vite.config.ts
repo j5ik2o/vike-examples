@@ -6,8 +6,8 @@ import { UserConfig } from "vite";
 export default {
   root: "./src",
   build: {
-    base: "./",
     outDir: "../dist",
+    emptyOutDir: true,
   },
   plugins: [
     ssr({

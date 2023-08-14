@@ -3,11 +3,11 @@ import mdx from "@mdx-js/rollup";
 import ssr from "vite-plugin-ssr/plugin";
 import { UserConfig } from "vite";
 
-const root = __dirname;
-
 export default {
+  root: "./src",
   build: {
-    outDir: `${root}/../../examples/react-full-ts-v1/dist/nested`,
+    outDir: "../dist",
+    emptyOutDir: true,
   },
   plugins: [
     ssr({
