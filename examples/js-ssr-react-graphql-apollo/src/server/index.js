@@ -5,9 +5,10 @@ const {
   createHttpLink,
   InMemoryCache,
 } = require("@apollo/client");
-
 let fetch;
-import("node-fetch").then((module) => {
+import(
+  "../../../ts-ssr-react-cloudflare-workers-full/node_modules/node-fetch/@types"
+).then((module) => {
   fetch = module.default;
 });
 
