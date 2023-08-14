@@ -1,12 +1,10 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
-
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
-async function onRenderHtml(pageContext) {
+const onRenderHtml = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const pageHtml = renderToString(
     <PageLayout>
@@ -20,4 +18,6 @@ async function onRenderHtml(pageContext) {
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
+
+export default onRenderHtml;
