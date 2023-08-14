@@ -10,9 +10,7 @@ const fetch = require("node-fetch");
 const isProduction = process.env.NODE_ENV === "production";
 const root = `${__dirname}/..`;
 
-startServer();
-
-async function startServer() {
+const startServer = async () => {
   const app = express();
 
   if (isProduction) {
@@ -53,9 +51,9 @@ async function startServer() {
   const port = 3000;
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
-}
+};
 
-function makeApolloClient() {
+const makeApolloClient = () => {
   const apolloClient = new ApolloClient({
     ssrMode: true,
     link: createHttpLink({
@@ -65,4 +63,6 @@ function makeApolloClient() {
     cache: new InMemoryCache(),
   });
   return apolloClient;
-}
+};
+
+startServer();

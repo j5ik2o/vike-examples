@@ -1,8 +1,3 @@
-export type { PageContextServer };
-export type { PageContextClient };
-export type { PageContext };
-export type { PageProps };
-
 import type {
   PageContextBuiltIn,
   //*
@@ -33,3 +28,5 @@ type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom;
 type PageContextClient = PageContextBuiltInClient<Page> & PageContextCustom;
 
 type PageContext = PageContextClient | PageContextServer;
+
+export type { PageContextServer, PageContextClient, PageContext, PageProps };

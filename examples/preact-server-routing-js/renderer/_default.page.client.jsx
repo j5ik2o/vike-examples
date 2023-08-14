@@ -1,9 +1,7 @@
-export { render };
-
 import { hydrate } from "preact";
 import { PageShell } from "./PageShell";
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const body = document.querySelector("body");
   hydrate(
@@ -12,4 +10,6 @@ async function render(pageContext) {
     </PageShell>,
     body,
   );
-}
+};
+
+export { render };

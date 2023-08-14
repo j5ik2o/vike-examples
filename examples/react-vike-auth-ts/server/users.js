@@ -13,16 +13,16 @@ const users = [
   },
 ];
 
-function getUser(username) {
+const getUser = (username) => {
   const user = users.find((a) => a.username === username);
   return user;
-}
+};
 
-function checkCredentials(username, password) {
+const checkCredentials = (username, password) => {
   const user = users.find(
     (a) => a.username === username && a.password === password,
   );
   return user;
-}
+};
 
 export { getUser, checkCredentials };

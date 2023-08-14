@@ -2,7 +2,7 @@ export { getPageTitle };
 
 import type { PageContext } from "./types";
 
-function getPageTitle(pageContext: PageContext): string {
+const getPageTitle = (pageContext: PageContext): string => {
   const title =
     // Title defined dynamically by onBeforeRender()
     pageContext.title ||

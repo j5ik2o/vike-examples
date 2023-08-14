@@ -1,8 +1,6 @@
-export default Page;
-
 import "./code.css";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>About</h1>
@@ -11,4 +9,6 @@ function Page() {
       </p>
     </>
   );
-}
+};
+
+export default Page;

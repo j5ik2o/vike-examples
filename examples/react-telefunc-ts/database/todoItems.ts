@@ -3,10 +3,11 @@ export type { TodoItem };
 
 type TodoItem = { text: string };
 const todoItems: TodoItem[] = [];
-init();
 
 // Initial data
-function init() {
+const init = () => {
   todoItems.push({ text: "Buy milk" });
   todoItems.push({ text: "Buy strawberries" });
-}
+};
+
+init();

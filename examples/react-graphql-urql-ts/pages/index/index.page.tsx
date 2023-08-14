@@ -1,6 +1,6 @@
-import React from 'react'
-import { gql, useQuery } from 'urql'
-import { Counter } from './Counter'
+import React from "react";
+import { gql, useQuery } from "urql";
+import { Counter } from "./Counter";
 
 const query = gql`
   {
@@ -9,12 +9,11 @@ const query = gql`
       name
     }
   }
-`
+`;
 
 const Page = () => {
-  const [result] = useQuery({ query })
-
-  const { data, fetching, error } = result
+  const [result] = useQuery({ query });
+  const { data, fetching, error } = result;
 
   return (
     <>
@@ -33,7 +32,7 @@ const Page = () => {
         )}
       </>
     </>
-  )
-}
+  );
+};
 
-export { Page }
+export { Page };

@@ -1,7 +1,7 @@
 import React from "react";
 import { usePageContext } from "../../renderer/usePageContext";
 
-function Page() {
+const Page = () => {
   const ctx = usePageContext();
   const { is404 } = ctx;
   let { abortReason } = ctx;
@@ -14,9 +14,9 @@ function Page() {
       <p style={{ fontSize: "1.3em" }}>{abortReason}</p>
     </Center>
   );
-}
+};
 
-function Center({ style, ...props }: any) {
+const Center = ({ style, ...props }: any) => {
   return (
     <div
       style={{
@@ -29,6 +29,6 @@ function Center({ style, ...props }: any) {
       {...props}
     ></div>
   );
-}
+};
 
 export default Page;

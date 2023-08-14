@@ -1,11 +1,9 @@
-export { render };
-
 import React from "react";
 import { hydrateRoot } from "react-dom/client";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import App from "./App";
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page } = pageContext;
   const apolloClient = makeApolloClient(pageContext.apolloIntialState);
   hydrateRoot(
@@ -14,11 +12,13 @@ async function render(pageContext) {
       <Page />
     </App>,
   );
-}
+};
 
-function makeApolloClient(apolloIntialState) {
+const makeApolloClient = (apolloIntialState) => {
   return new ApolloClient({
     uri: "https://countries.trevorblades.com",
     cache: new InMemoryCache().restore(apolloIntialState),
   });
-}
+};
+
+export { render };

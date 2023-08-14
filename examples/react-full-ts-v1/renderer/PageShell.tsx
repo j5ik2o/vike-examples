@@ -4,15 +4,13 @@ import { PageContextProvider } from "./usePageContext";
 import { Link } from "./Link";
 import type { PageContext } from "./types";
 
-export { PageShell };
-
-function PageShell({
+const PageShell = ({
   pageContext,
   children,
 }: {
   pageContext: PageContext;
   children: React.ReactNode;
-}) {
+}) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -29,9 +27,9 @@ function PageShell({
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};
 
-function Layout({ children }: { children: React.ReactNode }) {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -43,7 +41,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+};
 
 function Sidebar({ children }: { children: React.ReactNode }) {
   return (
@@ -63,7 +61,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Content({ children }: { children: React.ReactNode }) {
+const Content = ({ children }: { children: React.ReactNode }) => {
   return (
     <div id="page-container">
       <div
@@ -78,9 +76,9 @@ function Content({ children }: { children: React.ReactNode }) {
       </div>
     </div>
   );
-}
+};
 
-function Logo() {
+const Logo = () => {
   return (
     <div
       style={{
@@ -93,4 +91,6 @@ function Logo() {
       </a>
     </div>
   );
-}
+};
+
+export { PageShell };

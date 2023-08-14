@@ -1,8 +1,6 @@
-export { extractLocale };
-
 import { locales, localeDefault } from "./locales";
 
-function extractLocale(url) {
+const extractLocale = (url) => {
   const urlPaths = url.split("/");
 
   let locale;
@@ -20,4 +18,6 @@ function extractLocale(url) {
   }
 
   return { locale, urlWithoutLocale };
-}
+};
+
+export { extractLocale };

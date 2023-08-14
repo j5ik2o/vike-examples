@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
 
 import renderToString from "preact-render-to-string";
 import { PageShell } from "./PageShell";
@@ -42,3 +41,5 @@ async function onRenderHtml(pageContext) {
     },
   };
 }
+
+export default onRenderHtml;

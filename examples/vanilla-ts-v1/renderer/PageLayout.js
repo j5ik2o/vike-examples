@@ -1,8 +1,6 @@
-export { PageLayout }
+import "./PageLayout.css";
 
-import './PageLayout.css'
-
-function PageLayout(children) {
+const PageLayout = (children) => {
   return Layout(
     [
       Sidebar(
@@ -12,12 +10,12 @@ function PageLayout(children) {
           '<a class="navitem" href="/about">About</a>'
         ].join('\n')
       ),
-      Content(children)
-    ].join('\n')
-  )
-}
+      Content(children),
+    ].join("\n")
+  );
+};
 
-function Layout(children) {
+const Layout = (children) => {
   // prettier-ignore
   return (
 `<div
@@ -30,9 +28,9 @@ function Layout(children) {
   ${children}
 </div>`
   )
-}
+};
 
-function Sidebar(children) {
+const Sidebar = (children) => {
   // prettier-ignore
   return (
 `<div
@@ -49,9 +47,9 @@ function Sidebar(children) {
   ${children}
 </div>`
   )
-}
+};
 
-function Content(children) {
+const Content = (children) => {
   // prettier-ignore
   return (
 `<div
@@ -65,4 +63,6 @@ function Content(children) {
   ${children}
 </div>`
   )
-}
+};
+
+export { PageLayout };

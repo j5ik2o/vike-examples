@@ -1,13 +1,10 @@
-export { render };
-export const clientRouting = true;
-export const hydrationCanBeAborted = true;
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
 let root: ReactDOM.Root;
-async function render(pageContext: any) {
+
+const render = async (pageContext: any) => {
   const { Page, pageProps } = pageContext;
   const page = (
     <PageLayout>
@@ -23,4 +20,8 @@ async function render(pageContext: any) {
     }
     root.render(page);
   }
-}
+};
+
+export { render };
+export const clientRouting = true;
+export const hydrationCanBeAborted = true;

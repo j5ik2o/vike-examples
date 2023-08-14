@@ -1,10 +1,8 @@
 // https://vite-plugin-ssr.com/onRenderClient
-export default onRenderClient;
-
 import { hydrate } from "preact";
 import { PageShell } from "./PageShell";
 
-async function onRenderClient(pageContext) {
+const onRenderClient = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const body = document.querySelector("body");
   hydrate(
@@ -13,4 +11,6 @@ async function onRenderClient(pageContext) {
     </PageShell>,
     body,
   );
-}
+};
+
+export default onRenderClient;

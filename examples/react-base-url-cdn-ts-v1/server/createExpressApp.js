@@ -3,7 +3,7 @@
 import express from "express";
 const { Router } = express;
 
-function createExpressApp({ base, port }) {
+const createExpressApp = ({ base, port }) => {
   const appContainer = express();
   const app = Router();
   appContainer.use(base, app);
@@ -11,6 +11,6 @@ function createExpressApp({ base, port }) {
     appContainer.listen(port);
   };
   return { app, startApp };
-}
+};
 
 export { createExpressApp };

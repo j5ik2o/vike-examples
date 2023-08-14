@@ -4,8 +4,6 @@
 
 import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
 
-export { handleStaticAssets };
-
 /**
  * The DEBUG flag will do two things that help during development:
  * 1. we will skip caching on the edge, which makes it easier to
@@ -15,7 +13,7 @@ export { handleStaticAssets };
  */
 const DEBUG = true;
 
-async function handleStaticAssets(event) {
+const handleStaticAssets = async (event) => {
   let options = {};
 
   /**
@@ -63,4 +61,6 @@ async function handleStaticAssets(event) {
 
     return new Response(e.message || e.toString(), { status: 500 });
   }
-}
+};
+
+export { handleStaticAssets };

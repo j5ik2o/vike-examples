@@ -1,5 +1,5 @@
 import { names } from "./names";
 
-export default function (): string[] {
+export default (): string[] => {
   return ["/hello", ...names.map((name) => `/hello/${name}`)];
-}
+};

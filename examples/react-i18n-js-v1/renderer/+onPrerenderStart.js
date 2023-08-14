@@ -1,10 +1,8 @@
 // https://vite-plugin-ssr.com/onPrerenderStart
-export default onPrerenderStart;
-
 import { locales, localeDefault } from "../locales";
 
 // We only need this for pre-rendered apps https://vite-plugin-ssr.com/pre-rendering
-function onPrerenderStart(prerenderContext) {
+const onPrerenderStart = (prerenderContext) => {
   const pageContexts = [];
   prerenderContext.pageContexts.forEach((pageContext) => {
     // Duplicate pageContext for each locale
@@ -27,4 +25,6 @@ function onPrerenderStart(prerenderContext) {
       pageContexts,
     },
   };
-}
+};
+
+export default onPrerenderStart;

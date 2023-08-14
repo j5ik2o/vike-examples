@@ -1,8 +1,6 @@
-export default Page;
-
 import React from "react";
 
-function Page({ name }: { name: string }) {
+const Page = ({ name }: { name: string }) => {
   return (
     <>
       <h1>Hello</h1>
@@ -23,4 +21,6 @@ function Page({ name }: { name: string }) {
       </p>
     </>
   );
-}
+};
+
+export default Page;

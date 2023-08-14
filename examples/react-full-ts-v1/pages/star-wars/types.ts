@@ -3,6 +3,7 @@ export type Movie = {
   title: string;
   release_date: string;
 };
+
 export type MovieDetails = {
   id: string;
   title: string;

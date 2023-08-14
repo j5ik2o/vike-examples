@@ -5,9 +5,7 @@ const { renderPage } = require("vite-plugin-ssr/server");
 const isProduction = process.env.NODE_ENV === "production";
 const root = `${__dirname}/..`;
 
-startServer();
-
-async function startServer() {
+const startServer = async () => {
   const app = express();
 
   app.use(compression());
@@ -49,4 +47,6 @@ async function startServer() {
   const port = process.env.PORT || 3000;
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
-}
+};
+
+startServer();

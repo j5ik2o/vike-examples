@@ -1,10 +1,8 @@
-export default Page;
-
 import React from "react";
 import { navigate } from "vite-plugin-ssr/client/router";
 import { Counter } from "../../components/Counter";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>
@@ -29,4 +27,6 @@ function Page() {
       </p>
     </>
   );
-}
+};
+
+export default Page;

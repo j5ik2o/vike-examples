@@ -8,7 +8,7 @@ import type { PageContextClient } from "./types";
 
 let root: ReactDOM.Root;
 
-async function onRenderClient(pageContext: PageContextClient) {
+const onRenderClient = async (pageContext: PageContextClient) => {
   const { Page, pageProps } = pageContext;
   const page = (
     <PageShell pageContext={pageContext}>
@@ -25,6 +25,6 @@ async function onRenderClient(pageContext: PageContextClient) {
     root.render(page);
   }
   document.title = getPageTitle(pageContext);
-}
+};
 
 export default onRenderClient;

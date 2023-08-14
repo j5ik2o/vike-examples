@@ -1,6 +1,4 @@
 // https://vite-plugin-ssr.com/onBeforeRender
-export default onBeforeRender;
-
 import fetch from "cross-fetch";
 import { filterMovieData } from "../filterMovieData";
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
@@ -8,7 +6,7 @@ import type { MovieDetails } from "../types";
 import { render } from "vite-plugin-ssr/abort";
 import React from "react";
 
-async function onBeforeRender(pageContext: PageContextBuiltIn) {
+const onBeforeRender = async (pageContext: PageContextBuiltIn) => {
   const dataUrl = `https://star-wars.brillout.com/api/films/${pageContext.routeParams.id}.json`;
   let movie: MovieDetails;
   try {
@@ -46,4 +44,6 @@ async function onBeforeRender(pageContext: PageContextBuiltIn) {
       title,
     },
   };
-}
+};
+
+export default onBeforeRender;

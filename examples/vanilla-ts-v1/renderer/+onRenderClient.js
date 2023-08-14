@@ -1,22 +1,22 @@
 // https://vite-plugin-ssr.com/onRenderClient
-export default onRenderClient
+import { PageLayout } from "./PageLayout";
 
-import { PageLayout } from './PageLayout'
-
-async function onRenderClient(pageContext) {
+const onRenderClient = async (pageContext) => {
   if (!pageContext.isHydration) {
-    const { Page } = pageContext
-    const pageHtml = PageLayout(Page)
-    document.getElementById('page-view').innerHTML = pageHtml
+    const { Page } = pageContext;
+    const pageHtml = PageLayout(Page);
+    document.getElementById("page-view").innerHTML = pageHtml;
   }
-  hydrateCounters()
-}
+  hydrateCounters();
+};
 
-function hydrateCounters() {
-  document.querySelectorAll('.counter').forEach((counter) => {
-    let count = 0
+const hydrateCounters = () => {
+  document.querySelectorAll(".counter").forEach((counter) => {
+    let count = 0;
     counter.onclick = () => {
-      counter.textContent = `Counter ${++count}`
-    }
-  })
-}
+      counter.textContent = `Counter ${++count}`;
+    };
+  });
+};
+
+export default onRenderClient;

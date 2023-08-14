@@ -1,9 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default render;
-
 import { escapeInject } from "vite-plugin-ssr/server";
 
-function render() {
+const render = () => {
   // Note how `<b>` is (not) escaped
   const htmlFragment = escapeInject`<b>I was defined by an HTML Fragment</b>`;
   const htmlWithoutFragment = `<b>I was defined without an HTML Fragment</b>`;
@@ -21,4 +19,6 @@ function render() {
         <div>Empty Fragments: 0${emptyFragment1}${emptyFragment2}1</div>
       </body>
     </html>`;
-}
+};
+
+export default render;

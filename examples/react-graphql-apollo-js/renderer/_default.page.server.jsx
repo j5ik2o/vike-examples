@@ -3,12 +3,9 @@ import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { getDataFromTree } from "@apollo/client/react/ssr";
 import App from "./App";
 
-export { render };
-export { passToClient };
-
 const passToClient = ["apolloIntialState"];
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, apolloClient } = pageContext;
 
   // See https://www.apollographql.com/docs/react/performance/server-side-rendering/
@@ -33,4 +30,6 @@ async function render(pageContext) {
       apolloIntialState,
     },
   };
-}
+};
+
+export { render, passToClient };

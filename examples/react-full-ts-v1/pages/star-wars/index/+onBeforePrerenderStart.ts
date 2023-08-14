@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onBeforePrerenderStart
-export default onBeforePrerenderStart;
 
 import { filterMovieData } from "../filterMovieData";
 import {
@@ -8,7 +7,7 @@ import {
   getTitle,
 } from "./getStarWarsMovies";
 
-async function onBeforePrerenderStart() {
+const onBeforePrerenderStart = async () => {
   const movies = await getStarWarsMovies();
 
   return [
@@ -41,4 +40,6 @@ async function onBeforePrerenderStart() {
       };
     }),
   ];
-}
+};
+
+export default onBeforePrerenderStart;

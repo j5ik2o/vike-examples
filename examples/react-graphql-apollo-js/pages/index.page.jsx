@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 
-export { Page };
-
-function Page() {
+const Page = () => {
   const { data } = useQuery(gql`
     {
       countries {
@@ -37,9 +35,9 @@ function Page() {
       </ul>
     </>
   );
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -47,4 +45,6 @@ function Counter() {
       Counter <span>{count}</span>
     </button>
   );
-}
+};
+
+export { Page };

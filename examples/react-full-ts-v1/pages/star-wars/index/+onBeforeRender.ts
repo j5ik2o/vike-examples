@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onBeforeRender
-export default onBeforeRender;
 
 import {
   filterMoviesData,
@@ -7,7 +6,7 @@ import {
   getTitle,
 } from "./getStarWarsMovies";
 
-async function onBeforeRender() {
+const onBeforeRender = async () => {
   await sleep(700); // Simulate slow network
   const movies = await getStarWarsMovies();
   return {
@@ -21,8 +20,10 @@ async function onBeforeRender() {
       title: getTitle(movies),
     },
   };
-}
+};
 
-function sleep(milliseconds: number): Promise<void> {
+const sleep = (milliseconds: number): Promise<void> => {
   return new Promise((r) => setTimeout(r, milliseconds));
-}
+};
+
+export default onBeforeRender;

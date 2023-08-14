@@ -3,11 +3,7 @@ import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import logoUrl from "./logo.svg";
 
-export { render };
-// See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ["pageProps", "urlPathname"];
-
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const pageHtml = renderToString(
     <PageShell pageContext={pageContext}>
@@ -42,4 +38,9 @@ async function render(pageContext) {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
     },
   };
-}
+};
+
+// See https://vite-plugin-ssr.com/data-fetching
+const passToClient = ["pageProps", "urlPathname"];
+
+export { render, passToClient };

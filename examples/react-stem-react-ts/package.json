@@ -4,13 +4,19 @@
     "build": "vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
+    "dev:node": "npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "preview": "vite build && vite preview"
+    "preview": "vite build && vite preview",
+    "prod": "npm run lint && npm run build && npm run server:prod",
+    "server:dev": "ts-node ./server",
+    "server:prod": "cross-env NODE_ENV=production ts-node ./server",
+    "prod:static": "npm run build && npm run server:static",
+    "server:static": "serve dist/client/ --listen 3000"
   },
   "dependencies": {
     "@brillout/stem-react": "^0.1.3",

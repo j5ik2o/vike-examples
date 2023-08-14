@@ -7,18 +7,18 @@ import { getUser, checkCredentials } from "./users.js";
 const isProduction = process.env.NODE_ENV === "production";
 const port = process.env.PORT || 3000;
 
-async function startServer() {
+const startServer = async () => {
   const app = express();
   auth(app);
   await assets(app);
   ssr(app);
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
-}
+};
 
-function auth(app) {
+const auth = (app) => {
   app.use(cookieParser());
-  app.use(function (req, _res, next) {
+  app.use((req, _res, next) => {
     const { username } = req.cookies;
     const user = !username ? null : getUser(username);
     req.user = user;
@@ -41,7 +41,7 @@ function auth(app) {
     res.clearCookie("username");
     res.end();
   });
-}
+};
 
 const assets = async (app) => {
   if (isProduction) {

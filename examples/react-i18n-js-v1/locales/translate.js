@@ -1,9 +1,7 @@
-export { translate };
-
 import { translations } from "./translations";
 import { localeDefault } from "./locales";
 
-function translate(text, locale) {
+const translate = (text, locale) => {
   if (locale === localeDefault) {
     return text;
   }
@@ -12,4 +10,6 @@ function translate(text, locale) {
     throw new Error("No translation found for: `" + text + "`");
   }
   return textTranslations[locale];
-}
+};
+
+export { translate };

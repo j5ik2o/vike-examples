@@ -6,7 +6,7 @@ import { PageShell } from "./PageShell";
 import { getPageTitle } from "./getPageTitle";
 import type { PageContextServer } from "./types";
 
-async function onRenderHtml(pageContext: PageContextServer) {
+const onRenderHtml = async (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
 
   const stream = await renderToStream(
@@ -38,6 +38,6 @@ async function onRenderHtml(pageContext: PageContextServer) {
       };
     },
   };
-}
+};
 
 export default onRenderHtml;
