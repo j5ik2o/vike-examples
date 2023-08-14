@@ -32,7 +32,7 @@ const PageShell = ({
   );
 };
 
-function Layout({ children }: { children: React.ReactNode }) {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -44,7 +44,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+};
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (

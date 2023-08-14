@@ -5,7 +5,7 @@ import { escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function onRenderHtml(pageContext: any) {
+const onRenderHtml = async (pageContext: any) => {
   const { Page, pageProps } = pageContext;
 
   const page = (
@@ -28,6 +28,6 @@ async function onRenderHtml(pageContext: any) {
         <div id="page-view">${stream}</div>
       </body>
     </html>`;
-}
+};
 
 export default onRenderHtml;

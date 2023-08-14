@@ -36,7 +36,7 @@ const filterMoviesData = (movies: MovieDetails[]): Movie[] => {
 };
 
 /*
-async function prerender() {
+const prerender = async () => {
   const movies = await getStarWarsMovies()
 
   return [

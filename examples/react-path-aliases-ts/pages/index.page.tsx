@@ -3,12 +3,12 @@
 import { Counter } from "#root/components/Counter";
 import React from "react";
 
-export { Page };
-
-function Page() {
+const Page = () => {
   return (
     <p>
       Interactive: <Counter />
     </p>
   );
-}
+};
+
+export { Page };

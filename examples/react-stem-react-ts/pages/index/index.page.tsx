@@ -1,9 +1,6 @@
-import React from "react";
 import { Counter } from "./Counter";
 
-export default { Page };
-
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Vite-plugin-ssr + Stem React</h1>
@@ -16,4 +13,6 @@ function Page() {
       </ul>
     </>
   );
-}
+};
+
+export default { Page };

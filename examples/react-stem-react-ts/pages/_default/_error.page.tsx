@@ -1,8 +1,4 @@
-import React from "react";
-
-export { Page };
-
-function Page({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) {
+const Page = ({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) => {
   if (is404) {
     return (
       <>
@@ -19,4 +15,6 @@ function Page({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) {
       </>
     );
   }
-}
+};
+
+export { Page };

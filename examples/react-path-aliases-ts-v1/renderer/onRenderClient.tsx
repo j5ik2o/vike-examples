@@ -1,12 +1,10 @@
 // https://vite-plugin-ssr.com/onRenderClient
-export default onRenderClient;
-
-import React from "react";
+// import React from "react";
 import { hydrateRoot } from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "#root/types";
 
-async function onRenderClient(pageContext: PageContext) {
+const onRenderClient = async (pageContext: PageContext) => {
   const { Page } = pageContext;
   hydrateRoot(
     document.getElementById("page-view")!,
@@ -14,4 +12,6 @@ async function onRenderClient(pageContext: PageContext) {
       <Page />
     </PageLayout>,
   );
-}
+};
+
+export default onRenderClient;

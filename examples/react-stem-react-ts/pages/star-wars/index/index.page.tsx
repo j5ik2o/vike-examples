@@ -1,9 +1,6 @@
-import React from "react";
 import type { Movie } from "../types";
 
-export { Page };
-
-function Page({ movies }: { movies: Movie[] }) {
+const Page = ({ movies }: { movies: Movie[] }) => {
   return (
     <>
       <h1>Star Wars Movies</h1>
@@ -20,4 +17,6 @@ function Page({ movies }: { movies: Movie[] }) {
       </p>
     </>
   );
-}
+};
+
+export { Page };

@@ -3,9 +3,7 @@ import { PageContextProvider } from "./usePageContext";
 import "./PageShell.css";
 import { Link } from "./Link";
 
-export { PageShell };
-
-const PageShell = function ({ children, pageContext }) {
+const PageShell = ({ children, pageContext }) => {
   return (
     <PageContextProvider pageContext={pageContext}>
       <Layout>
@@ -24,7 +22,7 @@ const PageShell = function ({ children, pageContext }) {
   );
 };
 
-const Layout = function ({ children }) {
+const Layout = ({ children }) => {
   return (
     <div
       style={{
@@ -71,7 +69,7 @@ const Content = function ({ children }) {
   );
 };
 
-function Logo() {
+const Logo = () => {
   return (
     <div
       style={{
@@ -84,4 +82,6 @@ function Logo() {
       </a>
     </div>
   );
-}
+};
+
+export { PageShell };

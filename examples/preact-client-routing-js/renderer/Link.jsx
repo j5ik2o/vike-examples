@@ -1,8 +1,6 @@
 import { usePageContext } from "./usePageContext";
 
-export { Link };
-
-const Link = function (props) {
+const Link = (props) => {
   const pageContext = usePageContext();
   const className = [
     props.className,
@@ -12,3 +10,5 @@ const Link = function (props) {
     .join(" ");
   return <a {...props} className={className} />;
 };
+
+export { Link };

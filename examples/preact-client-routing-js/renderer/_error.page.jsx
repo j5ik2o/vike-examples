@@ -1,6 +1,4 @@
-export { Page };
-
-function Page({ is404 }) {
+const Page = ({ is404 }) => {
   if (is404) {
     return (
       <>
@@ -16,4 +14,6 @@ function Page({ is404 }) {
       </>
     );
   }
-}
+};
+
+export { Page };

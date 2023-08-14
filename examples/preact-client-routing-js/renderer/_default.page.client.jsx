@@ -1,10 +1,7 @@
-export { render };
-export const clientRouting = true;
-
 import { hydrate, render as render_ } from "preact";
 import { PageShell } from "./PageShell";
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const page = (
     <PageShell pageContext={pageContext}>
@@ -19,9 +16,9 @@ async function render(pageContext) {
     render_(page, container);
   }
   document.title = getPageTitle(pageContext);
-}
+};
 
-function getPageTitle(pageContext) {
+const getPageTitle = (pageContext) => {
   const title =
     // For static titles (defined in the `export { documentProps }` of the page's `.page.js`)
     (pageContext.exports.documentProps || {}).title ||
@@ -29,4 +26,8 @@ function getPageTitle(pageContext) {
     (pageContext.documentProps || {}).title ||
     "Demo";
   return title;
-}
+};
+
+const clientRouting = true;
+
+export { render, clientRouting };

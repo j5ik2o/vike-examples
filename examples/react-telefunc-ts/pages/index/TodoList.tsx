@@ -1,10 +1,8 @@
-export { TodoList };
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { onNewTodo } from "./TodoList.telefunc.js";
 import type { TodoItem } from "../../database/todoItems.js";
 
-function TodoList({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) {
+const TodoList = ({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) => {
   const [todoItems, setTodoItems] = useState(todoItemsInitial);
   const [draft, setDraft] = useState("");
   return (
@@ -34,4 +32,6 @@ function TodoList({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) {
       </ul>
     </>
   );
-}
+};
+
+export { TodoList };

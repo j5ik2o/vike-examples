@@ -43,7 +43,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-function Sidebar({ children }: { children: React.ReactNode }) {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       id="sidebar"
@@ -59,7 +59,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+};
 
 const Content = ({ children }: { children: React.ReactNode }) => {
   return (

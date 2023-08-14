@@ -1,13 +1,33 @@
+// {
+//   "compilerOptions": {
+//     "strict": true,
+//     "module": "ESNext",
+//     "target": "ESNext",
+//     "moduleResolution": "Node",
+//     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+//     "types": ["node", "vite/client"],
+//     "jsx": "react-jsx",
+//     "skipLibCheck": true,
+//     "esModuleInterop": true
+//   }
+// }
 {
   "compilerOptions": {
     "strict": true,
-    "module": "ES2020",
+    "module": "ESNext",
+    "target": "ESNext",
     "moduleResolution": "Node",
-    "target": "ES2020",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
-    "jsx": "react",
+    "types": ["node", "vite/client"],
+    "jsx": "react-jsx",
     "skipLibCheck": true,
     "esModuleInterop": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "esm": true,
+    "compilerOptions": {
+      "moduleResolution": "Node16"
+    }
   }
 }

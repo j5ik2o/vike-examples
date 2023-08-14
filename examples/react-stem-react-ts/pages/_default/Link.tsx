@@ -1,9 +1,6 @@
-export { Link };
-
 import { usePageContext } from "@brillout/stem-react";
-import React from "react";
 
-function Link({ href, children }: { href: string; children: string }) {
+const Link = ({ href, children }: { href: string; children: string }) => {
   const pageContext = usePageContext() as { urlPathname: string }; // TODO
   const { urlPathname } = pageContext;
   const isActive =
@@ -13,4 +10,6 @@ function Link({ href, children }: { href: string; children: string }) {
       {children}
     </a>
   );
-}
+};
+
+export { Link };
