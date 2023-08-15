@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
 let root;
+
 const onRenderClient = async (pageContext) => {
   const { Page, pageProps } = pageContext;
 

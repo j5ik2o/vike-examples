@@ -1,6 +1,5 @@
 // TODO: rename to +client.js
 //
-
 const handleCounter = () => {
   const counterEl = document.querySelector("button");
   let countState = 0;

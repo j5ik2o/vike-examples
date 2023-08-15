@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <b>
@@ -25,7 +25,7 @@ function Page() {
       </Routes>
     </>
   );
-}
+};
 
 function Home() {
   return (

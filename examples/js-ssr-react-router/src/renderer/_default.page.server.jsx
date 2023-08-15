@@ -5,7 +5,7 @@ import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 
 const passToClient = ["pageProps"];
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps, urlPathname } = pageContext;
   const pageHtml = renderToString(
     <StaticRouter location={urlPathname}>
@@ -18,6 +18,6 @@ async function render(pageContext) {
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
 
 export { render, passToClient };

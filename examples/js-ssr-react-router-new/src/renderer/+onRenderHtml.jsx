@@ -1,12 +1,10 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml;
-
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 
-async function onRenderHtml(pageContext) {
+const onRenderHtml = async (pageContext) => {
   const { Page, pageProps, urlPathname } = pageContext;
   const pageHtml = renderToString(
     <StaticRouter location={urlPathname}>
@@ -19,4 +17,6 @@ async function onRenderHtml(pageContext) {
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
+
+export default onRenderHtml;
