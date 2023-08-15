@@ -25,8 +25,8 @@
     "vite-plugin-ssr": "0.4.135"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "@vitejs/plugin-react": "^4.0.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",

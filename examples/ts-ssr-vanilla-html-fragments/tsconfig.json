@@ -9,5 +9,13 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
+  "ts-node": {
+    "transpileOnly": true,
+    "esm": true,
+    "compilerOptions": {
+      "moduleResolution": "Node16"
+    }
   }
 }
