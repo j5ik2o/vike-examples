@@ -3,13 +3,10 @@ import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
-export { render };
-export { passToClient };
-
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps"];
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps, userAgent } = pageContext;
   const stream = await renderToStream(
     <PageLayout>
@@ -24,4 +21,6 @@ async function render(pageContext) {
         <div id="page-view">${stream}</div>
       </body>
     </html>`;
-}
+};
+
+export { render, passToClient };

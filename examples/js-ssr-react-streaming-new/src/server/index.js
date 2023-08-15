@@ -12,7 +12,7 @@ const startServer = async () => {
 
   if (isProduction) {
     const sirv = require("sirv");
-    app.use(sirv(`${root}/dist/client`));
+    app.use(sirv(`${root}/../dist/client`));
   } else {
     const vite = require("vite");
     const viteDevMiddleware = (
