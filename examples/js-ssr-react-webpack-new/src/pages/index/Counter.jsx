@@ -1,5 +1,3 @@
-export { Counter };
-
 import React, { useState } from "react";
 
 const Counter = () => {
@@ -10,3 +8,5 @@ const Counter = () => {
     </button>
   );
 };
+
+export { Counter };

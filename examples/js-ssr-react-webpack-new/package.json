@@ -3,7 +3,7 @@
   "scripts": {
     "build": "npm run build:vite && npm run build:webpack",
     "build:vite": "vite build",
-    "build:webpack": "cp server/main.mjs dist/server/main.mjs && webpack -c ./webpack.config.js && rimraf dist/server",
+    "build:webpack": "cp src/server/main.mjs dist/server/main.mjs && webpack -c ./webpack.config.js && rimraf dist/server",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "dev:node": "npm run server:dev",
@@ -21,7 +21,9 @@
   "dependencies": {
     "express": "^4.18.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite": "^4.4.9",
+    "vite-plugin-ssr": "0.4.135"
   },
   "devDependencies": {
     "eslint": "^8.47.0",
@@ -31,8 +33,6 @@
     "prettier": "3.0.1",
     "prettier-plugin-organize-imports": "^3.2.3",
     "rimraf": "^5.0.1",
-    "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }

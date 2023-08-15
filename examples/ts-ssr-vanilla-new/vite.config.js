@@ -1,5 +1,10 @@
-import ssr from 'vite-plugin-ssr/plugin'
+import ssr from "vite-plugin-ssr/plugin";
 
 export default {
-  plugins: [ssr()]
-}
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
+  plugins: [ssr()],
+};
