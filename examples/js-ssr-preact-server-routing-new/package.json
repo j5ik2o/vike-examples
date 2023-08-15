@@ -16,10 +16,10 @@
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
   },
   "dependencies": {
-    "preact": "^10.16.0",
-    "preact-render-to-string": "^6.2.1",
     "compression": "^1.7.4",
     "express": "^4.18.2",
+    "preact": "^10.16.0",
+    "preact-render-to-string": "^6.2.1",
     "sirv": "^2.0.3",
     "vite": "^4.4.9",
     "vite-plugin-ssr": "0.4.135"
@@ -28,13 +28,13 @@
     "@babel/core": "^7.22.10",
     "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@preact/preset-vite": "^2.5.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.1",
     "prettier-plugin-organize-imports": "^3.2.3",
-    "rimraf": "^5.0.1",
-    "cross-env": "^7.0.3"
+    "rimraf": "^5.0.1"
   }
 }

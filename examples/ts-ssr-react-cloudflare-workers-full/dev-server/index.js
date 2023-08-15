@@ -3,6 +3,7 @@
 const express = require("express");
 const { renderPage } = require("vite-plugin-ssr/server");
 const vite = require("vite");
+
 let fetch;
 import("node-fetch").then((module) => {
   fetch = module.default;

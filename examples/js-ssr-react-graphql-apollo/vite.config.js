@@ -3,6 +3,7 @@ const ssr = require("vite-plugin-ssr/plugin");
 
 const config = {
   root: "./src",
+  public: "./src/public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
