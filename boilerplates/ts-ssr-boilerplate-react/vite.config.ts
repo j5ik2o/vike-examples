@@ -4,6 +4,7 @@ import { UserConfig } from "vite";
 
 const config: UserConfig = {
   root: "./src",
+  public: "./src/public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
