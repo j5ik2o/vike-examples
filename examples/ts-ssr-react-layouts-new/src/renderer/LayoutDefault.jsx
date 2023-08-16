@@ -1,5 +1,3 @@
-export { LayoutDefault };
-
 import "./LayoutDefault.css";
 
 function LayoutDefault({ children }) {
@@ -59,3 +57,5 @@ function Content({ children }) {
     </div>
   );
 }
+
+export { LayoutDefault };

@@ -3,6 +3,11 @@ import ssr from "vite-plugin-ssr/plugin";
 import { UserConfig } from "vite";
 
 const config: UserConfig = {
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
       "#root": __dirname,
