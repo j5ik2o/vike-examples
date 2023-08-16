@@ -1,6 +1,6 @@
 import { resolveRoute } from "vite-plugin-ssr/routing";
 
-export default (pageContext) => {
+export default (pageContext: { urlPathname: string }) => {
   if (
     pageContext.urlPathname === "/starship" ||
     pageContext.urlPathname === "/starship/"

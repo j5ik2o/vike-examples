@@ -1,5 +1,3 @@
-export default Page;
-
 function Page() {
   return (
     <>
@@ -14,3 +12,5 @@ function Page() {
     </>
   );
 }
+
+export default Page;

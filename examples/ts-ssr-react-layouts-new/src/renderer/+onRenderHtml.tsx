@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-import React from "react";
 import { renderToString } from "react-dom/server";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { PageShell } from "./PageShell";

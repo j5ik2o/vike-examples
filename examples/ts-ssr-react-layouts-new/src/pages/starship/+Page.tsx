@@ -1,5 +1,3 @@
-export default Page;
-
 import { useState } from "react";
 import { usePageContext } from "../../renderer/usePageContext";
 
@@ -207,3 +205,5 @@ function DummyText() {
     </>
   );
 }
+
+export default Page;

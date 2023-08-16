@@ -1,6 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderClient
-export default onRenderClient;
-
 import { Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { PageContext } from "./types";
 import { PageShell } from "./PageShell";
@@ -42,3 +40,5 @@ async function onRenderClient(
     reactRoot.render(page);
   }
 }
+
+export default onRenderClient;
