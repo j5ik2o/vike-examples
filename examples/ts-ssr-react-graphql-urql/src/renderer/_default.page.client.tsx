@@ -1,4 +1,3 @@
-import React from "react";
 import { hydrateRoot } from "react-dom/client";
 import {
   createClient,
@@ -38,7 +37,7 @@ const render = async (pageContext: PageContextBuiltInClient & PageContext) => {
       <Provider value={client}>
         <Page {...pageProps} />
       </Provider>
-    </PageShell>
+    </PageShell>,
   );
 };
 

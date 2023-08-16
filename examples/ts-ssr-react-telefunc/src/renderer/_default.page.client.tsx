@@ -1,9 +1,9 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
 let root: ReactDOM.Root;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const render = async (pageContext: any) => {
   const { Page, pageProps } = pageContext;
   const page = (
@@ -22,6 +22,7 @@ const render = async (pageContext: any) => {
   }
 };
 
-export { render };
-export const clientRouting = true;
-export const hydrationCanBeAborted = true;
+const clientRouting = true;
+const hydrationCanBeAborted = true;
+
+export { render, clientRouting, hydrationCanBeAborted };

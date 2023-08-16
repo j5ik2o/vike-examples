@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { onNewTodo } from "./TodoList.telefunc.js";
 import type { TodoItem } from "../../database/todoItems.js";
 

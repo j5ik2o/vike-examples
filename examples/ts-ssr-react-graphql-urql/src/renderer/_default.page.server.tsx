@@ -8,7 +8,6 @@ import {
   Provider,
 } from "urql";
 import prepass from "react-ssr-prepass";
-import React from "react";
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import type { PageContext } from "./types";
@@ -43,7 +42,7 @@ const render = async (pageContext: PageContextBuiltIn & PageContext) => {
 };
 
 const onBeforeRender = async (
-  pageContext: PageContextBuiltIn & PageContext
+  pageContext: PageContextBuiltIn & PageContext,
 ) => {
   const { Page, pageProps } = pageContext;
 
@@ -59,7 +58,7 @@ const onBeforeRender = async (
   await prepass(
     <Provider value={client}>
       <Page {...pageProps} />
-    </Provider>
+    </Provider>,
   );
   // After we can construct an initial html with renderToString as our cache is hydrated
   const pageHtml = ReactDOMServer.renderToString(
@@ -67,7 +66,7 @@ const onBeforeRender = async (
       <Provider value={client}>
         <Page {...pageProps} />
       </Provider>
-    </PageShell>
+    </PageShell>,
   );
 
   const urqlState = ssr.extractData();

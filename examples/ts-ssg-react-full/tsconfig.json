@@ -1,20 +1,27 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["node", "vite/client"],
+    "esModuleInterop": true,
     "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "strict": true,
+    "target": "ESNext",
+    "types": [
+      "node",
+      "vite/client"
+    ]
   },
   "ts-node": {
-    "transpileOnly": true,
-    "esm": true,
     "compilerOptions": {
       "moduleResolution": "Node16"
-    }
+    },
+    "esm": true,
+    "transpileOnly": true
   }
 }

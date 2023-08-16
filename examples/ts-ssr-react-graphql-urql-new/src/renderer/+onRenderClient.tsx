@@ -1,7 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderClient
-export default onRenderClient;
-
-import React from "react";
 import { hydrateRoot } from "react-dom/client";
 import {
   createClient,
@@ -24,7 +21,7 @@ import type {
 } from "vite-plugin-ssr/types";
 
 const onRenderClient = async (
-  pageContext: PageContextBuiltInClient & PageContext
+  pageContext: PageContextBuiltInClient & PageContext,
 ) => {
   const { Page, pageProps, urqlState } = pageContext;
   const client = createClient({
@@ -43,6 +40,8 @@ const onRenderClient = async (
       <Provider value={client}>
         <Page {...pageProps} />
       </Provider>
-    </PageShell>
+    </PageShell>,
   );
 };
+
+export default onRenderClient;

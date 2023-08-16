@@ -1,4 +1,4 @@
-main="./worker/index.js"
+main="./src/worker/index.js"
 name = "vite-plugin-ssr_worker-example"
 compatibility_flags = ["streams_enable_constructors"]
 compatibility_date = "2021-09-29"

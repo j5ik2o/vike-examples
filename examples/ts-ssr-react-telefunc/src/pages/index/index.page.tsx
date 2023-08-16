@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { TodoList } from "./TodoList";
 import type { TodoItem } from "../../database/todoItems";
-
-export { Page };
 
 function Page({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) {
   return (
@@ -25,3 +23,5 @@ function Counter() {
     </div>
   );
 }
+
+export { Page };

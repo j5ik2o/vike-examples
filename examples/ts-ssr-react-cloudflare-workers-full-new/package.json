@@ -4,7 +4,7 @@
     "clean": "rimraf ./dist",
     "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish",
     "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",
-    "dev:node": "node ./dev-server",
+    "dev:node": "node ./src/dev-server",
     "dev:vite": "vite",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",

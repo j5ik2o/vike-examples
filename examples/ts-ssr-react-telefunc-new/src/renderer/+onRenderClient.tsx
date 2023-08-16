@@ -1,10 +1,10 @@
 // https://vite-plugin-ssr.com/onRenderClient
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
 let root: ReactDOM.Root;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onRenderClient = async (pageContext: any) => {
   const { Page, pageProps } = pageContext;
   const page = (

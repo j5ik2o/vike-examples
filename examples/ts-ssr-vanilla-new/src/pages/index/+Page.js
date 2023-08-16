@@ -7,4 +7,4 @@ export default `
       Interactive. <button class="counter">Counter 0</button>
     </li>
   </ul>
-`
+`;

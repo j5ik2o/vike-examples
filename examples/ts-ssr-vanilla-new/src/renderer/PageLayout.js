@@ -8,10 +8,10 @@ const PageLayout = (children) => {
         [
           '<a class="navitem" href="/">Home</a>',
           '<a class="navitem" href="/about">About</a>'
-        ].join('\n')
+        ].join('\n'),
       ),
       Content(children),
-    ].join("\n")
+    ].join("\n"),
   );
 };
 

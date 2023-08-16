@@ -1,6 +1,7 @@
 import React from "react";
 import "./PageLayout.css";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const PageLayout = ({ children }: any) => {
   return (
     <React.StrictMode>
@@ -19,6 +20,7 @@ const PageLayout = ({ children }: any) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Layout = ({ children }: any) => {
   return (
     <div
@@ -33,6 +35,7 @@ const Layout = ({ children }: any) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Sidebar = ({ children }: any) => {
   return (
     <div
@@ -51,6 +54,7 @@ const Sidebar = ({ children }: any) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Content = ({ children }: any) => {
   return (
     <div
