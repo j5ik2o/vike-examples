@@ -6,13 +6,12 @@ import { PageContextProvider } from "./usePageContext";
 import { Link } from "./Link";
 import { childrenPropType } from "./PropTypeValues";
 
-export { PageShell };
-
 PageShell.propTypes = {
   pageContext: PropTypes.any,
   children: childrenPropType,
 };
-function PageShell({ pageContext, children }) {
+
+const PageShell = ({ pageContext, children }) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -31,12 +30,13 @@ function PageShell({ pageContext, children }) {
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};
 
 Layout.propTypes = {
   children: childrenPropType,
 };
-function Layout({ children }) {
+
+const Layout = ({ children }) => {
   return (
     <div
       style={{
@@ -48,12 +48,13 @@ function Layout({ children }) {
       {children}
     </div>
   );
-}
+};
 
 Sidebar.propTypes = {
   children: childrenPropType,
 };
-function Sidebar({ children }) {
+
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -68,12 +69,13 @@ function Sidebar({ children }) {
       {children}
     </div>
   );
-}
+};
 
 Content.propTypes = {
   children: childrenPropType,
 };
-function Content({ children }) {
+
+const Content = ({ children }) => {
   return (
     <div
       style={{
@@ -86,9 +88,9 @@ function Content({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Logo() {
+const Logo = () => {
   return (
     <div
       style={{
@@ -101,4 +103,6 @@ function Logo() {
       </a>
     </div>
   );
-}
+};
+
+export { PageShell };

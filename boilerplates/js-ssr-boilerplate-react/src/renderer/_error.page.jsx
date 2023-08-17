@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 
-export { Page };
-
 Page.propTypes = {
   is404: PropTypes.bool,
 };
-function Page({ is404 }) {
+
+const Page = ({ is404 }) => {
   if (is404) {
     return (
       <>
@@ -21,4 +20,6 @@ function Page({ is404 }) {
       </>
     );
   }
-}
+};
+
+export { Page };

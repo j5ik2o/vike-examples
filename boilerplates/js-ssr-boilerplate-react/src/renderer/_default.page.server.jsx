@@ -1,12 +1,11 @@
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ["pageProps", "urlPathname"];
 
 import ReactDOMServer from "react-dom/server";
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import logoUrl from "./logo.svg";
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   // This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
   if (!Page)
@@ -44,6 +43,8 @@ async function render(pageContext) {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
     },
   };
-}
+};
 
-export { render };
+const passToClient = ["pageProps", "urlPathname"];
+
+export { render, passToClient };

@@ -1,4 +1,6 @@
 import { Counter } from "./Counter";
+import Menu from "@mui/icons-material/Menu";
+import Button from "@mui/material/Button";
 
 const Page = () => {
   return (
@@ -11,6 +13,12 @@ const Page = () => {
           Interactive. <Counter />
         </li>
       </ul>
+      <div>
+        Menu: <Menu />
+      </div>
+      <div>
+        Button: <Button>Some button</Button>
+      </div>
     </>
   );
 };
