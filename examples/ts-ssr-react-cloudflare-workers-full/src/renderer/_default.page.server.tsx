@@ -1,12 +1,13 @@
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
+import { PageContext } from "./types";
 
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps"];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const render = async (pageContext: any) => {
+const render = async (pageContext: PageContext) => {
   const { Page, pageProps } = pageContext;
 
   const page = (

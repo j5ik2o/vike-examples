@@ -1,31 +1,25 @@
 import React from "react";
 import "./PageLayout.css";
-import { PageContextProvider } from "./usePageContext";
 
-const PageLayout = ({ pageContext, children }) => {
+const PageLayout = ({ children }: { children: React.ReactElement }) => {
   return (
     <React.StrictMode>
-      <PageContextProvider pageContext={pageContext}>
-        <Layout>
-          <Sidebar>
-            <a className="navitem" href="/">
-              Home
-            </a>
-            <a className="navitem" href="/about">
-              About
-            </a>
-            <a className="navitem" href="/star-wars">
-              Star Wars
-            </a>
-          </Sidebar>
-          <Content>{children}</Content>
-        </Layout>
-      </PageContextProvider>
+      <Layout>
+        <Sidebar>
+          <a className="navitem" href="/">
+            Home
+          </a>
+          <a className="navitem" href="/about">
+            About
+          </a>
+        </Sidebar>
+        <Content>{children}</Content>
+      </Layout>
     </React.StrictMode>
   );
 };
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -39,7 +33,7 @@ const Layout = ({ children }) => {
   );
 };
 
-const Sidebar = ({ children }) => {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -57,7 +51,7 @@ const Sidebar = ({ children }) => {
   );
 };
 
-const Content = ({ children }) => {
+const Content = ({ children }: { children: React.ReactElement }) => {
   return (
     <div
       style={{
