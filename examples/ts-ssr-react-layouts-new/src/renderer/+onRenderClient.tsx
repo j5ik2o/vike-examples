@@ -14,9 +14,9 @@ import type {
 
 let reactRoot: Root;
 
-async function onRenderClient(
+const onRenderClient = async (
   pageContext: PageContextBuiltInClient & PageContext,
-) {
+) => {
   const { Page, pageProps } = pageContext;
 
   const page = (
@@ -39,6 +39,6 @@ async function onRenderClient(
     }
     reactRoot.render(page);
   }
-}
+};
 
 export default onRenderClient;

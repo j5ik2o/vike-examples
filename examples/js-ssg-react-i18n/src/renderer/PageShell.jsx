@@ -1,11 +1,9 @@
-export { PageShell };
-
 import React from "react";
 import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
 import { Link } from "./Link";
 
-function PageShell({ pageContext, children }) {
+const PageShell = ({ pageContext, children }) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -26,9 +24,9 @@ function PageShell({ pageContext, children }) {
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div
       style={{
@@ -40,9 +38,9 @@ function Layout({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Sidebar({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -58,9 +56,9 @@ function Sidebar({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Content({ children }) {
+const Content = ({ children }) => {
   return (
     <div
       style={{
@@ -73,4 +71,6 @@ function Content({ children }) {
       {children}
     </div>
   );
-}
+};
+
+export { PageShell };

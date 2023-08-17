@@ -1,6 +1,6 @@
 import "./LayoutDefault.css";
 
-function LayoutDefault({ children }: { children: React.ReactNode }) {
+const LayoutDefault = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -23,9 +23,9 @@ function LayoutDefault({ children }: { children: React.ReactNode }) {
       <Content>{children}</Content>
     </div>
   );
-}
+};
 
-function Sidebar({ children }: { children: React.ReactNode }) {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -41,9 +41,9 @@ function Sidebar({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+};
 
-function Content({ children }: { children: React.ReactNode }) {
+const Content = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -56,6 +56,6 @@ function Content({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+};
 
 export { LayoutDefault };

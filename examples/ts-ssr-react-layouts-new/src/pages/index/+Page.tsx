@@ -1,4 +1,4 @@
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Landing Page</h1>
@@ -28,6 +28,6 @@ function Page() {
       </p>
     </>
   );
-}
+};
 
 export default Page;

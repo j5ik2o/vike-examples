@@ -1,4 +1,4 @@
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>About</h1>
@@ -11,6 +11,6 @@ function Page() {
       <p>This app showcases (nested) layouts.</p>
     </>
   );
-}
+};
 
 export default Page;

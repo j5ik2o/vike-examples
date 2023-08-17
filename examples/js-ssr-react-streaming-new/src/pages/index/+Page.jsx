@@ -3,7 +3,7 @@ export default Page;
 import React from "react";
 import { Counter } from "./Counter";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Welcome</h1>
@@ -16,4 +16,4 @@ function Page() {
       </ul>
     </>
   );
-}
+};

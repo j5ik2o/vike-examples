@@ -27,7 +27,7 @@ const Page = () => {
   );
 };
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <h2>Home</h2>
@@ -38,9 +38,9 @@ function Home() {
       </p>
     </div>
   );
-}
+};
 
-function About() {
+const About = () => {
   return (
     <>
       <h2>About</h2>
@@ -54,9 +54,9 @@ function About() {
       </p>
     </>
   );
-}
+};
 
-function Code(props) {
+const Code = (props) => {
   const style = {
     backgroundColor: "#eaeaea",
     padding: "1px 4px",
@@ -64,9 +64,9 @@ function Code(props) {
     ...props.style,
   };
   return <code {...props} style={style} />;
-}
+};
 
-function TimeElapsed() {
+const TimeElapsed = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -77,9 +77,9 @@ function TimeElapsed() {
   }, []);
 
   return <>{count}</>;
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -90,6 +90,6 @@ function Counter() {
       Count: <span>{count}</span>
     </button>
   );
-}
+};
 
 export { Page };

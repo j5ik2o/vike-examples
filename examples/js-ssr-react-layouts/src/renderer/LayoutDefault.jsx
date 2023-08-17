@@ -1,8 +1,6 @@
-export { LayoutDefault };
-
 import "./LayoutDefault.css";
 
-function LayoutDefault({ children }) {
+const LayoutDefault = ({ children }) => {
   return (
     <div
       style={{
@@ -25,9 +23,9 @@ function LayoutDefault({ children }) {
       <Content>{children}</Content>
     </div>
   );
-}
+};
 
-function Sidebar({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -43,9 +41,9 @@ function Sidebar({ children }) {
       {children}
     </div>
   );
-}
+};
 
-function Content({ children }) {
+const Content = ({ children }) => {
   return (
     <div
       style={{
@@ -58,4 +56,6 @@ function Content({ children }) {
       {children}
     </div>
   );
-}
+};
+
+export { LayoutDefault };

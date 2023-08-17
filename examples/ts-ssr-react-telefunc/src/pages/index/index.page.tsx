@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TodoList } from "./TodoList";
 import type { TodoItem } from "../../database/todoItems";
 
-function Page({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) {
+const Page = ({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) => {
   return (
     <>
       <h1>To-do List</h1>
@@ -10,9 +10,9 @@ function Page({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) {
       <Counter />
     </>
   );
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
   return (
     <div>
@@ -22,6 +22,6 @@ function Counter() {
       </button>
     </div>
   );
-}
+};
 
 export { Page };

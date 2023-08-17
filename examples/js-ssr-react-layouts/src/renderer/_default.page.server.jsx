@@ -1,6 +1,3 @@
-export { render };
-export { passToClient };
-
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
@@ -9,7 +6,7 @@ import { PageShell } from "./PageShell";
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps", "routeParams"];
 
-async function render(pageContext) {
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
 
   const pageHtml = renderToString(
@@ -27,4 +24,6 @@ async function render(pageContext) {
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
+
+export { render, passToClient };

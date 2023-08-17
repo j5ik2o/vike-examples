@@ -6,7 +6,8 @@ import ReactDOM from "react-dom/client";
 import { PageShell } from "./PageShell";
 
 let root;
-async function onRenderClient(pageContext) {
+
+const onRenderClient = async (pageContext) => {
   const { Page, pageProps } = pageContext;
   const page = (
     <PageShell pageContext={pageContext}>
@@ -22,4 +23,4 @@ async function onRenderClient(pageContext) {
     }
     root.render(page);
   }
-}
+};

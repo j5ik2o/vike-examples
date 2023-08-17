@@ -1,9 +1,6 @@
-export { Layout } from "./Layout";
-export { Page };
-
 import React from "react";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Landing Page</h1>
@@ -33,4 +30,7 @@ function Page() {
       </p>
     </>
   );
-}
+};
+
+export { Layout } from "./Layout";
+export { Page };

@@ -2,7 +2,7 @@ import { hydrateRoot } from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "#root/types";
 
-async function render(pageContext: PageContext) {
+const render = async (pageContext: PageContext) => {
   const { Page } = pageContext;
   hydrateRoot(
     document.getElementById("page-view")!,
@@ -10,6 +10,6 @@ async function render(pageContext: PageContext) {
       <Page />
     </PageLayout>,
   );
-}
+};
 
 export { render };

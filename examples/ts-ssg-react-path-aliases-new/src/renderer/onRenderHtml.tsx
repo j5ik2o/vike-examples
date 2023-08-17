@@ -1,6 +1,5 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import ReactDOMServer from "react-dom/server";
-// import React from "react";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "#root/types";

@@ -20,6 +20,10 @@ const Page = () => {
 };
 
 const PresetButtons = () => {
+  const fill = (username, password) => {
+    document.querySelector("input#username").value = username;
+    document.querySelector("input#password").value = password;
+  };
   return (
     <>
       Fill in as:{" "}
@@ -37,10 +41,6 @@ const PresetButtons = () => {
       </Button>
     </>
   );
-  function fill(username, password) {
-    document.querySelector("input#username").value = username;
-    document.querySelector("input#password").value = password;
-  }
 };
 
 const onSubmit = async (ev) => {

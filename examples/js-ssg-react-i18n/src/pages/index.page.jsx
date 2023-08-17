@@ -1,11 +1,9 @@
-export { Page };
-
 import React, { useState } from "react";
 import { locales } from "../locales";
 import { Link } from "../renderer/Link";
 import { LocaleText } from "../renderer/LocaleText";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>
@@ -36,13 +34,15 @@ function Page() {
       </ul>
     </>
   );
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
   return (
     <button type="button" onClick={() => setCount((count) => count + 1)}>
       <LocaleText>Counter</LocaleText> {count}
     </button>
   );
-}
+};
+
+export { Page };

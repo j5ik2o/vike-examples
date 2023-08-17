@@ -1,7 +1,3 @@
-export { render };
-export { passToClient };
-export { onBeforePrerender };
-
 import ReactDOMServer from "react-dom/server";
 import React from "react";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
@@ -10,7 +6,7 @@ import { locales, localeDefault } from "../locales";
 
 const passToClient = ["pageProps", "locale"];
 
-function render(pageContext) {
+const render = (pageContext) => {
   const { Page, pageProps } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageShell pageContext={pageContext}>
@@ -27,10 +23,10 @@ function render(pageContext) {
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
 
 // We only need this for pre-rendered apps https://vite-plugin-ssr.com/pre-rendering
-function onBeforePrerender(prerenderContext) {
+const onBeforePrerender = (prerenderContext) => {
   const pageContexts = [];
   prerenderContext.pageContexts.forEach((pageContext) => {
     // Duplicate pageContext for each locale
@@ -53,4 +49,6 @@ function onBeforePrerender(prerenderContext) {
       pageContexts,
     },
   };
-}
+};
+
+export { render, passToClient, onBeforePrerender };

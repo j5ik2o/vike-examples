@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
   );
 };
 
-const Sidebar = function ({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{

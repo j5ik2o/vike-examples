@@ -3,7 +3,7 @@ import { useAsync } from "react-streaming";
 import { usePageContext } from "../renderer/usePageContext";
 import { Counter } from "../components/Counter";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>Star Wars Movies</h1>
@@ -13,7 +13,7 @@ function Page() {
       </Suspense>
     </>
   );
-}
+};
 
 const MovieList = () => {
   const pageContext = usePageContext();
@@ -45,11 +45,11 @@ type Movie = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function getMovies(response: any): Promise<Movie[]> {
+const getMovies = async (response: any): Promise<Movie[]> => {
   const moviesFromApi = (await response.json()).results as MovieFromApi[];
   const movies = cleanApiResult(moviesFromApi);
   return movies;
-}
+};
 
 type MovieFromApi = {
   title: string;

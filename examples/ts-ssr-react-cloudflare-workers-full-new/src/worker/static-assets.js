@@ -12,7 +12,7 @@ import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
  */
 const DEBUG = true;
 
-async function handleStaticAssets(event) {
+const handleStaticAssets = async (event) => {
   let options = {};
 
   /**
@@ -60,6 +60,6 @@ async function handleStaticAssets(event) {
 
     return new Response(e.message || e.toString(), { status: 500 });
   }
-}
+};
 
 export { handleStaticAssets };

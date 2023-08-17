@@ -6,7 +6,7 @@ import React from "react";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import { PageShell } from "./PageShell";
 
-function onRenderHtml(pageContext) {
+const onRenderHtml = (pageContext) => {
   const { Page, pageProps } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageShell pageContext={pageContext}>
@@ -23,4 +23,4 @@ function onRenderHtml(pageContext) {
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};

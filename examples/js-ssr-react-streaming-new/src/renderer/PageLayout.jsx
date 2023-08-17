@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
   );
 };
 
-function Sidebar({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -49,7 +49,7 @@ function Sidebar({ children }) {
       {children}
     </div>
   );
-}
+};
 
 const Content = ({ children }) => {
   return (

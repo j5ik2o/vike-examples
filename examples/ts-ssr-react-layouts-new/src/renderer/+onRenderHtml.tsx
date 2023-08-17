@@ -5,7 +5,7 @@ import { PageShell } from "./PageShell";
 import type { PageContext } from "./types";
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
-async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
+const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
   const { Page, pageProps } = pageContext;
 
   const pageHtml = renderToString(
@@ -23,6 +23,6 @@ async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
-}
+};
 
 export default onRenderHtml;

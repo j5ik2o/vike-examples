@@ -1,9 +1,7 @@
-export { Page };
-
 import { useState } from "react";
 import { usePageContext } from "../../renderer/usePageContext";
 
-function Page() {
+const Page = () => {
   const pageContext = usePageContext();
   const { view } = pageContext.routeParams;
   return (
@@ -47,9 +45,9 @@ function Page() {
       <DummyText />
     </>
   );
-}
+};
 
-function Link(props) {
+const Link = (props) => {
   // We set `keep-scroll-position` to tell vite-plugin-ssr to preserve the current scroll position
   return (
     <a
@@ -58,9 +56,9 @@ function Link(props) {
       {...props}
     />
   );
-}
+};
 
-function InnerView({ view } = { view: "overview" | "reviews" | "spec" }) {
+const InnerView = ({ view } = { view: "overview" | "reviews" | "spec" }) => {
   if (view === "overview") {
     return <Overview />;
   }
@@ -70,9 +68,9 @@ function InnerView({ view } = { view: "overview" | "reviews" | "spec" }) {
   if (view === "spec") {
     return <Spec />;
   }
-}
+};
 
-function Overview() {
+const Overview = () => {
   return (
     <>
       <h2>Overview</h2>
@@ -84,8 +82,9 @@ function Overview() {
       </p>
     </>
   );
-}
-function Reviews() {
+};
+
+const Reviews = () => {
   return (
     <>
       <h2>Reviews</h2>
@@ -98,8 +97,9 @@ function Reviews() {
       </p>
     </>
   );
-}
-function Spec() {
+};
+
+const Spec = () => {
   return (
     <>
       <h2>Spec</h2>
@@ -114,18 +114,18 @@ function Spec() {
       </pre>
     </>
   );
-}
+};
 
-function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
   return (
     <button type="button" onClick={() => setCount((count) => count + 1)}>
       Counter {count}
     </button>
   );
-}
+};
 
-function DummyText() {
+const DummyText = () => {
   return (
     <>
       <p>
@@ -206,4 +206,6 @@ function DummyText() {
       </p>
     </>
   );
-}
+};
+
+export { Page };

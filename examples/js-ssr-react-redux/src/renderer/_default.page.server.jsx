@@ -16,7 +16,7 @@ const render = async (pageContext) => {
     </html>`;
 };
 
-async function onBeforeRender(pageContext) {
+const onBeforeRender = async (pageContext) => {
   const store = getStore();
 
   const { Page } = pageContext;
@@ -35,6 +35,6 @@ async function onBeforeRender(pageContext) {
       pageHtml,
     },
   };
-}
+};
 
 export { render, onBeforeRender, passToClient };

@@ -1,9 +1,7 @@
-export { Page };
-
 import React from "react";
 import { LocaleText } from "../../renderer/LocaleText";
 
-function Page(pageProps) {
+const Page = (pageProps) => {
   return (
     <>
       <h1>
@@ -12,9 +10,9 @@ function Page(pageProps) {
       <MovieList movies={pageProps.movies} />
     </>
   );
-}
+};
 
-function MovieList({ movies }) {
+const MovieList = ({ movies }) => {
   return (
     <ol>
       {movies.map(({ title, release_date }, i) => (
@@ -24,4 +22,6 @@ function MovieList({ movies }) {
       ))}
     </ol>
   );
-}
+};
+
+export { Page };

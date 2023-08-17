@@ -1,27 +1,7 @@
 import React from "react";
 import "./PageLayout.css";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const PageLayout = ({ children }: any) => {
-  return (
-    <React.StrictMode>
-      <Layout>
-        <Sidebar>
-          <a className="navitem" href="/">
-            Home
-          </a>
-          <a className="navitem" href="/about">
-            About
-          </a>
-        </Sidebar>
-        <Content>{children}</Content>
-      </Layout>
-    </React.StrictMode>
-  );
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Layout = ({ children }: any) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -35,8 +15,7 @@ const Layout = ({ children }: any) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Sidebar = ({ children }: any) => {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -54,8 +33,7 @@ const Sidebar = ({ children }: any) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Content = ({ children }: any) => {
+const Content = ({ children }: { children: React.ReactElement }) => {
   return (
     <div
       style={{
@@ -67,6 +45,24 @@ const Content = ({ children }: any) => {
     >
       {children}
     </div>
+  );
+};
+
+const PageLayout = ({ children }: { children: React.ReactElement }) => {
+  return (
+    <React.StrictMode>
+      <Layout>
+        <Sidebar>
+          <a className="navitem" href="/">
+            Home
+          </a>
+          <a className="navitem" href="/about">
+            About
+          </a>
+        </Sidebar>
+        <Content>{children}</Content>
+      </Layout>
+    </React.StrictMode>
   );
 };
 

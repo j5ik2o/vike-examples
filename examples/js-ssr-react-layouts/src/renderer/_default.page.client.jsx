@@ -1,13 +1,10 @@
-export { render };
-export const clientRouting = true;
-export const hydrationCanBeAborted = true;
-
 import React from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { PageShell } from "./PageShell";
 
 let reactRoot;
-async function render(pageContext) {
+
+const render = async (pageContext) => {
   const { Page, pageProps } = pageContext;
 
   const page = (
@@ -25,4 +22,9 @@ async function render(pageContext) {
     }
     reactRoot.render(page);
   }
-}
+};
+
+const clientRouting = true;
+const hydrationCanBeAborted = true;
+
+export { render, clientRouting, hydrationCanBeAborted };

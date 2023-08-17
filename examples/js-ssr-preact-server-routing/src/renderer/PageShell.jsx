@@ -22,7 +22,7 @@ const PageShell = ({ children, pageContext }) => {
   );
 };
 
-const Layout = function ({ children }) {
+const Layout = ({ children }) => {
   return (
     <div
       style={{

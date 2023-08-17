@@ -51,7 +51,7 @@ const Sidebar = ({ children }) => {
   );
 };
 
-function Content({ children }) {
+const Content = ({ children }) => {
   return (
     <div
       style={{
@@ -64,6 +64,6 @@ function Content({ children }) {
       {children}
     </div>
   );
-}
+};
 
 export { PageLayout };

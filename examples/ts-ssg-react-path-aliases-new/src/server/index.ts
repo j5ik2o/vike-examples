@@ -16,7 +16,7 @@ const startServer = async () => {
   const app = express();
 
   if (isProduction) {
-    app.use(express.static(`${root}/dist/client`));
+    app.use(express.static(`${root}/../dist/client`));
   } else {
     const vite = await import("vite");
     const viteDevMiddleware = (

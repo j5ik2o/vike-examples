@@ -1,12 +1,18 @@
 import react from "@vitejs/plugin-react";
 import ssr from "vite-plugin-ssr/plugin";
-import { UserConfig } from "vite";
+import { defineConfig } from "vite";
+import * as path from "path";
 
-const config: UserConfig = {
+const config = defineConfig({
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
       // We prefix path aliases with '#', see https://vite-plugin-ssr.com/path-aliases#vite
-      "#root": __dirname,
+      "#root": path.resolve(__dirname, "src"),
     },
   },
   plugins: [
@@ -15,6 +21,6 @@ const config: UserConfig = {
       prerender: true,
     }),
   ],
-};
+});
 
 export default config;

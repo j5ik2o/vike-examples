@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
   );
 };
 
-const Sidebar = function ({ children }) {
+const Sidebar = ({ children }) => {
   return (
     <div
       style={{
@@ -53,7 +53,7 @@ const Sidebar = function ({ children }) {
   );
 };
 
-const Content = function ({ children }) {
+const Content = ({ children }) => {
   return (
     <div
       id="page-content"

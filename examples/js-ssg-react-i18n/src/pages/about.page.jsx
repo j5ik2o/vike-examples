@@ -1,9 +1,7 @@
-export { Page };
-
 import React from "react";
 import { LocaleText } from "../renderer/LocaleText";
 
-function Page() {
+const Page = () => {
   return (
     <>
       <h1>
@@ -14,4 +12,6 @@ function Page() {
       </p>
     </>
   );
-}
+};
+
+export { Page };
