@@ -4,9 +4,9 @@ import type { PageContext } from "./types";
 import { PageShell } from "./PageShell";
 import type {
   /*
-  // When using Client Routing https://vite-plugin-ssr.com/clientRouting
-  PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-  /*/
+            // When using Client Routing https://vite-plugin-ssr.com/clientRouting
+            PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
+            /*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
   //*/
@@ -16,7 +16,7 @@ let reactRoot: Root;
 
 const onRenderClient = async (
   pageContext: PageContextBuiltInClient & PageContext,
-) => {
+): Promise<void> => {
   const { Page, pageProps } = pageContext;
 
   const page = (
@@ -25,17 +25,17 @@ const onRenderClient = async (
     </PageShell>
   );
 
-  const reactRootElem: HTMLElement | null =
-    document.getElementById("react-root");
+  const reactRootElem = document.getElementById("react-root");
+
+  if (!reactRootElem) {
+    throw new Error("react-root element not found!");
+  }
+
   if (pageContext.isHydration) {
-    if (reactRootElem !== null) {
-      reactRoot = hydrateRoot(reactRootElem, page);
-    }
+    reactRoot = hydrateRoot(reactRootElem, page);
   } else {
     if (!reactRoot) {
-      if (reactRootElem !== null) {
-        reactRoot = createRoot(reactRootElem);
-      }
+      reactRoot = createRoot(reactRootElem);
     }
     reactRoot.render(page);
   }

@@ -14,7 +14,9 @@ const PageShell = ({
   pageContext: PageContext;
 }) => {
   // The config 'Layout' is a custom config we defined at ./+config.ts
-  const Layout = pageContext.config?.Layout || LayoutDefault;
+  const Layout =
+    (pageContext.config?.Layout as ({children}: { children: React.ReactNode }) => React.JSX.Element) ||
+    LayoutDefault;
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>

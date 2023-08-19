@@ -5,7 +5,7 @@ const Page = () => {
       <p>
         <b>
           This page uses the default layout{" "}
-          <code>/renderer/LayouDefault.jsx</code>.
+          <code>/renderer/LayoutDefault.jsx</code>.
         </b>
       </p>
       <p>This app showcases (nested) layouts.</p>

@@ -1,6 +1,11 @@
+import React from "react";
 import "./LayoutDefault.css";
 
-const LayoutDefault = ({ children }: { children: React.ReactNode }) => {
+const LayoutDefault: ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => React.JSX.Element = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{

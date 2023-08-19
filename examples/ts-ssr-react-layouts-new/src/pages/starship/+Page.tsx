@@ -10,7 +10,7 @@ const Page = () => {
       <p>
         <b>
           This page uses the default layout{" "}
-          <code>/renderer/LayouDefault.jsx</code>.
+          <code>/renderer/LayoutDefault.jsx</code>.
           <br />
           With the nested layout <code>/pages/starship/Layout.jsx</code>.
         </b>
@@ -34,7 +34,7 @@ const Page = () => {
           padding: "10px 40px",
         }}
       >
-        <InnerView view={view} />
+        <InnerView view={view as ViewType} />
       </div>
       <br />
       <p>
@@ -47,7 +47,7 @@ const Page = () => {
   );
 };
 
-const Link = (props) => {
+const Link = (props: any) => {
   // We set `keep-scroll-position` to tell vite-plugin-ssr to preserve the current scroll position
   return (
     <a
@@ -76,10 +76,12 @@ const Overview = () => {
   return (
     <>
       <h2>Overview</h2>
-      <p>The Starship will, at term, repalce all SpaceX's rocket models.</p>
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
+      <p>The Starship will, at term, replace all SpaceX's rocket models.</p>
       <p>The mission: Make life multi planetary.</p>
       <p>
         Starship drastically reduces the cost of sending payload to space,
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         ensuring SpaceX's financial prosperity.
       </p>
     </>
