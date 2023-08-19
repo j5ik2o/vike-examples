@@ -1,6 +1,5 @@
 import {HasChildrenComponent, HasChildren, HasPageContext} from "./types";
 
-export { PageShell };
 
 import React from "react";
 import { LayoutDefault } from "./LayoutDefault";
@@ -23,3 +22,5 @@ const PageShell = ({
     </React.StrictMode>
   );
 };
+
+export { PageShell };
