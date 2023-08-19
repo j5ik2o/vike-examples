@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import {configureStore, createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 export interface CounterState {
   value: number;
@@ -8,13 +8,12 @@ const INITIAL_STATE: CounterState = {
   value: 100,
 };
 
-export const counterSlice = (initialState: CounterState) =>
-  createSlice({
+export const counterSlice = createSlice({
     name: "counter",
-    initialState,
+    initialState: INITIAL_STATE,
     reducers: {
-      set: (state, action) => {
-        state = action.payload;
+      set: (state, action: PayloadAction<number>) => {
+         state.value = action.payload;
       },
       increment: (state) => {
         console.log(`state = ${JSON.stringify(state)}`);
@@ -29,7 +28,7 @@ export const counterSlice = (initialState: CounterState) =>
 
 export const store = configureStore({
   reducer: {
-    counter: counterSlice(INITIAL_STATE).reducer,
+    counter: counterSlice.reducer,
   },
 });
 
@@ -37,7 +36,7 @@ export const selectCount = (state: ReturnType<typeof store.getState>) =>
   state.counter.value;
 
 export const { set, increment, decrement } =
-  counterSlice(INITIAL_STATE).actions;
+  counterSlice.actions;
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

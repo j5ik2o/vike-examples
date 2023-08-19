@@ -24,6 +24,7 @@ type PageContextCustom = {
     };
   };
   pageHtml: string;
+  PRELOADED_STATE: CounterState;
 };
 
 type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom;

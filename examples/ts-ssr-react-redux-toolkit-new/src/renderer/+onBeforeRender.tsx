@@ -10,7 +10,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
 } from "vite-plugin-ssr/types";
-import {set, store} from "./store";
+import {store} from "./store";
 import type { PageContext } from "./types";
 import { PageContextProvider } from "./usePageContext";
 
@@ -18,6 +18,7 @@ const onBeforeRender = async (
   pageContext: PageContextBuiltInClient & PageContext,
 ) => {
   console.log(`onBeforeRender: ${JSON.stringify(store.getState())}`);
+
   const { Page } = pageContext;
   const pageHtml = renderToString(
     <PageContextProvider pageContext={pageContext}>
@@ -27,9 +28,12 @@ const onBeforeRender = async (
     </PageContextProvider>,
   );
 
+  const PRELOADED_STATE = { value: 10 };
+
   return {
     pageContext: {
       pageHtml,
+      PRELOADED_STATE
     },
   };
 };
