@@ -3,10 +3,16 @@ import React from "react";
 import { hydrateRoot } from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 
-const onRenderClient = async (pageContext) => {
+const onRenderClient = async (pageContext: any) => {
   const { Page, pageProps } = pageContext;
+  const pageViewElem = document.getElementById("page-view");
+
+  if (!pageViewElem) {
+    throw new Error("page-view element not found!");
+  }
+
   hydrateRoot(
-    document.getElementById("page-view"),
+    pageViewElem,
     <PageLayout pageContext={pageContext}>
       <Page {...pageProps} />
     </PageLayout>,

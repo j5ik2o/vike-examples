@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "tsc -p . && vite build",
+    "build": "tsc && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "dev:node": "npm run server:dev",

@@ -19,7 +19,7 @@ const onRenderClient = async (
   const pageViewElem = document.getElementById("page-view");
 
   if (!pageViewElem) {
-    throw new Error("react-root element not found!");
+    throw new Error("page-view element not found!");
   }
 
   hydrateRoot(

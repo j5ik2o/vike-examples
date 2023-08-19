@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "vite build",
+    "build": "tsc && vite build",
     "clean": "rimraf ./dist",
     "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler publish",
     "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) vite build && wrangler dev",

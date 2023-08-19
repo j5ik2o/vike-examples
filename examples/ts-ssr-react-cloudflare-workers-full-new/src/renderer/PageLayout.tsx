@@ -1,8 +1,15 @@
 import React from "react";
 import "./PageLayout.css";
 import { PageContextProvider } from "./usePageContext";
+import { PageContext } from "./types";
 
-const PageLayout = ({ pageContext, children }) => {
+const PageLayout = ({
+  pageContext,
+  children,
+}: {
+  pageContext: PageContext;
+  children: React.ReactNode;
+}) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -25,7 +32,7 @@ const PageLayout = ({ pageContext, children }) => {
   );
 };
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -39,7 +46,7 @@ const Layout = ({ children }) => {
   );
 };
 
-const Sidebar = ({ children }) => {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
@@ -57,7 +64,7 @@ const Sidebar = ({ children }) => {
   );
 };
 
-const Content = ({ children }) => {
+const Content = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
