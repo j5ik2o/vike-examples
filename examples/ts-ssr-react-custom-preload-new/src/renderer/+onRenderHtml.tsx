@@ -5,9 +5,10 @@ import type { InjectFilterEntry } from "vite-plugin-ssr/types";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { PageLayout } from "./PageLayout";
+import type { PageContext } from "./types";
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const onRenderHtml = async (pageContext: any) => {
+const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
   const { Page, pageProps } = pageContext;
   // The config 'preloadStrategy' is a custom config we defined at ./+config.ts
   const { preloadStrategy } = pageContext.config;

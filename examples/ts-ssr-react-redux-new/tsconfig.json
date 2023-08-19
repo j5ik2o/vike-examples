@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "allowJs": true,
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "Node",
@@ -8,10 +9,9 @@
     "types": ["node", "vite/client"],
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noEmit": true,
+    "esModuleInterop": true
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {
     "transpileOnly": true,
