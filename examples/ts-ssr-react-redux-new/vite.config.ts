@@ -1,7 +1,8 @@
 import react from "@vitejs/plugin-react";
+import { UserConfigExport, defineConfig } from "vite";
 import ssr from "vite-plugin-ssr/plugin";
 
-export default {
+export default defineConfig({
   root: "./src",
   public: "./src/public",
   build: {
@@ -9,4 +10,4 @@ export default {
     emptyOutDir: true,
   },
   plugins: [react(), ssr()],
-};
+} as UserConfigExport);

@@ -1,7 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderClient
 import { Root, createRoot, hydrateRoot } from "react-dom/client";
-import type { PageContext } from "./types";
 import { PageShell } from "./PageShell";
+import type { PageContext } from "./types";
 import type {
   /*
             // When using Client Routing https://vite-plugin-ssr.com/clientRouting

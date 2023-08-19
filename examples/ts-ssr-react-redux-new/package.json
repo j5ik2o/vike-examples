@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "dev:node": "npm run server:dev",
@@ -25,17 +25,21 @@
     "redux": "^4.2.1",
     "sirv": "^2.0.3",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135"
+    "vite-plugin-ssr": "0.4.136"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
     "@types/react-redux": "^7.1.25",
     "@vitejs/plugin-react": "^4.0.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
-    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "prettier-plugin-organize-imports": "^3.2.3",
     "rimraf": "^5.0.1"
   }

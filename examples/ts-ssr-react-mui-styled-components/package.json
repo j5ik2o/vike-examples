@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "vite build",
+    "build": "tsc && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "dev:node": "npm run server:dev",
@@ -10,7 +10,7 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "preview": "vite build && vite preview",
+    "preview": "npm run build && vite preview",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
@@ -20,7 +20,7 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/lab": "5.0.0-alpha.140",
     "@mui/material": "^5.14.5",
-    "@mui/styled-engine-sc": "^5.12.0",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.12.0",    
     "compression": "^1.7.4",
     "express": "^4.18.2",
     "react": "^18.2.0",
@@ -45,5 +45,8 @@
     "prettier": "3.0.2",
     "prettier-plugin-organize-imports": "^3.2.3",
     "rimraf": "^5.0.1"
+  },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.12.0"
   }
 }

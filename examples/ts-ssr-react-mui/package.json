@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "vite build",
+    "build": "tsc && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "dev:node": "npm run server:dev",
@@ -10,7 +10,7 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "preview": "vite build && vite preview",
+    "preview": "npm run build && vite preview",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
