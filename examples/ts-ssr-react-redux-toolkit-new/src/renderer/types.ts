@@ -11,7 +11,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
 import { CounterState } from "./store";
 
 type PageProps = Record<string, unknown>;
-type Page = (pageProps: PageProps) => React.ReactElement;
+type Page = (pageProps: PageProps) => React.JSX.Element;
 
 type PageContextCustom = {
   Page: Page;

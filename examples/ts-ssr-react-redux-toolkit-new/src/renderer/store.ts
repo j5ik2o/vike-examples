@@ -13,6 +13,7 @@ export const counterSlice = createSlice({
     initialState: INITIAL_STATE,
     reducers: {
       set: (state, action: PayloadAction<number>) => {
+          console.log(`set: state = ${JSON.stringify(state)}, action.payload = ${JSON.stringify(action.payload)}`);
          state.value = action.payload;
       },
       increment: (state) => {

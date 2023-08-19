@@ -19,7 +19,7 @@ const onRenderClient = async (
   console.log(
     `onRenderClient: store.getState() = ${JSON.stringify(store.getState())}`,
   );
-  console.log(`useEffect: ${JSON.stringify(pageContext.PRELOADED_STATE)}`);
+  console.log(`onRenderClient: pageContext.PRELOADED_STATE = ${JSON.stringify(pageContext.PRELOADED_STATE)}`);
   store.dispatch(set(pageContext.PRELOADED_STATE.value));
 
   const { Page } = pageContext;

@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../renderer/hooks";
 import {decrement, increment, selectCount, set} from "../../renderer/store";
-import {useEffect} from "react";
-import {usePageContext} from "../../renderer/usePageContext";
+// import {useEffect} from "react";
+// import {usePageContext} from "../../renderer/usePageContext";
 
 const Page = () => {
   const count = useAppSelector(selectCount);
