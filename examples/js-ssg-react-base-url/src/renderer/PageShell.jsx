@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "../components/Link";
-import logo from "./logo.svg";
 import "./PageShell.css";
+import logo from "./logo.svg";
 
 const PageShell = ({ children }) => {
   return (

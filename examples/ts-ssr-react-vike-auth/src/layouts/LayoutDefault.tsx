@@ -1,8 +1,8 @@
 import React from "react";
-import "./LayoutDefault.css";
-import { reload } from "vite-plugin-ssr/client/router";
 import { usePageContext } from "vike-react/usePageContext";
+import { reload } from "vite-plugin-ssr/client/router";
 import { Button } from "../components/Button";
+import "./LayoutDefault.css";
 
 const LayoutDefault = ({ children }: { children: React.ReactNode }) => {
   return (

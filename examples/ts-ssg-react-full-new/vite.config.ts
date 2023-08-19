@@ -1,7 +1,7 @@
-import react from "@vitejs/plugin-react-swc";
 import mdx from "@mdx-js/rollup";
-import ssr from "vite-plugin-ssr/plugin";
+import react from "@vitejs/plugin-react-swc";
 import { UserConfig } from "vite";
+import ssr from "vite-plugin-ssr/plugin";
 
 export default {
   root: "./src",

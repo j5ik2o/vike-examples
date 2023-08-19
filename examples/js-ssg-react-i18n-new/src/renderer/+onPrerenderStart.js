@@ -1,5 +1,5 @@
 // https://vite-plugin-ssr.com/onPrerenderStart
-import { locales, localeDefault } from "../locales";
+import { localeDefault, locales } from "../locales";
 
 // We only need this for pre-rendered apps https://vite-plugin-ssr.com/pre-rendering
 const onPrerenderStart = (prerenderContext) => {

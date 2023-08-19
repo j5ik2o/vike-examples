@@ -1,7 +1,7 @@
-import "./style.css";
 import React from "react";
-import logoUrl from "./logo.svg";
 import { Link } from "./Link";
+import logoUrl from "./logo.svg";
+import "./style.css";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

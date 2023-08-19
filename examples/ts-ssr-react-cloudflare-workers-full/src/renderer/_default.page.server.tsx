@@ -6,7 +6,6 @@ import { PageContext } from "./types";
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps"];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const render = async (pageContext: PageContext) => {
   const { Page, pageProps } = pageContext;
 
@@ -32,4 +31,4 @@ const render = async (pageContext: PageContext) => {
     </html>`;
 };
 
-export { render, passToClient };
+export { passToClient, render };

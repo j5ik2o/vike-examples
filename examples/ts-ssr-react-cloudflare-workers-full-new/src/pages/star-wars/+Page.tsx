@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "../../renderer/usePageContext";
 import { Counter } from "../../components/Counter";
+import { usePageContext } from "../../renderer/usePageContext";
 
 const Page = () => {
   return (

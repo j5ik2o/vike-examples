@@ -1,8 +1,7 @@
 import ReactDOMServer from "react-dom/server";
-import React from "react";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { localeDefault, locales } from "../locales";
 import { PageShell } from "./PageShell";
-import { locales, localeDefault } from "../locales";
 
 const passToClient = ["pageProps", "locale"];
 
@@ -51,4 +50,4 @@ const onBeforePrerender = (prerenderContext) => {
   };
 };
 
-export { render, passToClient, onBeforePrerender };
+export { onBeforePrerender, passToClient, render };

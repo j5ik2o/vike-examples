@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import ssr from "vite-plugin-ssr/plugin";
-import { baseServer, baseAssets } from "./src/base.js";
+import { baseAssets, baseServer } from "./src/base.js";
 
 export default {
   root: "./src",

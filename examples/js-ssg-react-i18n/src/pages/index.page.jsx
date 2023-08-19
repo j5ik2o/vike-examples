@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { locales } from "../locales";
 import { Link } from "../renderer/Link";
 import { LocaleText } from "../renderer/LocaleText";

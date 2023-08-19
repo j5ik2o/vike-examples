@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TodoList } from "./TodoList";
 import type { TodoItem } from "../../database/todoItems";
+import { TodoList } from "./TodoList";
 
 const Page = ({ todoItemsInitial }: { todoItemsInitial: TodoItem[] }) => {
   return (

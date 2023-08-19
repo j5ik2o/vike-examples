@@ -1,6 +1,6 @@
-import { Counter } from "./Counter";
 import Menu from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
+import { Counter } from "./Counter";
 
 const Page = () => {
   return (

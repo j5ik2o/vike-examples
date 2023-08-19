@@ -1,5 +1,5 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
 const onRenderHtml = async (pageContext) => {

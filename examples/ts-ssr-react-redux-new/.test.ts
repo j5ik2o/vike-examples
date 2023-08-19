@@ -1,11 +1,11 @@
 import {
   autoRetry,
-  fetchHtml,
-  page,
-  test,
   expect,
-  run,
+  fetchHtml,
   getServerUrl,
+  page,
+  run,
+  test,
 } from "@brillout/test-e2e";
 
 run("npm run dev");

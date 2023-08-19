@@ -1,6 +1,5 @@
-import React from "react";
 import { renderToString } from "react-dom/server";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
 
 // See https://vite-plugin-ssr.com/data-fetching
@@ -22,4 +21,4 @@ const render = async (pageContext) => {
     </html>`;
 };
 
-export { render, passToClient };
+export { passToClient, render };

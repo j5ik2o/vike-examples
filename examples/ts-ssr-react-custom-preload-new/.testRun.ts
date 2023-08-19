@@ -1,4 +1,4 @@
-import { test, expect, run, partRegex, fetchHtml } from "@brillout/test-e2e";
+import { expect, fetchHtml, partRegex, run, test } from "@brillout/test-e2e";
 
 export { testRun };
 

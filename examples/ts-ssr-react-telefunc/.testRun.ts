@@ -1,14 +1,11 @@
 import {
-  page,
-  test,
-  expect,
-  run,
-  getServerUrl,
   autoRetry,
+  expect,
   fetchHtml,
-  isWindows,
-  isMac,
-  sleep,
+  getServerUrl,
+  page,
+  run,
+  test,
 } from "@brillout/test-e2e";
 
 export { testRun };

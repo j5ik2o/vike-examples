@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-import React from "react";
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";

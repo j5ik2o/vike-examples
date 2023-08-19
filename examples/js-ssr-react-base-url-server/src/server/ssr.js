@@ -1,6 +1,6 @@
 import { renderPage } from "vite-plugin-ssr/server";
-import { createExpressApp } from "./createExpressApp.js";
 import { baseServer } from "../base.js";
+import { createExpressApp } from "./createExpressApp.js";
 
 const { app, startApp } = createExpressApp({ base: baseServer, port: 3000 });
 

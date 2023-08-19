@@ -1,17 +1,16 @@
 // https://vite-plugin-ssr.com/onBeforeRender
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
-import { getStore } from "./store";
-import type { PageContext } from "./types";
 import type {
   /*
-            // When using Client Routing https://vite-plugin-ssr.com/clientRouting
-            PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-            /*/
+// When using Client Routing https://vite-plugin-ssr.com/clientRouting
+PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
+/*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-  //*/
 } from "vite-plugin-ssr/types";
+import { getStore } from "./store";
+import type { PageContext } from "./types";
 
 const onBeforeRender = async (
   pageContext: PageContextBuiltInClient & PageContext,

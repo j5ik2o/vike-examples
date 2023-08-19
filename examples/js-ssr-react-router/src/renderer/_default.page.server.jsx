@@ -1,7 +1,6 @@
-import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 
 const passToClient = ["pageProps"];
 
@@ -20,4 +19,4 @@ const render = async (pageContext) => {
     </html>`;
 };
 
-export { render, passToClient };
+export { passToClient, render };

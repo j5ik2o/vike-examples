@@ -1,15 +1,15 @@
 import {
-  run,
-  page,
-  test,
-  expect,
-  getServerUrl,
-  fetchHtml,
   autoRetry,
-  partRegex,
   editFile,
   editFileRevert,
+  expect,
+  fetchHtml,
+  getServerUrl,
+  page,
+  partRegex,
+  run,
   sleep,
+  test,
 } from "@brillout/test-e2e";
 import assert from "assert";
 

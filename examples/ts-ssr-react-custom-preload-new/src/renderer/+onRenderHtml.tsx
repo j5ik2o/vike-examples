@@ -1,12 +1,12 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { renderToString } from "react-dom/server";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import type { InjectFilterEntry } from "vite-plugin-ssr/types";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "./types";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
 const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
   const { Page, pageProps } = pageContext;

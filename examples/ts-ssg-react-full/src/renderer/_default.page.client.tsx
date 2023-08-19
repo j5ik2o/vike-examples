@@ -44,10 +44,10 @@ const clientRouting = true;
 const hydrationCanBeAborted = true;
 
 export {
-  render,
-  onHydrationEnd,
-  onPageTransitionStart,
-  onPageTransitionEnd,
   clientRouting,
   hydrationCanBeAborted,
+  onHydrationEnd,
+  onPageTransitionEnd,
+  onPageTransitionStart,
+  render,
 };

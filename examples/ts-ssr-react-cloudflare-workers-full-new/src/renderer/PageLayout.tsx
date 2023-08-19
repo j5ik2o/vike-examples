@@ -1,7 +1,7 @@
 import React from "react";
 import "./PageLayout.css";
-import { PageContextProvider } from "./usePageContext";
 import { PageContext } from "./types";
+import { PageContextProvider } from "./usePageContext";
 
 const PageLayout = ({
   pageContext,

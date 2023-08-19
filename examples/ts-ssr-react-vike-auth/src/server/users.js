@@ -25,4 +25,4 @@ const checkCredentials = (username, password) => {
   return user;
 };
 
-export { getUser, checkCredentials };
+export { checkCredentials, getUser };

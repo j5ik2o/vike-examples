@@ -1,7 +1,7 @@
-import express from "express";
-import { root } from "./root.js";
-import { createExpressApp } from "./createExpressApp.js";
 import cors from "cors";
+import express from "express";
+import { createExpressApp } from "./createExpressApp.js";
+import { root } from "./root.js";
 
 const { app, startApp } = createExpressApp({ base: "/cdn/", port: 8080 });
 

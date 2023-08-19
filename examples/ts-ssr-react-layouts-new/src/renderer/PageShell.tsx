@@ -1,10 +1,10 @@
 export { PageShell };
 
 import React from "react";
-import "./PageShell.css";
 import { LayoutDefault } from "./LayoutDefault";
-import { PageContextProvider } from "./usePageContext";
+import "./PageShell.css";
 import type { PageContext } from "./types";
+import { PageContextProvider } from "./usePageContext";
 
 const PageShell = ({
   children,
@@ -15,8 +15,11 @@ const PageShell = ({
 }) => {
   // The config 'Layout' is a custom config we defined at ./+config.ts
   const Layout =
-    (pageContext.config?.Layout as ({children}: { children: React.ReactNode }) => React.JSX.Element) ||
-    LayoutDefault;
+    (pageContext.config?.Layout as ({
+      children,
+    }: {
+      children: React.ReactNode;
+    }) => React.JSX.Element) || LayoutDefault;
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>

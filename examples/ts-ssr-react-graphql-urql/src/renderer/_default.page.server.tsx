@@ -1,18 +1,18 @@
-import ReactDOMServer from "react-dom/server";
-import {
-  createClient,
-  ssrExchange,
-  dedupExchange,
-  cacheExchange,
-  fetchExchange,
-  Provider,
-} from "urql";
-import prepass from "react-ssr-prepass";
-import { PageShell } from "./PageShell";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
-import type { PageContext } from "./types";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 import "isomorphic-fetch";
+import ReactDOMServer from "react-dom/server";
+import prepass from "react-ssr-prepass";
+import {
+  Provider,
+  cacheExchange,
+  createClient,
+  dedupExchange,
+  fetchExchange,
+  ssrExchange,
+} from "urql";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import { PageShell } from "./PageShell";
+import type { PageContext } from "./types";
 
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps", "urlPathname", "urqlState"];
@@ -79,4 +79,4 @@ const onBeforeRender = async (
   };
 };
 
-export { passToClient, render, onBeforeRender };
+export { onBeforeRender, passToClient, render };

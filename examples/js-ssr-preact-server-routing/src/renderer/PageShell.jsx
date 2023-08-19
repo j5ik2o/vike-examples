@@ -1,7 +1,7 @@
+import { Link } from "./Link";
+import "./PageShell.css";
 import logo from "./logo.svg";
 import { PageContextProvider } from "./usePageContext";
-import "./PageShell.css";
-import { Link } from "./Link";
 
 const PageShell = ({ children, pageContext }) => {
   return (

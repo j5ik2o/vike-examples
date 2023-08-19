@@ -1,5 +1,5 @@
-import { resolveRoute } from "vite-plugin-ssr/routing";
 import { RenderErrorPage } from "vite-plugin-ssr/RenderErrorPage";
+import { resolveRoute } from "vite-plugin-ssr/routing";
 
 // Route Functions enables advanced routing logic
 const route = (pageContext: { urlPathname: string }) => {

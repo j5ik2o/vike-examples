@@ -1,4 +1,3 @@
-import React from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { PageShell } from "./PageShell";
 
@@ -27,4 +26,4 @@ const render = async (pageContext) => {
 const clientRouting = true;
 const hydrationCanBeAborted = true;
 
-export { render, clientRouting, hydrationCanBeAborted };
+export { clientRouting, hydrationCanBeAborted, render };

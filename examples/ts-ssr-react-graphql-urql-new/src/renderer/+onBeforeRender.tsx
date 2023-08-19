@@ -1,19 +1,19 @@
 // https://vite-plugin-ssr.com/onBeforeRender
 
-import ReactDOMServer from "react-dom/server";
-import {
-  createClient,
-  ssrExchange,
-  dedupExchange,
-  cacheExchange,
-  fetchExchange,
-  Provider,
-} from "urql";
-import prepass from "react-ssr-prepass";
 import "isomorphic-fetch";
+import ReactDOMServer from "react-dom/server";
+import prepass from "react-ssr-prepass";
+import {
+  Provider,
+  cacheExchange,
+  createClient,
+  dedupExchange,
+  fetchExchange,
+  ssrExchange,
+} from "urql";
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 import { PageShell } from "./PageShell";
 import type { PageContext } from "./types";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
 const onBeforeRender = async (
   pageContext: PageContextBuiltIn & PageContext,

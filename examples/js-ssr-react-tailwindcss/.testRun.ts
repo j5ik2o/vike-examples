@@ -1,19 +1,19 @@
 export { testRun };
 
 import {
-  page,
-  test,
-  expect,
-  run,
-  partRegex,
   autoRetry,
+  expect,
   fetchHtml,
   getServerUrl,
+  page,
+  partRegex,
+  run,
+  test,
   testScreenshotFixture,
 } from "@brillout/test-e2e";
+import { createRequire } from "module";
 import path from "path";
 import url from "url";
-import { createRequire } from "module";
 
 function testRun(cmd: "npm run dev" | "npm run preview" | "npm run prod") {
   run(cmd);

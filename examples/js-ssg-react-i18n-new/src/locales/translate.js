@@ -1,5 +1,5 @@
-import { translations } from "./translations";
 import { localeDefault } from "./locales";
+import { translations } from "./translations";
 
 const translate = (text, locale) => {
   if (locale === localeDefault) {

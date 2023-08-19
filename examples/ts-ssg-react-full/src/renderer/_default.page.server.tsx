@@ -40,4 +40,4 @@ const render = async (pageContext: PageContextServer) => {
   };
 };
 
-export { render, passToClient };
+export { passToClient, render };

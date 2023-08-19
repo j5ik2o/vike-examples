@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderClient
-import React from "react";
 import { hydrate } from "react-dom";
 import { PageLayout } from "./PageLayout";
 

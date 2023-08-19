@@ -1,6 +1,6 @@
 import fetch from "cross-fetch";
-import { filterMovieData } from "../filterMovieData";
 import type { PageContextBuiltIn } from "vike-react/types";
+import { filterMovieData } from "../filterMovieData";
 import type { MovieDetails } from "../types";
 
 const onBeforeRender = async (pageContext: PageContextBuiltIn) => {

@@ -1,17 +1,17 @@
 export { testRun };
 
 import {
-  page,
-  test,
-  expect,
-  run,
   autoRetry,
+  expect,
   fetchHtml,
-  partRegex,
   getServerUrl,
+  page,
+  partRegex,
+  run,
+  test,
 } from "@brillout/test-e2e";
-import { ensureWasClientSideRouted, testCounter } from "../../test/utils";
 import assert from "node:assert";
+import { ensureWasClientSideRouted, testCounter } from "../../test/utils";
 
 function testRun(
   cmd: "npm run dev" | "npm run preview" | "npm run start",

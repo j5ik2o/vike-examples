@@ -1,8 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import ReactDOMServer from "react-dom/server";
-import React from "react";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageShell } from "./PageShell";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 // Vite automatically injects the Base URL to `logoUrl`.
 import logoUrl from "./logo.svg";
 

@@ -1,9 +1,9 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { renderToString } from "react-dom/server";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 import { PageShell } from "./PageShell";
 import type { PageContext } from "./types";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
 const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
   const { Page, pageProps } = pageContext;

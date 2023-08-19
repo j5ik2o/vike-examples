@@ -30,4 +30,4 @@ const getPageTitle = (pageContext) => {
 
 const clientRouting = true;
 
-export { render, clientRouting };
+export { clientRouting, render };

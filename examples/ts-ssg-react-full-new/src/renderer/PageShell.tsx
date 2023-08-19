@@ -1,8 +1,8 @@
 import React from "react";
-import logoUrl from "./logo.svg";
-import { PageContextProvider } from "./usePageContext";
 import { Link } from "./Link";
+import logoUrl from "./logo.svg";
 import type { PageContext } from "./types";
+import { PageContextProvider } from "./usePageContext";
 
 const PageShell = ({
   pageContext,

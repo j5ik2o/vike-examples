@@ -1,8 +1,8 @@
 import fetch from "cross-fetch";
-import { filterMovieData } from "./filterMovieData";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
-import type { MovieDetails } from "./types";
 import { RenderErrorPage } from "vite-plugin-ssr/RenderErrorPage";
+import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import { filterMovieData } from "./filterMovieData";
+import type { MovieDetails } from "./types";
 
 const Page = ({ movie }: { movie: MovieDetails }) => {
   return (

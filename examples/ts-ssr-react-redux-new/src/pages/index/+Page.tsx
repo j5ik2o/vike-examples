@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Page = () => {
   const count = useSelector((state: { value: number }) => state.value);

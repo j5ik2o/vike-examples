@@ -1,7 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderClient
-import "./css/index.css";
 import ReactDOM from "react-dom/client";
 import { PageShell } from "./PageShell";
+import "./css/index.css";
 import { getPageTitle } from "./getPageTitle";
 import type { PageContextClient } from "./types";
 

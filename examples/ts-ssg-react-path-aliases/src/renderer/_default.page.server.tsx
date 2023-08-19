@@ -1,7 +1,7 @@
-import ReactDOMServer from "react-dom/server";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
-import { PageLayout } from "./PageLayout";
 import type { PageContext } from "#root/types";
+import ReactDOMServer from "react-dom/server";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { PageLayout } from "./PageLayout";
 
 const render = (pageContext: PageContext) => {
   const { Page } = pageContext;

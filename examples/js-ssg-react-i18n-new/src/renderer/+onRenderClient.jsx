@@ -1,7 +1,6 @@
 // https://vite-plugin-ssr.com/onRenderClient
 export default onRenderClient;
 
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { PageShell } from "./PageShell";
 

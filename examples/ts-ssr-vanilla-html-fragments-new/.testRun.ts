@@ -1,6 +1,6 @@
 export { testRun };
 
-import { run, fetchHtml, test, expect } from "@brillout/test-e2e";
+import { expect, fetchHtml, run, test } from "@brillout/test-e2e";
 
 function testRun(cmd: "npm run dev" | "npm run preview") {
   run(cmd);

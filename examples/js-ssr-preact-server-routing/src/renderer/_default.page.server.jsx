@@ -1,6 +1,6 @@
 import renderToString from "preact-render-to-string";
+import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageShell } from "./PageShell";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server";
 import logoUrl from "./logo.svg";
 
 const render = async (pageContext) => {
@@ -43,4 +43,4 @@ const render = async (pageContext) => {
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ["pageProps", "urlPathname"];
 
-export { render, passToClient };
+export { passToClient, render };

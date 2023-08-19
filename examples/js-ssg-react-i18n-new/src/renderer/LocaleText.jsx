@@ -1,6 +1,5 @@
-import React from "react";
-import { usePageContext } from "./usePageContext";
 import { translate } from "../locales";
+import { usePageContext } from "./usePageContext";
 
 const LocaleText = ({ children }) => {
   const pageContext = usePageContext();

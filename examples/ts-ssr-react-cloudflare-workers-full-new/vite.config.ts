@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
-import ssr from "vite-plugin-ssr/plugin";
 import type { UserConfig } from "vite";
+import ssr from "vite-plugin-ssr/plugin";
 
 export default {
   root: "./src",

@@ -1,4 +1,4 @@
-import { locales, localeDefault } from "./locales";
+import { localeDefault, locales } from "./locales";
 
 const extractLocale = (url) => {
   const urlPaths = url.split("/");

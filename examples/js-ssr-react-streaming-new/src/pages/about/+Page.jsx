@@ -1,7 +1,5 @@
 export default Page;
 
-import React from "react";
-
 const Page = () => {
   return (
     <>

@@ -1,9 +1,9 @@
-import express from "express";
-import { root } from "./root.js";
-import { createExpressApp } from "./createExpressApp.js";
-import cors from "cors";
-import { baseAssets } from "../base.js";
 import assert from "assert";
+import cors from "cors";
+import express from "express";
+import { baseAssets } from "../base.js";
+import { createExpressApp } from "./createExpressApp.js";
+import { root } from "./root.js";
 
 assert(baseAssets === "http://localhost:8080/cdn/");
 const { app, startApp } = createExpressApp({ base: "/cdn/", port: 8080 });

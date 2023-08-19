@@ -25,4 +25,4 @@ const render = async (pageContext: any) => {
 const clientRouting = true;
 const hydrationCanBeAborted = true;
 
-export { render, clientRouting, hydrationCanBeAborted };
+export { clientRouting, hydrationCanBeAborted, render };

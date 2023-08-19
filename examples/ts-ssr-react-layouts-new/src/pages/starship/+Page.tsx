@@ -47,15 +47,10 @@ const Page = () => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Link = (props: any) => {
   // We set `keep-scroll-position` to tell vite-plugin-ssr to preserve the current scroll position
-  return (
-    <a
-      keep-scroll-position=""
-      style={{ marginRight: 10, ...props.style }}
-      {...props}
-    />
-  );
+  return <a style={{ marginRight: 10, ...props.style }} {...props} />;
 };
 
 type ViewType = "overview" | "reviews" | "spec";
@@ -93,11 +88,12 @@ const Reviews = () => {
     <>
       <h2>Reviews</h2>
       <p>
-        "The Starship brought me and my family to Mars safely." -- Rom Brillout
+        &quot;The Starship brought me and my family to Mars safely.&quot; -- Rom
+        Brillout
       </p>
       <p>
-        "A handful of Starships was enough to set up SkyNet. It worked like a
-        charm." -- Skynet Research
+        &quot;A handful of Starships was enough to set up SkyNet. It worked like
+        a charm. &quot; -- Skynet Research
       </p>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import "./PageShell.css";
 import { LayoutDefault } from "./LayoutDefault";
+import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
 
 const PageShell = ({ children, pageContext }) => {

@@ -1,8 +1,10 @@
 import { createStore, Store } from "redux";
 
-const getStore = (preloadedState: {
-  value: number;
-} = { value: 100 }): Store<{ value: number }, { type: string }> => {
+const getStore = (
+  preloadedState: {
+    value: number;
+  } = { value: 100 },
+): Store<{ value: number }, { type: string }> => {
   console.log(preloadedState);
   return createStore(counterReducer, preloadedState);
 };

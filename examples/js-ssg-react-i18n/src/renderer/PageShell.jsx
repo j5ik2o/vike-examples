@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "./Link";
 import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
-import { Link } from "./Link";
 
 const PageShell = ({ pageContext, children }) => {
   return (

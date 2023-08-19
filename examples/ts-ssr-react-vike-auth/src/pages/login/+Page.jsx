@@ -1,4 +1,3 @@
-import React from "react";
 import { reload } from "vite-plugin-ssr/client/router";
 import { Button } from "../../components/Button";
 

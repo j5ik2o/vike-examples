@@ -1,6 +1,5 @@
-import React from "react";
-import { usePageContext } from "./usePageContext";
 import { localeDefault } from "../locales";
+import { usePageContext } from "./usePageContext";
 
 const Link = ({ href, locale, ...props }) => {
   const pageContext = usePageContext();

@@ -24,6 +24,4 @@ const getTitle = (movies: Movie[] | MovieDetails[]): string => {
   return title;
 };
 
-export { getStarWarsMovies };
-export { filterMoviesData };
-export { getTitle };
+export { filterMoviesData, getStarWarsMovies, getTitle };

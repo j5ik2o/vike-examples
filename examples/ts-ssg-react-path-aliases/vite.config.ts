@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
-import ssr from "vite-plugin-ssr/plugin";
-import { defineConfig } from "vite";
 import * as path from "path";
+import { defineConfig } from "vite";
+import ssr from "vite-plugin-ssr/plugin";
 
 const config = defineConfig({
   root: "./src",

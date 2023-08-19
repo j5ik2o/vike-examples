@@ -1,8 +1,8 @@
-import type { Config } from "vike-react/types";
-import Layout from "../layouts/LayoutDefault";
-import Head from "../layouts/HeadDefault";
-import logoUrl from "../assets/logo.svg";
 import vikeReact from "vike-react";
+import type { Config } from "vike-react/types";
+import logoUrl from "../assets/logo.svg";
+import Head from "../layouts/HeadDefault";
+import Layout from "../layouts/LayoutDefault";
 
 // Default configs (can be overriden by pages)
 export default {

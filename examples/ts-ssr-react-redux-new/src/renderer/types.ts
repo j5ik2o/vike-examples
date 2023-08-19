@@ -1,12 +1,12 @@
+import React from "react";
 import type {
   PageContextBuiltIn,
   /*
-  // When using Client Routing https://vite-plugin-ssr.com/clientRouting
-  PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-  /*/
+// When using Client Routing https://vite-plugin-ssr.com/clientRouting
+PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
+/*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-  //*/
 } from "vite-plugin-ssr/types";
 
 type PageProps = Record<string, unknown>;
@@ -31,8 +31,10 @@ type PageContextClient = PageContextBuiltInClient<Page> & PageContextCustom;
 
 type PageContext = PageContextClient | PageContextServer;
 
-export type { PageContextCustom };
-export type { PageContextServer };
-export type { PageContextClient };
-export type { PageContext };
-export type { PageProps };
+export type {
+  PageContext,
+  PageContextClient,
+  PageContextCustom,
+  PageContextServer,
+  PageProps,
+};

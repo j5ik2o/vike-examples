@@ -1,5 +1,3 @@
-import React from "react";
-
 const Link = ({ href, children }) => {
   if (!href.startsWith("/")) throw new Error("Link href should start with /");
   href = import.meta.env.BASE_URL + href;
