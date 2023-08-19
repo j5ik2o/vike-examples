@@ -1,11 +1,8 @@
 import React from "react";
 import "./LayoutDefault.css";
+import {HasChildrenComponent, HasChildren} from "./types";
 
-const LayoutDefault: ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => React.JSX.Element = ({ children }: { children: React.ReactNode }) => {
+const LayoutDefault: HasChildrenComponent = ({ children }: HasChildren) => {
   return (
     <div
       style={{
@@ -30,7 +27,7 @@ const LayoutDefault: ({
   );
 };
 
-const Sidebar = ({ children }: { children: React.ReactNode }) => {
+const Sidebar: HasChildrenComponent = ({ children }: HasChildren) => {
   return (
     <div
       style={{
@@ -48,7 +45,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const Content = ({ children }: { children: React.ReactNode }) => {
+const Content: HasChildrenComponent = ({ children }: HasChildren) => {
   return (
     <div
       style={{
