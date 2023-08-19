@@ -1,6 +1,5 @@
-import React from "react";
 import "./LayoutDefault.css";
-import {HasChildrenComponent, HasChildren} from "./types";
+import { HasChildren, HasChildrenComponent } from "./types";
 
 const LayoutDefault: HasChildrenComponent = ({ children }: HasChildren) => {
   return (

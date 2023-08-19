@@ -1,15 +1,11 @@
-import {HasChildrenComponent, HasChildren, HasPageContext} from "./types";
-
+import { HasChildren, HasChildrenComponent, HasPageContext } from "./types";
 
 import React from "react";
 import { LayoutDefault } from "./LayoutDefault";
 import "./PageShell.css";
 import { PageContextProvider } from "./usePageContext";
 
-const PageShell = ({
-  children,
-  pageContext,
-}: HasChildren & HasPageContext) => {
+const PageShell = ({ children, pageContext }: HasChildren & HasPageContext) => {
   // The config 'Layout' is a custom config we defined at ./+config.ts
 
   const Layout =

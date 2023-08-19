@@ -1,5 +1,5 @@
+import { HasChildren } from "../../renderer/types";
 import "./Layout.css";
-import {HasChildren} from "../../renderer/types";
 
 const Layout = ({ children }: HasChildren) => {
   return <div id="landing-page">{children}</div>;
