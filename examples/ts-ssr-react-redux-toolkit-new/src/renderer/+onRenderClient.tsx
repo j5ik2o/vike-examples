@@ -1,12 +1,11 @@
 // https://vite-plugin-ssr.com/onRenderClient
 import { hydrateRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { set } from "./counterSlice";
-import { store } from "./store";
+import { getStore } from "./store";
 import type { PageContext } from "./types";
-import { PageContextProvider } from "./usePageContext";
 
 const onRenderClient = async (pageContext: PageContext) => {
+  const store = getStore(pageContext.PRELOADED_STATE);
   console.log(
     `onRenderClient: store.getState() = ${JSON.stringify(store.getState())}`,
   );
@@ -15,7 +14,7 @@ const onRenderClient = async (pageContext: PageContext) => {
       pageContext.PRELOADED_STATE,
     )}`,
   );
-  store.dispatch(set(pageContext.PRELOADED_STATE.value));
+  // store.dispatch(set(pageContext.PRELOADED_STATE.value));
 
   const { Page } = pageContext;
   // We initilaize the store on every render because we use Server Routing. If we use Client Routing, then we should initialize the store only once instead.
@@ -28,11 +27,11 @@ const onRenderClient = async (pageContext: PageContext) => {
 
   hydrateRoot(
     reactRootElem,
-    <PageContextProvider pageContext={pageContext}>
-      <Provider store={store}>
-        <Page />
-      </Provider>
-    </PageContextProvider>,
+    //  <PageContextProvider pageContext={pageContext}>
+    <Provider store={store}>
+      <Page />
+    </Provider>,
+    //   </PageContextProvider>,
   );
 };
 
