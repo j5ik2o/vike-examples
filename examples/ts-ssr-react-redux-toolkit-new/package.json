@@ -2,7 +2,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "clean": "rimraf ./dist",
-    "dev": "vite",
+    "dev": "tsc && vite",
     "dev:node": "npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
