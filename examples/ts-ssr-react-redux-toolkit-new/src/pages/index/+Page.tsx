@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../renderer/hooks";
-import {decrement, increment, selectCount, set} from "../../renderer/store";
+import { decrement, increment, selectCount } from "../../renderer/counterSlice";
 // import {useEffect} from "react";
 // import {usePageContext} from "../../renderer/usePageContext";
 

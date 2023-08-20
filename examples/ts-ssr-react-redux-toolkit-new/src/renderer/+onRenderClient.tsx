@@ -1,25 +1,20 @@
 // https://vite-plugin-ssr.com/onRenderClient
 import { hydrateRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import type {
-  /*
-// When using Client Routing https://vite-plugin-ssr.com/clientRouting
-PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-/*/
-  // When using Server Routing
-  PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-} from "vite-plugin-ssr/types";
-import {set, store} from "./store";
+import { set } from "./counterSlice";
+import { store } from "./store";
 import type { PageContext } from "./types";
 import { PageContextProvider } from "./usePageContext";
 
-const onRenderClient = async (
-  pageContext: PageContextBuiltInClient & PageContext,
-) => {
+const onRenderClient = async (pageContext: PageContext) => {
   console.log(
     `onRenderClient: store.getState() = ${JSON.stringify(store.getState())}`,
   );
-  console.log(`onRenderClient: pageContext.PRELOADED_STATE = ${JSON.stringify(pageContext.PRELOADED_STATE)}`);
+  console.log(
+    `onRenderClient: pageContext.PRELOADED_STATE = ${JSON.stringify(
+      pageContext.PRELOADED_STATE,
+    )}`,
+  );
   store.dispatch(set(pageContext.PRELOADED_STATE.value));
 
   const { Page } = pageContext;

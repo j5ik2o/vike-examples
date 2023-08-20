@@ -8,7 +8,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
 } from "vite-plugin-ssr/types";
-import { CounterState } from "./store";
+import { CounterState } from "./counterSlice";
 
 type PageProps = Record<string, unknown>;
 type Page = (pageProps: PageProps) => React.JSX.Element;
