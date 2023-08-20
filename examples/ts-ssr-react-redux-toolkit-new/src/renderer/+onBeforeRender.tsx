@@ -4,10 +4,9 @@ import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
 import { getStore } from "./store";
 import type { PageContext } from "./types";
-// import { PageContextProvider } from "./usePageContext";
 
 const onBeforeRender = async (pageContext: PageContext) => {
-  const store = getStore({ value: 10 });
+  const store = getStore({ value: 10 , status: "idle"});
   console.log(
     `onBeforeRender: store.getState() = ${JSON.stringify(store.getState())}`,
   );
