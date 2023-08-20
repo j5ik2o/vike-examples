@@ -14,7 +14,6 @@ const onRenderClient = async (pageContext: PageContext) => {
       pageContext.PRELOADED_STATE,
     )}`,
   );
-  // store.dispatch(set(pageContext.PRELOADED_STATE.value));
 
   const { Page } = pageContext;
   // We initilaize the store on every render because we use Server Routing. If we use Client Routing, then we should initialize the store only once instead.
@@ -27,11 +26,9 @@ const onRenderClient = async (pageContext: PageContext) => {
 
   hydrateRoot(
     reactRootElem,
-    //  <PageContextProvider pageContext={pageContext}>
     <Provider store={store}>
       <Page />
     </Provider>,
-    //   </PageContextProvider>,
   );
 };
 

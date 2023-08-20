@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { counterSlice, CounterState } from "./counterSlice";
+
 export type RootState = { counter: CounterState };
 export const getStore = (preloadedState: CounterState) =>
   configureStore({

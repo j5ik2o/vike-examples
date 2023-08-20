@@ -8,19 +8,17 @@ import type { PageContext } from "./types";
 
 const onBeforeRender = async (pageContext: PageContext) => {
   const store = getStore({ value: 10 });
-  console.log(`onBeforeRender: ${JSON.stringify(store.getState())}`);
+  console.log(`onBeforeRender: store.getState() = ${JSON.stringify(store.getState())}`);
 
   const { Page } = pageContext;
   const pageHtml = renderToString(
-    //    <PageContextProvider pageContext={pageContext}>
     <Provider store={store}>
       <Page />
     </Provider>,
-    //    </PageContextProvider>,
   );
 
   const PRELOADED_STATE = store.getState().counter;
-  console.log(`PRELOADED_STATE = ${JSON.stringify(PRELOADED_STATE)}`);
+  console.log(`onBeforeRender: PRELOADED_STATE = ${JSON.stringify(PRELOADED_STATE)}`);
 
   return {
     pageContext: {
