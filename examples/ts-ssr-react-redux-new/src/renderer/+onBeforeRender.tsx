@@ -25,7 +25,7 @@ const onBeforeRender = async (
   );
 
   // Grab the initial state from our Redux store
-  const PRELOADED_STATE = store.getState();
+  const PRELOADED_STATE = store.getState().counter;
 
   return {
     pageContext: {

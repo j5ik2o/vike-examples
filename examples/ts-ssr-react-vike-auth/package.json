@@ -3,8 +3,7 @@
   "scripts": {
     "build": "vite build",
     "clean": "rimraf ./dist",
-    "dev": "vite",
-    "dev:node": "npm run server:dev",
+    "dev": "npm run lint && npm run build && npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",

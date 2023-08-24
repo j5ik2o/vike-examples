@@ -3,26 +3,31 @@ import { HasChildren, HasChildrenComponent } from "./types";
 
 const LayoutDefault: HasChildrenComponent = ({ children }: HasChildren) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        maxWidth: 900,
-        margin: "auto",
-      }}
-    >
-      <Sidebar>
-        <a className="navitem" href="/">
-          Home
-        </a>
-        <a className="navitem" href="/about">
-          About
-        </a>
-        <a className="navitem" href="/starship">
-          Starship
-        </a>
-      </Sidebar>
-      <Content>{children}</Content>
-    </div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          maxWidth: 900,
+          margin: "auto",
+        }}
+      >
+        <Sidebar>
+          <a className="navitem" href="/">
+            Home
+          </a>
+          <a className="navitem" href="/about">
+            About
+          </a>
+          <a className="navitem" href="/starship">
+            Starship
+          </a>
+        </Sidebar>
+        <Content>
+          <h1>Default Layout</h1>
+          {children}
+        </Content>
+      </div>
+    </>
   );
 };
 

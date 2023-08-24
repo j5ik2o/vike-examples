@@ -19,9 +19,15 @@ const Page = () => {
 };
 
 const PresetButtons = () => {
-  const fill = (username, password) => {
-    document.querySelector("input#username").value = username;
-    document.querySelector("input#password").value = password;
+  const fill = (username: string, password: string) => {
+    const usernameElement = document.querySelector("input#username");
+    if (usernameElement !== null) {
+      (usernameElement as HTMLInputElement).value = username;
+    }
+    const passwordElement = document.querySelector("input#password");
+    if (passwordElement !== null) {
+      (passwordElement as HTMLInputElement).value = password;
+    }
   };
   return (
     <>
@@ -42,10 +48,22 @@ const PresetButtons = () => {
   );
 };
 
-const onSubmit = async (ev) => {
+const onSubmit = async (ev: React.FormEvent<HTMLFormElement>) => {
   ev.preventDefault();
-  const username = document.querySelector("input#username").value;
-  const password = document.querySelector("input#password").value;
+  const usernameElement = document.querySelector("input#username");
+  const passwordElement = document.querySelector("input#password");
+
+  let username: string | null = null;
+  let password: string | null = null;
+
+  if (usernameElement !== null) {
+    username = (usernameElement as HTMLInputElement).value;
+  }
+
+  if (passwordElement !== null) {
+    password = (passwordElement as HTMLInputElement).value;
+  }
+
   const response = await fetch("/_auth/login", {
     method: "POST",
     body: JSON.stringify({ username, password }),
@@ -55,7 +73,10 @@ const onSubmit = async (ev) => {
   if (success) {
     await reload();
   } else {
-    document.querySelector("#validation").style.display = "block";
+    const validation = document.querySelector("#validation");
+    if (validation !== null) {
+      (validation as HTMLInputElement).style.display = "block";
+    }
   }
 };
 
@@ -70,12 +91,16 @@ const Validation = () => {
   );
 };
 
-const Input = ({ id, ...props }) => {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  id: string;
+}
+
+const Input = ({ id, ...props }: InputProps) => {
   return (
     <label style={{ display: "block" }}>
       <span style={{ fontSize: "0.91em" }}>{id}</span>
       <br />
-      <input type="text" id={id} size="20" {...props}></input>
+      <input type="text" id={id} size={20} {...props}></input>
     </label>
   );
 };

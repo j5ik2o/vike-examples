@@ -1,20 +1,12 @@
 // https://vite-plugin-ssr.com/onRenderClient
 import { Root, createRoot, hydrateRoot } from "react-dom/client";
-import type {
-  /*
-// When using Client Routing https://vite-plugin-ssr.com/clientRouting
-PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-/*/
-  // When using Server Routing
-  PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-} from "vite-plugin-ssr/types";
 import { PageShell } from "./PageShell";
-import type { PageContext } from "./types";
+import type { PageContextClient } from "./types";
 
 let reactRoot: Root;
 
 const onRenderClient = async (
-  pageContext: PageContextBuiltInClient & PageContext,
+  pageContext: PageContextClient,
 ): Promise<void> => {
   const { Page, pageProps } = pageContext;
 

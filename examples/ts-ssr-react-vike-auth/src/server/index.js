@@ -45,12 +45,12 @@ const auth = (app) => {
 
 const assets = async (app) => {
   if (isProduction) {
-    app.use(express.static(`${root}/dist/client`));
+    app.use(express.static(`${root}/../dist/client`));
   } else {
     const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
-        root,
+        root: `${root}/../`,
         server: { middlewareMode: true },
       })
     ).middlewares;
