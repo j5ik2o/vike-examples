@@ -6,7 +6,7 @@ import { getStore } from "./store";
 import type { PageContext } from "./types";
 
 const onBeforeRender = async (pageContext: PageContext) => {
-  const store = getStore({ value: 10 , status: "idle"});
+  const store = getStore({ value: 10, status: "idle" });
   console.log(
     `onBeforeRender: store.getState() = ${JSON.stringify(store.getState())}`,
   );

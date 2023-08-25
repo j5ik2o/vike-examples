@@ -10,7 +10,7 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "preview": "vite build && vite preview"
+    "preview": "npm run lint && npm run && vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",

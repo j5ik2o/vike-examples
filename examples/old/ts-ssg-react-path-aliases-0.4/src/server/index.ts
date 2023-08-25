@@ -1,33 +1,45 @@
-// Note that our scripts defined at `package.json#scripts` use `ts-node` which
-// means that Node.js directly executes this file; Vite doesn't process this file.
-// We use `package.json#imports` to define path aliases for Node.js files that are
-// not processed by Vite, such as this one.
-import { msg } from "#root/server/msg";
-
+// This file isn't processed by Vite, see https://github.com/brillout/vite-plugin-ssr/issues/562
+// Consequently:
+//  - When changing this file, you needed to manually restart your server for your changes to take effect.
+//  - To use your environment variables defined in your .env files, you need to install dotenv, see https://vite-plugin-ssr.com/env
+//  - To use your path aliases defined in your vite.config.js, you need to tell Node.js about them, see https://vite-plugin-ssr.com/path-aliases
+import compression from "compression";
 import express from "express";
 import { renderPage } from "vite-plugin-ssr/server";
-
-console.log(msg);
-
+import { root } from "./root.js";
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
 
 const startServer = async () => {
   const app = express();
 
+  app.use(compression());
+
+  // Vite integration
   if (isProduction) {
-    app.use(express.static(`${root}/../dist/client`));
+    // In production, we need to serve our static assets ourselves.
+    // (In dev, Vite's middleware serves our static assets.)
+    const sirv = (await import("sirv")).default;
+    app.use(sirv(`${root}/../dist/client`));
   } else {
+    // We instantiate Vite's development server and integrate its middleware to our server.
+    // ⚠️ We instantiate it only in development. (It isn't needed in production and it
+    // would unnecessarily bloat our production server.)
     const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
-        root,
+        root: `${root}/..`,
         server: { middlewareMode: true },
       })
     ).middlewares;
     app.use(viteDevMiddleware);
   }
 
+  // ...
+  // Other middlewares (e.g. some RPC middleware such as Telefunc)
+  // ...
+
+  // Vite-plugin-ssr middleware. It should always be our last middleware (because it's a
+  // catch-all middleware superseding any middleware placed after it).
   app.get("*", async (req, res, next) => {
     const pageContextInit = {
       urlOriginal: req.originalUrl,
@@ -37,9 +49,13 @@ const startServer = async () => {
     if (!httpResponse) {
       return next();
     } else {
-      const { body, statusCode, headers } = httpResponse;
+      const { body, statusCode, headers, earlyHints } = httpResponse;
+      if (res.writeEarlyHints)
+        res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) });
       headers.forEach(([name, value]) => res.setHeader(name, value));
-      res.status(statusCode).send(body);
+      res.status(statusCode);
+      // For HTTP streams use httpResponse.pipe() instead, see https://vite-plugin-ssr.com/stream
+      res.send(body);
     }
   });
 

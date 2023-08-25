@@ -3,12 +3,12 @@
 //  - When changing this file, you needed to manually restart your server for your changes to take effect.
 //  - To use your environment variables defined in your .env files, you need to install dotenv, see https://vite-plugin-ssr.com/env
 //  - To use your path aliases defined in your vite.config.js, you need to tell Node.js about them, see https://vite-plugin-ssr.com/path-aliases
-const express = require("express");
-const compression = require("compression");
-const { renderPage } = require("vite-plugin-ssr/server");
+import compression from "compression";
+import express from "express";
+import { renderPage } from "vite-plugin-ssr/server";
 
+const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
 
 const startServer = async () => {
   const app = express();
@@ -19,16 +19,16 @@ const startServer = async () => {
   if (isProduction) {
     // In production, we need to serve our static assets ourselves.
     // (In dev, Vite's middleware serves our static assets.)
-    const sirv = require("sirv");
-    app.use(sirv(`${root}/../dist/client`));
+    const sirv = (await import("sirv")).default;
+    app.use(sirv(`${root}/dist/client`));
   } else {
     // We instantiate Vite's development server and integrate its middleware to our server.
     // ⚠️ We instantiate it only in development. (It isn't needed in production and it
     // would unnecessarily bloat our production server.)
-    const vite = require("vite");
+    const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
-        root: `${root}/..`,
+        root,
         server: { middlewareMode: true },
       })
     ).middlewares;

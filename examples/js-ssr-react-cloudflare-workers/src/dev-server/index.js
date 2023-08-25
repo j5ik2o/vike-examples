@@ -1,16 +1,12 @@
 // We use a Express.js server for development
-const express = require("express");
-const { renderPage } = require("vite-plugin-ssr/server");
-const vite = require("vite");
-
-let fetch;
-import("node-fetch").then((module) => {
-  fetch = module.default;
-});
-const compression = require("compression");
+import express from "express";
+import { renderPage } from "vite-plugin-ssr/server";
+import vite from "vite";
 
 const startServer = async () => {
   const app = express();
+  const fetch = await import("node-fetch");
+  const compression = await import("compression");
 
   // We don't need gzip compression for dev. We use compression just to show
   // that it's properly handled by vite-plugin-ssr and react-streaming.

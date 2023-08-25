@@ -1,16 +1,15 @@
 {
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "clean": "rimraf ./dist",
-    "dev": "vite",
-    "dev:node": "npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,json}\"",
-    "preview": "vite build && vite preview",
+    "dev": "npm run lint && npm run build && npm run server:dev",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"

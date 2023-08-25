@@ -1,9 +1,9 @@
-const express = require("express");
-const compression = require("compression");
-const { renderPage } = require("vite-plugin-ssr/server");
+import compression from "compression";
+import express from "express";
+import { renderPage } from "vite-plugin-ssr/server";
 
+const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
 
 const startServer = async () => {
   const app = express();
@@ -11,10 +11,10 @@ const startServer = async () => {
   app.use(compression());
 
   if (isProduction) {
-    const sirv = require("sirv");
-    app.use(sirv(`${root}/../dist/client`));
+    const sirv = (await import("sirv")).default;
+    app.use(sirv(`${root}/dist/client`));
   } else {
-    const vite = require("vite");
+    const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
         root,

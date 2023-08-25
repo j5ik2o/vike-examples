@@ -1,18 +1,18 @@
 import react from "@vitejs/plugin-react";
 import ssr, { UserConfig } from "vite-plugin-ssr/plugin";
-// const isProd = process.env.NODE_ENV === "production";
-// const noExternal: string[] = [];
-// if (isProd) {
-//   noExternal.push(
-//     ...[
-//       // MUI needs to be pre-processed by Vite in production: https://github.com/brillout/vite-plugin-ssr/discussions/901
-//       "@mui/base",
-//       "@mui/icons-material",
-//       "@mui/material",
-//       "@mui/utils",
-//     ],
-//   );
-// }
+const isProd = process.env.NODE_ENV === "production";
+const noExternal: string[] = [];
+if (isProd) {
+  noExternal.push(
+    ...[
+      // MUI needs to be pre-processed by Vite in production: https://github.com/brillout/vite-plugin-ssr/discussions/901
+      "@mui/base",
+      "@mui/icons-material",
+      "@mui/material",
+      "@mui/utils",
+    ],
+  );
+}
 export default {
   root: "./src",
   public: "./src/public",
@@ -22,11 +22,6 @@ export default {
   },
   plugins: [react(), ssr()],
   ssr: {
-    noExternal: [
-      "@mui/base",
-      "@mui/icons-material",
-      "@mui/material",
-      "@mui/utils",
-    ],
+    noExternal,
   },
 } as UserConfig;

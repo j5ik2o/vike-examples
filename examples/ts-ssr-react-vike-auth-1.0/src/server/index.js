@@ -1,9 +1,9 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 import { renderPage } from "vite-plugin-ssr/server";
-import { root } from "./root.js";
 import { checkCredentials, getUser } from "./users.js";
 
+const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
 const port = process.env.PORT || 3000;
 
@@ -45,12 +45,12 @@ const auth = (app) => {
 
 const assets = async (app) => {
   if (isProduction) {
-    app.use(express.static(`${root}/../dist/client`));
+    app.use(express.static(`${root}/dist/client`));
   } else {
     const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
-        root: `${root}/../`,
+        root,
         server: { middlewareMode: true },
       })
     ).middlewares;

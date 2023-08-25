@@ -1,17 +1,17 @@
-const express = require("express");
-const { renderPage } = require("vite-plugin-ssr/server");
-const { telefunc } = require("telefunc");
+import express from "express";
+import { telefunc } from "telefunc";
+import { renderPage } from "vite-plugin-ssr/server";
 
+const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
 
 const startServer = async () => {
   const app = express();
 
   if (isProduction) {
-    app.use(express.static(`${root}/../dist/client`));
+    app.use(express.static(`${root}/dist/client`));
   } else {
-    const vite = require("vite");
+    const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
         root,

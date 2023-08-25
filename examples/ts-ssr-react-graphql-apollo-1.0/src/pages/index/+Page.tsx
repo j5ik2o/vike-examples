@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 
 const Page = () => {
@@ -29,7 +29,7 @@ const Page = () => {
       </p>
       <ul>
         {data &&
-          data.countries.map((country) => (
+          data.countries.map((country: { code: number; name: string }) => (
             <li key={country.code}>{country.name}</li>
           ))}
       </ul>

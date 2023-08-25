@@ -7,6 +7,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
 /*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
+  PageContextBuiltInServer,
 } from "vite-plugin-ssr/types";
 
 type PageProps = Record<string, unknown>;
@@ -22,11 +23,11 @@ type PageContextCustom = {
       description?: string;
     };
   };
-  apolloIntialState: any;
+  apolloIntialState: NormalizedCacheObject;
   apolloClient: ApolloClient<NormalizedCacheObject>;
 };
 
-type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom;
+type PageContextServer = PageContextBuiltInServer<Page> & PageContextCustom;
 type PageContextClient = PageContextBuiltInClient<Page> & PageContextCustom;
 
 type PageContext = PageContextClient | PageContextServer;

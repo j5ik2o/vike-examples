@@ -27,7 +27,7 @@ const startServer = async () => {
     const vite = await import("vite");
     const viteDevMiddleware = (
       await vite.createServer({
-        root,
+        root: `${root}/..`,
         server: { middlewareMode: true },
       })
     ).middlewares;

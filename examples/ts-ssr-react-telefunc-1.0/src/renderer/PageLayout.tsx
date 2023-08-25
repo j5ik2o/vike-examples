@@ -1,6 +1,5 @@
 import React from "react";
 import "./PageLayout.css";
-
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <React.StrictMode>

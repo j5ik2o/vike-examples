@@ -1,4 +1,9 @@
-import {decrement, increment, incrementAsync, selectCount} from "../../renderer/counterSlice";
+import {
+  decrement,
+  increment,
+  incrementAsync,
+  selectCount,
+} from "../../renderer/counterSlice";
 import { useAppDispatch, useAppSelector } from "../../renderer/hooks";
 
 const Page = () => {
