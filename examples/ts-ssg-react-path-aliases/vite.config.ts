@@ -3,8 +3,9 @@ import * as path from "path";
 import { defineConfig } from "vite";
 import ssr from "vite-plugin-ssr/plugin";
 
-const config = defineConfig({
+export default defineConfig({
   root: "./src",
+  publicDir: "./src/public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
@@ -22,5 +23,3 @@ const config = defineConfig({
     }),
   ],
 });
-
-export default config;

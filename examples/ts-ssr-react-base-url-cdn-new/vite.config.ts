@@ -9,8 +9,10 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
   },
-  plugins: [react(), ssr()],
-  ssr: {
-    noExternal: ["styled-components", "@emotion/*"],
-  },
+  plugins: [
+    react(),
+    ssr({
+      baseAssets: "http://localhost:8080/cdn/",
+    }),
+  ],
 });

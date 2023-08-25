@@ -6,6 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 const config = defineConfig({
   root: "./src",
+  publicDir: "./src/public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,

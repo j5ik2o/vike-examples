@@ -1,8 +1,8 @@
 import react from "@vitejs/plugin-react";
-import { UserConfig } from "vite";
+import { defineConfig } from "vite";
 import ssr from "vite-plugin-ssr/plugin";
 
-export default {
+export default defineConfig({
   root: "./src",
   build: {
     outDir: "../dist",
@@ -10,4 +10,4 @@ export default {
   },
   plugins: [react(), ssr()],
   optimizeDeps: { include: ["cross-fetch", "react/jsx-runtime"] },
-} satisfies UserConfig;
+});
