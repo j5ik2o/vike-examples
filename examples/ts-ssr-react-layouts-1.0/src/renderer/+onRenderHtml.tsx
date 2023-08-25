@@ -2,7 +2,7 @@
 import { renderToString } from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageShell } from "./PageShell";
-import type { PageContextServer} from "./types";
+import type { PageContextServer } from "./types";
 
 const onRenderHtml = async (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
