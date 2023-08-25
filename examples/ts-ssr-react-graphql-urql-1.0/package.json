@@ -9,7 +9,7 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,json}\"",
-    "dev": "npm run lint && npm run build && npm run server:dev",
+    "dev": "npm run server:dev",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node --loader ts-node/esm ./src/server/index.ts",
     "server:prod": "cross-env NODE_ENV=production node --loader ts-node/esm ./src/server/index.ts"
