@@ -9,7 +9,8 @@ const Page = () => {
   let title;
 
   // Handle `throw render(403, { notAdmin: true })`
-  if (pageContext.abortReason?.notAdmin) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if ((pageContext.abortReason as any)?.notAdmin) {
     msg = "You cannot access this page because you aren't an administrator.";
     title = "Unauthorized";
   }

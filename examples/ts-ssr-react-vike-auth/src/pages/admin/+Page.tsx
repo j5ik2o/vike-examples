@@ -3,12 +3,12 @@ import { Counter } from "../../components/Counter";
 
 const Page = () => {
   const pageContext = usePageContext();
-  const { userFullName } = pageContext;
+  const { userFullName } = pageContext as unknown as PageContextCustom;
   return (
     <>
       <h1>Admin Panel</h1>
       <p>
-        You're able to access this page because you're logged in as{" "}
+        You&apos;re able to access this page because you&apos;re logged in as{" "}
         <b>{userFullName}</b>.
       </p>
       <p>
