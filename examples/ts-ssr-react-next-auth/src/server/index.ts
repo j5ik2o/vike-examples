@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import express from "express";
 import { renderPage } from "vite-plugin-ssr/server";
-import NextAuthHandler from "./auth/next.js";
+import NextAuthHandler from "./next.js";
 
 import fetch, { Headers, Request, Response } from "cross-fetch";
 
@@ -59,7 +59,6 @@ async function startServer() {
     console.log("POST: req.path", req.path);
     const nextauth = req.path.split("/");
     nextauth.splice(0, 3);
-    console.log("POST: nextauth", nextauth);
     req.query.nextauth = nextauth;
 
     NextAuthHandler(req, res);

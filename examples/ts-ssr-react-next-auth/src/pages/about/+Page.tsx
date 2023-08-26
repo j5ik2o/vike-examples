@@ -9,4 +9,4 @@ function Page() {
   );
 }
 
-export { Page };
+export default Page;
