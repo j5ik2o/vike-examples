@@ -5,12 +5,11 @@ import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 const googleId = process.env.GOOGLE_ID;
-console.log("googleId", googleId);
 if (googleId === undefined) {
   throw new Error("Missing env.GOOGLE_ID");
 }
+
 const googleSecret = process.env.GOOGLE_SECRET;
-console.log("googleSecret", googleSecret);
 if (googleSecret === undefined) {
   throw new Error("Missing env.GOOGLE_SECRET");
 }
