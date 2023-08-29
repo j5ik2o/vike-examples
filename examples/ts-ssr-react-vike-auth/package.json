@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "vike-react": "^0.1.6",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135"
+    "vite-plugin-ssr": "0.4.138"
   },
   "devDependencies": {
     "@types/compression": "^1.7.1",

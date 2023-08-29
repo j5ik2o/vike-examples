@@ -1,10 +1,8 @@
-// サーバサイド実行
 // https://vite-plugin-ssr.com/onRenderHtml
 import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
-import type { PageContext } from "./types";
+import { PageContextServer } from "./types";
 
-const onRenderHtml = async (pageContext: PageContext) => {
-  // console.log(`onRenderHtml: ${JSON.stringify(store.getState())}`);
+const onRenderHtml = async (pageContext: PageContextServer) => {
   const { pageHtml } = pageContext;
 
   return escapeInject`<!DOCTYPE html>

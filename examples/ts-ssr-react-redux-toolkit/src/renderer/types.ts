@@ -17,12 +17,6 @@ type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
   urlPathname: string;
-  exports: {
-    documentProps?: {
-      title?: string;
-      description?: string;
-    };
-  };
   pageHtml: string;
   PRELOADED_STATE: CounterState;
 };
