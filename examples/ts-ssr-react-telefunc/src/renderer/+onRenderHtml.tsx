@@ -1,5 +1,4 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-
 import { renderToString } from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 import { PageLayout } from "./PageLayout";
