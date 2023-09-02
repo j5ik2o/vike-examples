@@ -8,7 +8,7 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,json}\"",
-    "dev": "npm run lint && npm run build && npm run server:dev",
+    "dev": "npm run server:dev",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
@@ -20,7 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "^0.4.135",
+    "vite-plugin-ssr": "^0.4.138",
     "sirv": "^2.0.3"
   },
   "devDependencies": {
