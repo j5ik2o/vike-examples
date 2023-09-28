@@ -18,6 +18,7 @@
     "transpileOnly": true,
     "esm": true,
     "compilerOptions": {
+      "module": "Node16",
       "moduleResolution": "Node16"
     }
   }

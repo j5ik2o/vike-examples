@@ -1,5 +1,5 @@
 import { useSession } from "next-auth/react";
-import { render } from "vite-plugin-ssr/abort";
+import { render } from "vike/abort";
 import { PageContextCustom, PageContextServer } from "../../renderer/types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

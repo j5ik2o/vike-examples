@@ -1,6 +1,6 @@
 import { SessionProvider } from "next-auth/react";
 import ReactDOMServer from "react-dom/server";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { PageLayout } from "./PageLayout";
 import logoUrl from "./logo.svg";
 import { PageContextServer } from "./types";

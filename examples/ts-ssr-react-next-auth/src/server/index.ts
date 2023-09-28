@@ -4,7 +4,7 @@ dotenv.config();
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import express from "express";
-import { renderPage } from "vite-plugin-ssr/server";
+import { renderPage } from "vike/server";
 import NextAuthHandler from "./next.js";
 
 import fetch, { Headers, Request, Response } from "cross-fetch";
