@@ -1,10 +1,10 @@
 import react from "@vitejs/plugin-react";
-import ssr from "vite-plugin-ssr/plugin";
+import ssr from "vike/plugin";
 import { UserConfig } from "vite";
 
 const config: UserConfig = {
   root: "./src",
-  public: "./src/public",
+  publicDir: "./src/public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
