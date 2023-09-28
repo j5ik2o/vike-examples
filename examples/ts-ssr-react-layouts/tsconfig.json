@@ -3,7 +3,7 @@
     "strict": true,
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["node", "vite/client"],
     "jsx": "react-jsx",
@@ -17,6 +17,7 @@
     "transpileOnly": true,
     "esm": true,
     "compilerOptions": {
+      "module": "Node16",
       "moduleResolution": "Node16"
     }
   }
