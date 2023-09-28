@@ -7,6 +7,7 @@ const onRenderClient = async (
   pageContext: PageContextClient,
 ): Promise<void> => {
   const { Page, pageProps } = pageContext;
+  // eslint-disable-next-line react/no-deprecated
   ReactDOM.hydrate(
     <PageLayout>
       <SessionProvider>
