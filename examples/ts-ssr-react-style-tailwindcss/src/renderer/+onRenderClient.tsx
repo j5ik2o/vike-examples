@@ -1,15 +1,16 @@
 import { hydrateRoot } from "react-dom/client";
 import { PageLayout } from "./PageLayout";
 import "./index.css";
+import { PageContextClient } from "./types";
 
-const render = async (pageContext) => {
+const onRenderClient = async (pageContext: PageContextClient) => {
   const { Page } = pageContext;
   hydrateRoot(
-    document.getElementById("page-view"),
+    document.getElementById("page-view")!,
     <PageLayout>
       <Page />
     </PageLayout>,
   );
 };
 
-export { render };
+export { onRenderClient };

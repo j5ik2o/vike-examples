@@ -1,8 +1,9 @@
 import { renderToString } from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { PageLayout } from "./PageLayout";
+import { PageContextServer } from "./types";
 
-const render = async (pageContext) => {
+const onRenderHtml = async (pageContext: PageContextServer) => {
   const { Page } = pageContext;
   const viewHtml = dangerouslySkipEscape(
     renderToString(
@@ -20,4 +21,4 @@ const render = async (pageContext) => {
     </html>`;
 };
 
-export { render };
+export { onRenderHtml };
