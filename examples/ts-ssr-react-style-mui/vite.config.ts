@@ -1,5 +1,5 @@
 import react from "@vitejs/plugin-react";
-import ssr, { UserConfig } from "vite-plugin-ssr/plugin";
+import ssr, { UserConfig } from "vike/plugin";
 const isProd = process.env.NODE_ENV === "production";
 const noExternal: string[] = [];
 if (isProd) {

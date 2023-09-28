@@ -1,7 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { PageContextServer } from "./types";
 
 const onRenderHtml = async (pageContext: PageContextServer) => {

@@ -1,6 +1,6 @@
 import express from "express";
 import { telefunc } from "telefunc";
-import { renderPage } from "vite-plugin-ssr/server";
+import { renderPage } from "vike/server";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";

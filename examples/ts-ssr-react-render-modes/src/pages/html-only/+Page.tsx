@@ -9,8 +9,8 @@ const Page = () => {
         only.
       </p>
       <p>
-        This page has zero browser-side JavaScript. (In development, Vite's HMR
-        client is loaded.)
+        This page has zero browser-side JavaScript. (In development, Vite&apos;s
+        HMR client is loaded.)
       </p>
       <p>
         As shown by this <span className="colored">orange text</span>, CSS can

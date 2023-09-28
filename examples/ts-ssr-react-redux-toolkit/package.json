@@ -24,7 +24,7 @@
     "redux": "^4.2.1",
     "sirv": "^2.0.3",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.138"
+    "vike": "^0.4.142"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",

@@ -8,8 +8,8 @@ const Page = () => {
           browser-side JavaScript.
         </li>
         <li>
-          <a href="/spa">SPA</a>. Rendered to the browser's DOM (not rendered to
-          HTML).
+          <a href="/spa">SPA</a>. Rendered to the browser&apos;s DOM (not
+          rendered to HTML).
         </li>
         <li>
           <a href="/html-js">HTML + JS</a>. Rendered to HTML, some browser-side

@@ -7,7 +7,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
 /*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-} from "vite-plugin-ssr/types";
+} from "vike/types";
 import { CounterState } from "./counterSlice";
 
 type PageProps = Record<string, unknown>;

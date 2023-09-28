@@ -24,7 +24,7 @@
     "react-router-dom": "^6.15.0",
     "sirv": "^2.0.3",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.138"
+    "vike": "^0.4.142"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
