@@ -1,5 +1,5 @@
-import { PageContextServer } from "vike-react/dist/renderer/types";
-import { render } from "vite-plugin-ssr/abort";
+import { render } from "vike/abort";
+import { PageContextServer } from "vike/types";
 
 const guard = (pageContext: PageContextServer & PageContextCustom) => {
   if (!pageContext.user) {

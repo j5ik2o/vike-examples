@@ -1,4 +1,4 @@
-import { reload } from "vite-plugin-ssr/client/router";
+import { reload } from "vike/client/router";
 import { Button } from "../../components/Button";
 
 const Page = () => {

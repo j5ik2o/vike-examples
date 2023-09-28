@@ -1,6 +1,6 @@
 import cookieParser from "cookie-parser";
 import express from "express";
-import { renderPage } from "vite-plugin-ssr/server";
+import { renderPage } from "vike/server";
 import { checkCredentials, getUser } from "./users.js";
 
 const root = process.cwd();

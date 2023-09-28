@@ -1,6 +1,6 @@
 import React from "react";
 import { usePageContext } from "vike-react/usePageContext";
-import { reload } from "vite-plugin-ssr/client/router";
+import { reload } from "vike/client/router";
 import { Button } from "../components/Button";
 import "./LayoutDefault.css";
 
