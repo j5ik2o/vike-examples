@@ -1,5 +1,5 @@
 import { renderToString } from "react-dom/server";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import LayoutDefault from "../layouts/LayoutDefault";
 import type { PageContext } from "./types";
 import { PageContextProvider } from "./usePageContext";

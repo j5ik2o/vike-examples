@@ -6,7 +6,7 @@
 
 import compression from "compression";
 import express from "express";
-import { renderPage } from "vite-plugin-ssr/server";
+import { renderPage } from "vike/server";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";

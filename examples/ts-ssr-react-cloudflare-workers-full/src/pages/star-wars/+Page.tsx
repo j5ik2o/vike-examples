@@ -29,7 +29,7 @@ const MovieList = () => {
   });
   return (
     <ol>
-      {movies.map(({ id, title, release_date }) => (
+      {movies.map(({ id, title, release_date }: any) => (
         <li key={id}>
           {title} ({release_date})
         </li>

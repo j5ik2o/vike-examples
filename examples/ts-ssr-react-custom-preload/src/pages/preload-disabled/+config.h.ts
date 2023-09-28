@@ -1,5 +1,5 @@
 // https://vite-plugin-ssr.com/config
-import { Config } from "vite-plugin-ssr/types";
+import { Config } from "vike/types";
 
 const config = {
   // The config 'preloadStrategy' is a custom config we defined at ../../renderer/+config.ts

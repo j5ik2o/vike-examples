@@ -1,7 +1,7 @@
 // We use a Express.js server for development
 import express from "express";
+import { renderPage } from "vike/server";
 import vite from "vite";
-import { renderPage } from "vite-plugin-ssr/server";
 
 const startServer = async () => {
   const app = express();

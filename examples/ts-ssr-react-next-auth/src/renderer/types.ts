@@ -1,12 +1,7 @@
 import React from "react";
 import type {
-  PageContextBuiltIn,
-  /*
-// When using Client Routing https://vite-plugin-ssr.com/clientRouting
-PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
-/*/
-  // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
+  PageContextBuiltInServer,
 } from "vike/types";
 
 type PageProps = Record<string, unknown>;
@@ -24,7 +19,7 @@ type PageContextCustom = {
   };
 };
 
-type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom;
+type PageContextServer = PageContextBuiltInServer<Page> & PageContextCustom;
 type PageContextClient = PageContextBuiltInClient<Page> & PageContextCustom;
 
 type PageContext = PageContextClient | PageContextServer;

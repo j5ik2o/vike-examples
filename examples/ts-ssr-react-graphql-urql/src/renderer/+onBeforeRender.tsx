@@ -11,13 +11,11 @@ import {
   fetchExchange,
   ssrExchange,
 } from "urql";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import type { PageContextServer } from "vike/types";
 import { PageShell } from "./PageShell";
 import type { PageContext } from "./types";
 
-const onBeforeRender = async (
-  pageContext: PageContextBuiltIn & PageContext,
-) => {
+const onBeforeRender = async (pageContext: PageContextServer & PageContext) => {
   const { Page, pageProps } = pageContext;
 
   const ssr = ssrExchange({ initialState: undefined });

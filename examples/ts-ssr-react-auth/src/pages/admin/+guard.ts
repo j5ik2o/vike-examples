@@ -1,4 +1,4 @@
-import { render } from "vite-plugin-ssr/abort";
+import { render } from "vike/abort";
 import { PageContextCustom, PageContextServer } from "../../renderer/types";
 
 const guard = (pageContext: PageContextServer & PageContextCustom) => {

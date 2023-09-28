@@ -7,7 +7,7 @@ PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient
 /*/
   // When using Server Routing
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient,
-} from "vite-plugin-ssr/types";
+} from "vike/types";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "./types";
 

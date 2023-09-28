@@ -1,7 +1,7 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 
 import { renderToStream } from "react-streaming/server";
-import { escapeInject } from "vite-plugin-ssr/server";
+import { escapeInject } from "vike/server";
 import { PageLayout } from "./PageLayout";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

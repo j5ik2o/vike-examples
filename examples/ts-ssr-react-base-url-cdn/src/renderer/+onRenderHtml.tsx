@@ -1,6 +1,6 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import ReactDOMServer from "react-dom/server";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { PageShell } from "./PageShell";
 // Assets deployed to a CDN:
 //  - logo.svg

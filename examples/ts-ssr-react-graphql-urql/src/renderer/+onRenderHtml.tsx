@@ -1,9 +1,9 @@
 // https://vite-plugin-ssr.com/onRenderHtml
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
+import type { PageContextServer } from "vike/types";
 import type { PageContext } from "./types";
 
-const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
+const onRenderHtml = async (pageContext: PageContextServer & PageContext) => {
   const { pageHtml } = pageContext;
 
   // See https://vite-plugin-ssr.com/head

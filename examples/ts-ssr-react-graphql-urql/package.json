@@ -26,7 +26,7 @@
     "sirv": "^2.0.3",
     "urql": "^4.0.5",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135"
+    "vike": "^0.4.142"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",

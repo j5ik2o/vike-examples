@@ -1,17 +1,17 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { renderToString } from "react-dom/server";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
-import type { InjectFilterEntry } from "vite-plugin-ssr/types";
+import { dangerouslySkipEscape, escapeInject } from "vike/server";
+import type { InjectFilterEntry } from "vike/types";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import type { PageContextBuiltIn } from "vike/types";
 import { PageLayout } from "./PageLayout";
 import type { PageContext } from "./types";
 
 const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
   const { Page, pageProps } = pageContext;
   // The config 'preloadStrategy' is a custom config we defined at ./+config.ts
-  const { preloadStrategy } = pageContext.config;
+  const { preloadStrategy } = pageContext.exports;
   const pageHtml = renderToString(
     <PageLayout>
       <Page {...pageProps} />
