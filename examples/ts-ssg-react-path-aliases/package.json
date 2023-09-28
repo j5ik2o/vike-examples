@@ -4,7 +4,7 @@
     "#root/*": "./src/*.ts"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
     "fix": "npm run fix:prettier && npm run fix:eslint",

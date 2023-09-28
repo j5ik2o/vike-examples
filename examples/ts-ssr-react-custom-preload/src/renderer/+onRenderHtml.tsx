@@ -2,13 +2,10 @@
 import { renderToString } from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { InjectFilterEntry } from "vike/types";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import type { PageContextBuiltIn } from "vike/types";
 import { PageLayout } from "./PageLayout";
-import type { PageContext } from "./types";
+import { PageContext } from "./types";
 
-const onRenderHtml = async (pageContext: PageContextBuiltIn & PageContext) => {
+const onRenderHtml = async (pageContext: PageContext) => {
   const { Page, pageProps } = pageContext;
   // The config 'preloadStrategy' is a custom config we defined at ./+config.ts
   const { preloadStrategy } = pageContext.exports;

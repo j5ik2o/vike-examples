@@ -1,16 +1,11 @@
 // https://vite-plugin-ssr.com/onRenderClient
 import { hydrateRoot } from "react-dom/client";
 import { PageLayout } from "./PageLayout";
+import { PageContextClient } from "./types";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const onRenderClient = async (pageContext: any) => {
+const onRenderClient = async (pageContext: PageContextClient) => {
   const { Page, pageProps } = pageContext;
-  const pageViewElem = document.getElementById("page-view");
-
-  if (!pageViewElem) {
-    throw new Error("page-view element not found!");
-  }
-
+  const pageViewElem = document.getElementById("page-view")!;
   hydrateRoot(
     pageViewElem,
     <PageLayout pageContext={pageContext}>

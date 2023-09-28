@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",

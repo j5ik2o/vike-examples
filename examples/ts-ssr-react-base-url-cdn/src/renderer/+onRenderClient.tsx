@@ -12,7 +12,7 @@ const onRenderClient = async (pageContext: PageContextClient) => {
       <Page {...pageProps} />
     </PageShell>
   );
-  const container = document.getElementById("page-view");
+  const container = document.getElementById("page-view")!;
   if (pageContext.isHydration) {
     root = hydrateRoot(container, page);
   } else {

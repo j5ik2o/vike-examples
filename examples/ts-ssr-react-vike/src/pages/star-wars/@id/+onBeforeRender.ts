@@ -1,9 +1,9 @@
 import fetch from "cross-fetch";
-import type { PageContextBuiltIn } from "vike-react/types";
+import { PageContextServer } from "vike/types";
 import { filterMovieData } from "../filterMovieData";
 import type { MovieDetails } from "../types";
 
-const onBeforeRender = async (pageContext: PageContextBuiltIn) => {
+const onBeforeRender = async (pageContext: PageContextServer) => {
   const response = await fetch(
     `https://star-wars.brillout.com/api/films/${pageContext.routeParams.id}.json`,
   );

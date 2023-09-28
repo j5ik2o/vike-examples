@@ -9,7 +9,8 @@
     "types": ["node", "vite/client"],
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noEmit": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],

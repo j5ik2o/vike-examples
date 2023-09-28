@@ -3,11 +3,10 @@
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vike/server";
 import { PageLayout } from "./PageLayout";
+import { PageContextServer } from "./types";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const onRenderHtml = async (pageContext: any) => {
+const onRenderHtml = async (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
-
   const page = (
     <PageLayout pageContext={pageContext}>
       <Page {...pageProps} />

@@ -1,0 +1,43 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p . && npm run build:vite && npm run build:webpack",
+    "build:vite": "vite build",
+    "build:webpack": "cp src/server/main.mjs dist/server/main.mjs && webpack -c ./webpack.config.js && rimraf dist/server",
+    "clean": "rimraf ./dist",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "dev": "npm run server:dev",
+    "prod": "npm run lint && npm run build && npm run server:prod",
+    "server:dev": "node dist/main.mjs",
+    "server:prod": "cross-env NODE_ENV=production node dist/main.mjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vike": "^0.4.142",
+    "vite": "^4.4.9"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.1",
+    "@types/express": "4.17.17",
+    "@types/node": "^20.4.10",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "3.0.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "rimraf": "^5.0.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

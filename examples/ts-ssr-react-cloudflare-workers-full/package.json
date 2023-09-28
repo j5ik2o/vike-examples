@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler publish",
     "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler dev",
