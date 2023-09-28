@@ -3,12 +3,16 @@
   "scripts": {
     "build": "vite build",
     "clean": "rimraf ./dist",
+    "dev": "vite",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\""
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "preview": "vite build && vite preview",
+    "prod:static": "npm run build && npm run server:static",
+    "server:static": "serve dist/client/ --listen 3000"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",
@@ -21,9 +25,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-streaming": "^0.3.14",
+    "serve": "^14.2.0",
     "sirv": "^2.0.3",
     "vite": "^4.4.9",
-    "vite-plugin-ssr": "0.4.135"
+    "vike": "^0.4.142"
   },
   "devDependencies": {
     "@types/node": "^20.4.10",

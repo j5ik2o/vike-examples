@@ -1,5 +1,5 @@
-import { render } from "vite-plugin-ssr/abort";
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
+import { render } from "vike/abort";
+import type { PageContextBuiltIn } from "vike/types";
 
 import { names } from "./names";
 

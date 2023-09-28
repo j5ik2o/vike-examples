@@ -1,9 +1,7 @@
 import type {
   PageContextBuiltIn,
-  //*
-  // When using Client Routing https://vite-plugin-ssr.com/clientRouting
   PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient,
-} from "vite-plugin-ssr/types";
+} from "vike/types";
 
 type Page = (pageProps: PageProps) => React.ReactElement;
 type PageProps = Record<string, unknown>;

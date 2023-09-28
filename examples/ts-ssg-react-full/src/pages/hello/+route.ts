@@ -1,4 +1,4 @@
-import { resolveRoute } from "vite-plugin-ssr/routing";
+import { resolveRoute } from "vike/routing";
 
 // Route Functions enables advanced routing logic
 const route = (pageContext: { urlPathname: string }) => {

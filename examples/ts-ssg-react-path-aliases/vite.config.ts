@@ -1,8 +1,6 @@
 import react from "@vitejs/plugin-react";
-import * as path from "path";
+import ssr from "vike/plugin";
 import { defineConfig } from "vite";
-import ssr from "vite-plugin-ssr/plugin";
-import tsconfigPaths from "vite-tsconfig-paths";
 
 const config = defineConfig({
   root: "./src",
@@ -13,11 +11,10 @@ const config = defineConfig({
   },
   resolve: {
     alias: {
-      "#root": path.resolve(__dirname, "src"),
+      "#root/": `${__dirname}/src/`,
     },
   },
   plugins: [
-    tsconfigPaths(),
     react(),
     ssr({
       prerender: true,

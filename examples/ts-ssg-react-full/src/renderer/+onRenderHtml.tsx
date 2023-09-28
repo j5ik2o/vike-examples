@@ -1,6 +1,6 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { renderToStream } from "react-streaming/server";
-import { escapeInject } from "vite-plugin-ssr/server";
+import { escapeInject } from "vike/server";
 import { PageShell } from "./PageShell";
 import { getPageTitle } from "./getPageTitle";
 import type { PageContextServer } from "./types";

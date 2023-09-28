@@ -5,7 +5,7 @@
 //  - To use your path aliases defined in your vite.config.js, you need to tell Node.js about them, see https://vite-plugin-ssr.com/path-aliases
 import compression from "compression";
 import express from "express";
-import { renderPage } from "vite-plugin-ssr/server";
+import { renderPage } from "vike/server";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";

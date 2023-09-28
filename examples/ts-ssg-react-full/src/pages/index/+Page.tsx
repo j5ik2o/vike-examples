@@ -1,4 +1,4 @@
-import { navigate } from "vite-plugin-ssr/client/router";
+import { navigate } from "vike/client/router";
 import { Counter } from "../../components/Counter";
 
 const Page = () => {
