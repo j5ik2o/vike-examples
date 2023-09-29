@@ -6,7 +6,6 @@ let root: Root;
 
 const onRenderClient = async (pageContext: PageContextClient) => {
   const { Page, routeParams } = pageContext;
-
   const page = (
     <PageLayout>
       <Page routeParams={routeParams} />

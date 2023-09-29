@@ -8,8 +8,6 @@ import {
   test,
 } from "@brillout/test-e2e";
 
-export { testRun };
-
 function testRun(cmd: "npm run dev" | "npm run prod" | "npm run prod:static") {
   run(cmd);
 
@@ -72,3 +70,5 @@ function testRun(cmd: "npm run dev" | "npm run prod" | "npm run prod:static") {
     );
   });
 }
+
+export { testRun };

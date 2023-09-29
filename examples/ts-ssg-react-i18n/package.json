@@ -1,6 +1,8 @@
 {
   "type": "module",
   "scripts": {
+    "test": "npm run test:e2e",
+    "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
@@ -36,6 +38,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.1",
     "prettier-plugin-organize-imports": "^3.2.3",
-    "rimraf": "^5.0.1"
+    "rimraf": "^5.0.1",
+    "@brillout/test-e2e": "^0.5.15"
   }
 }

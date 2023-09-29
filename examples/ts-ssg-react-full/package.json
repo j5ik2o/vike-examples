@@ -1,6 +1,8 @@
 {
   "type": "module",
   "scripts": {
+    "test": "npm run test:e2e",
+    "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
@@ -47,6 +49,7 @@
     "prettier-plugin-organize-imports": "^3.2.3",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "5.1.x"
+    "typescript": "5.1.x",
+    "@brillout/test-e2e": "^0.5.15"
   }
 }
