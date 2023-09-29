@@ -1,13 +1,14 @@
 // https://vite-plugin-ssr.com/onRenderHtml
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 const onRenderHtml = async (pageContext) => {
-    const { pageHtml } = pageContext;
-    // See https://vite-plugin-ssr.com/head
-    const { documentProps } = pageContext;
-    const title = (documentProps && documentProps.title) || "Vite SSR app";
-    const desc = (documentProps && documentProps.description) ||
-        "App using Vite + vite-plugin-ssr";
-    return escapeInject `<!DOCTYPE html>
+  const { pageHtml } = pageContext;
+  // See https://vite-plugin-ssr.com/head
+  const { documentProps } = pageContext;
+  const title = (documentProps && documentProps.title) || "Vite SSR app";
+  const desc =
+    (documentProps && documentProps.description) ||
+    "App using Vite + vite-plugin-ssr";
+  return escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
