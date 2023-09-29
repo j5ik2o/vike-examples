@@ -3,13 +3,13 @@
   "scripts": {
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
+    "dev": "npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,json}\"",
-    "dev": "npm run server:dev",
     "prod": "npm run lint && npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
@@ -23,15 +23,15 @@
     "react-redux": "^8.1.2",
     "redux": "^4.2.1",
     "sirv": "^2.0.3",
-    "vite": "^4.4.9",
-    "vike": "^0.4.142"
+    "vike": "^0.4.142",
+    "vite": "^4.4.9"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/react-redux": "^7.1.25",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "@vitejs/plugin-react": "^4.0.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",

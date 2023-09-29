@@ -1,14 +1,15 @@
 {
+  "type": "module",
   "scripts": {
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
+    "dev": "npm run build && npm run server:dev",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "dev": "npm run build && npm run server:dev",
     "prod": "npm run build && npm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
@@ -18,8 +19,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "telefunc": "^0.1.58",
-    "vite": "^4.4.9",
-    "vike": "^0.4.142"
+    "vike": "^0.4.142",
+    "vite": "^4.4.9"
   },
   "devDependencies": {
     "@types/compression": "^1.7.1",
@@ -38,6 +39,5 @@
     "prettier-plugin-organize-imports": "^3.2.3",
     "rimraf": "^5.0.1",
     "typescript": "5.1.x"
-  },
-  "type": "module"
+  }
 }

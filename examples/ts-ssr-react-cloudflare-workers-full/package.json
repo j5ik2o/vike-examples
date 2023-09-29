@@ -4,16 +4,16 @@
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler publish",
+    "dev": "vite",
     "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler dev",
     "dev:node": "node ./src/dev-server",
-    "dev": "vite",
-    "preview": "npm run build && vite preview",
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\""
+    "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
+    "preview": "npm run build && vite preview"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
