@@ -2,28 +2,17 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": [
-      "node",
-      "vite/client"
-    ]
+    "types": ["node", "vite/client"],
+    "noEmit": true
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "include": [
-    "src/**/*"
-  ],
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "Node16",

@@ -1,6 +1,6 @@
-import type { Config, Env } from "vike/types";
-
 // https://vite-plugin-ssr.com/config
+import type { Config, ConfigEnv } from "vike/types";
+
 export default {
   clientRouting: true,
   hydrationCanBeAborted: true,
@@ -10,7 +10,7 @@ export default {
     renderMode: {
       env: "config-only",
       effect({ configDefinedAt, configValue }) {
-        let env: Env | undefined;
+        let env: ConfigEnv | undefined;
         if (configValue == "HTML") env = "server-only";
         if (configValue == "SPA") env = "client-only";
         if (configValue == "SSR") env = "server-and-client";

@@ -1,6 +1,7 @@
+// https://vite-plugin-ssr.com/config
 import onRenderClient from "#root/renderer/onRenderClient";
 import onRenderHtml from "#root/renderer/onRenderHtml";
-import type { Config } from "vike/types";
+import { Config } from "vike/types";
 
 export default {
   onRenderClient,

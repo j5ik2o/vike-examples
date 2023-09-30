@@ -1,4 +1,5 @@
-import type { Config } from "vike/types";
+// https://vite-plugin-ssr.com/config
+import { Config } from "vike/types";
 
 export default {
   clientRouting: true,
