@@ -16,10 +16,10 @@ import assert from "assert";
 const HMR_SLEEP = 500;
 
 // TODO:v1/release: remove non-V1 design case
-function testRun(cmd: "npm run dev" | "npm run preview", isV1Design?: true) {
+function testRun(cmd: "pnpm run dev" | "pnpm run preview", isV1Design?: true) {
   run(cmd, { isFlaky: true });
 
-  const isPreview = cmd === "npm run preview";
+  const isPreview = cmd === "pnpm run preview";
 
   const hash = /[a-z0-9]+/;
   const path = /[^\>]+/;

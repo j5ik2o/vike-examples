@@ -2,7 +2,7 @@ import { expect, fetchHtml, partRegex, run, test } from "@brillout/test-e2e";
 
 export { testRun };
 
-function testRun(cmd: "npm run preview") {
+function testRun(cmd: "pnpm run preview") {
   run(cmd);
 
   const fontRE = partRegex`<link rel="preload" href="/assets/static/Sono-Light.${/[a-zA-Z0-9]+/}.ttf" as="font" type="font/ttf" crossorigin>`;

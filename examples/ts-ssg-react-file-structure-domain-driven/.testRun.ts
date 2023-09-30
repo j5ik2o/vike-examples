@@ -9,7 +9,7 @@ import {
 
 export { testRun };
 
-function testRun(cmd: "npm run dev" | "npm run preview") {
+function testRun(cmd: "pnpm run dev" | "pnpm run preview") {
   run(cmd);
 
   test("Route strings", async () => {

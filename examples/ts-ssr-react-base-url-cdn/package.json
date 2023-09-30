@@ -3,14 +3,14 @@
   "scripts": {
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
-    "dev": "npm run build && npm run serve",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "dev": "pnpm run build && pnpm run serve",
+    "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "serve": "concurrently \"npm run serve:cdn \" \"npm run serve:ssr\"",
+    "serve": "concurrently \"pnpm run serve:cdn \" \"pnpm run serve:ssr\"",
     "serve:cdn": "node ./src/server/cdn",
     "serve:ssr": "node ./src/server/ssr"
   },

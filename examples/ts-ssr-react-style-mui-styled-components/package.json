@@ -3,20 +3,17 @@
   "scripts": {
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
-    "dev": "npm run server:dev",
-    "dev:node": "npm run server:dev",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "dev": "pnpm run server:dev",
+    "dev:node": "pnpm run server:dev",
+    "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "prod": "npm run lint && npm run build && npm run server:prod",
+    "prod": "pnpm run lint && pnpm run build && pnpm run server:prod",
     "server:dev": "node ./src/server",
     "server:prod": "cross-env NODE_ENV=production node ./src/server"
-  },
-  "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.12.0"
   },
   "dependencies": {
     "@emotion/styled": "11.11.0",

@@ -3,8 +3,8 @@ Example of deploying static assets to a CDN + setting a Base URL for the server.
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/base-url-server/
-npm install
-npm run start
+pnpm install
+pnpm run start
 ```
 
 Highlights:

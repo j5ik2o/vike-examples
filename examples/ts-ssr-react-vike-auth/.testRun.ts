@@ -11,7 +11,7 @@ import {
 } from "@brillout/test-e2e";
 import { ensureWasClientSideRouted, testCounter } from "../../test/utils";
 
-function testRun(cmd: "npm run dev" | "npm run prod") {
+function testRun(cmd: "pnpm run dev" | "pnpm run prod") {
   run(cmd);
 
   test("Basics", async () => {

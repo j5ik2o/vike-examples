@@ -3,6 +3,6 @@ Example of using `vite-plugin-ssr` with [domain-driven file structure](https://v
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/file-structure-domain-driven/
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```

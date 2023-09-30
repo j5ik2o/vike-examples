@@ -8,7 +8,7 @@ import {
   test,
 } from "@brillout/test-e2e";
 
-run("npm run dev");
+run("pnpm run dev");
 
 test("page content is rendered to HTML", async () => {
   const html = await fetchHtml("/");

@@ -15,7 +15,7 @@ import { createRequire } from "module";
 import path from "path";
 import url from "url";
 
-function testRun(cmd: "npm run dev" | "npm run preview" | "npm run prod") {
+function testRun(cmd: "pnpm run dev" | "pnpm run preview" | "pnpm run prod") {
   run(cmd);
 
   test("page content is rendered to HTML", async () => {

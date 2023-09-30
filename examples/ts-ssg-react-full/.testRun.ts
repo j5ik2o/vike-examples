@@ -15,12 +15,12 @@ import { ensureWasClientSideRouted } from "../../test/utils";
 
 function testRun(
   viewFramework: "vue" | "react",
-  cmd: "npm run dev" | "npm run preview",
+  cmd: "pnpm run dev" | "pnpm run preview",
   isV1Design?: true,
 ) {
   run(cmd);
 
-  const isDev = cmd === "npm run dev";
+  const isDev = cmd === "pnpm run dev";
 
   test("page content is rendered to HTML", async () => {
     const html = await fetchHtml("/");

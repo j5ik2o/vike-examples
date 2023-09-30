@@ -118,17 +118,17 @@ function tolerateError({ logSource, logText }) {
 
   // These seems to come from esbuild
   // ```
-  // [16:41:56.607][\examples\preact-server-routing][npm run preview][stderr] 4:41:56 PM [vite] Internal server error: The service was stopped
+  // [16:41:56.607][\examples\preact-server-routing][pnpm run preview][stderr] 4:41:56 PM [vite] Internal server error: The service was stopped
   //   Plugin: vite:esbuild
   //   File: D:/a/vike/vike/examples/preact-server-routing/renderer/_error.page.jsx
-  //       at D:\a\vike\vike\node_modules\.pnpm\esbuild@0.14.47\node_modules\esbuild\lib\main.js:1381:29
+  //       at D:\a\vike\vike\node_modules\.ppnpm\esbuild@0.14.47\node_modules\esbuild\lib\main.js:1381:29
   // ```
-  // [16:10:29.456][\examples\preact-client-routing][npm run preview][stderr] 4:10:29 PM [vite] Internal server error: The service is no longer running
+  // [16:10:29.456][\examples\preact-client-routing][pnpm run preview][stderr] 4:10:29 PM [vite] Internal server error: The service is no longer running
   // ```
-  // [16:38:26.428][\examples\i18n][npm run dev][stderr] Error: The service was stopped
-  //     at D:\a\vike\vike\node_modules\.pnpm\esbuild@0.14.47\node_modules\esbuild\lib\main.js:1381:29
+  // [16:38:26.428][\examples\i18n][pnpm run dev][stderr] Error: The service was stopped
+  //     at D:\a\vike\vike\node_modules\.ppnpm\esbuild@0.14.47\node_modules\esbuild\lib\main.js:1381:29
   // ```
-  // [08:35:12.487][/examples/preact-client-routing-v1][npm run preview][stderr] The service is no longer running: write EPIPE
+  // [08:35:12.487][/examples/preact-client-routing-v1][pnpm run preview][stderr] The service is no longer running: write EPIPE
   // ```
   function isServiceExit() {
     return (
@@ -148,7 +148,7 @@ function tolerateError({ logSource, logText }) {
     );
   }
 
-  // /assets/Inter-Var-IOAEQULN.ttf referenced in /home/runner/work/vike/vike/node_modules/.pnpm/@brillout+docpress@0.1.12_6bdbsu2yzpeczxw5qylih75b3i/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css?used didn't resolve at build time, it will remain unchanged to be resolved at runtime
+  // /assets/Inter-Var-IOAEQULN.ttf referenced in /home/runner/work/vike/vike/node_modules/.ppnpm/@brillout+docpress@0.1.12_6bdbsu2yzpeczxw5qylih75b3i/node_modules/@brillout/docpress/dist/renderer/_default.page.client.css?used didn't resolve at build time, it will remain unchanged to be resolved at runtime
   function isDocpressAssetWarning() {
     return (
       logSource === "stderr" &&

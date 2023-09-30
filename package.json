@@ -1,0 +1,19 @@
+{
+  "name": "vike-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "fix": "pnpm -r run fix",
+    "lint": "pnpm -r run lint"
+  },
+  "author": "Junichi Kato <j5ik2o@gmail.com> (https://blog.j5ik2o.me/)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.8.0",
+    "npm": "use pnpm",
+    "pnpm": ">=7",
+    "yarn": "use pnpm"
+  }
+}

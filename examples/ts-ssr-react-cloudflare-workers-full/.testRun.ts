@@ -19,10 +19,10 @@ import { testCounter } from "../../test/utils";
 // urlBaseChange('http://127.0.0.1:3000')
 
 function testRun(
-  cmd: "npm run dev" | "npm run preview",
+  cmd: "pnpm run dev" | "pnpm run preview",
   { hasStarWarsPage }: { hasStarWarsPage: boolean },
 ) {
-  const isWrangler = cmd === "npm run preview";
+  const isWrangler = cmd === "pnpm run preview";
 
   // - `CLOUDFLARE_ACCOUNT_ID`/`CLOUDFLARE_API_TOKEN` not available for:
   //   - Vite's ecosystem CI

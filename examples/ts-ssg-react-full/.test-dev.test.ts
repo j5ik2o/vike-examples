@@ -1,2 +1,2 @@
 import { testRun } from "./.testRun";
-testRun("react", "npm run dev", true);
+testRun("react", "pnpm run dev", true);

@@ -9,7 +9,7 @@ import {
 } from "@brillout/test-e2e";
 import { testCounter } from "../../test/utils";
 
-run("npm run dev");
+run("pnpm run dev");
 
 test("page content is rendered to HTML", async () => {
   const htmlHome = await fetchHtml("/");

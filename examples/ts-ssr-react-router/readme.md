@@ -7,6 +7,6 @@ This example completely replaces `vite-plugin-ssr`'s built-in router with React 
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/react-router/
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```

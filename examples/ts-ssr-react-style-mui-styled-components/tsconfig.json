@@ -3,34 +3,20 @@
     "allowJs": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
-      "@mui/styled-engine": [
-        "./node_modules/@mui/styled-engine-sc"
-      ]
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
     },
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": [
-      "node",
-      "vite/client"
-    ]
+    "types": ["node", "vite/client"]
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "include": [
-    "src/**/*"
-  ],
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "Node16",

@@ -1,39 +1,39 @@
 {
   "type": "module",
   "scripts": {
-    "test": "npm run test:e2e",
+    "test": "pnpm run test:e2e",
     "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "preview": "vite build && vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vike": "^0.4.142",
-    "vite": "^4.4.9"
+    "react": "workspace:override",
+    "react-dom": "workspace:override",
+    "vite": "workspace:override",
+    "vike": "workspace:override"
   },
   "devDependencies": {
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
-    "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.47.0",
-    "eslint-plugin-react": "^7.33.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "prettier": "3.0.1",
-    "prettier-plugin-organize-imports": "^3.2.3",
-    "rimraf": "^5.0.1",
-    "typescript": "5.1.x",
-    "@brillout/test-e2e": "^0.5.15"
+    "@typescript-eslint/eslint-plugin": "workspace:override",
+    "@typescript-eslint/parser": "workspace:override",
+    "@vitejs/plugin-react": "workspace:override",
+    "eslint": "workspace:override",
+    "eslint-plugin-react": "workspace:override",
+    "eslint-plugin-react-hooks": "workspace:override",
+    "eslint-plugin-react-refresh": "workspace:override",
+    "prettier": "workspace:override",
+    "prettier-plugin-organize-imports": "workspace:override",
+    "rimraf": "workspace:override",
+    "typescript": "workspace:override",
+    "@brillout/test-e2e": "workspace:override"
   }
 }

@@ -10,7 +10,7 @@ import {
 } from "@brillout/test-e2e";
 
 function testRun(
-  cmd: "npm run dev" | "npm run preview",
+  cmd: "pnpm run dev" | "pnpm run preview",
   uiFrameworkRoot: "react-root" | "app" = "react-root",
 ) {
   run(cmd);

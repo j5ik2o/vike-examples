@@ -3,19 +3,20 @@
   "scripts": {
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
-    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler publish",
+    "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) pnpm run build && wrangler publish",
     "dev": "vite",
-    "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) npm run build && wrangler dev",
+    "dev:cf": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) pnpm run build && wrangler dev",
     "dev:node": "node ./src/dev-server",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "preview": "npm run build && vite preview"
+    "preview": "pnpm run build && vite preview"
   },
   "dependencies": {
+    "@brillout/json-serializer": "^0.5.6",
     "@cloudflare/kv-asset-handler": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -9,7 +9,7 @@ import {
 } from "@brillout/test-e2e";
 import { ensureWasClientSideRouted, testCounter } from "../../test/utils";
 
-function testRun(cmd: "npm run dev" | "npm run preview", isStem?: true) {
+function testRun(cmd: "pnpm run dev" | "pnpm run preview", isStem?: true) {
   run(cmd, { doNotFailOnWarning: true });
 
   test("page content is rendered to HTML", async () => {

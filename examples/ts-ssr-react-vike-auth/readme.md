@@ -3,6 +3,6 @@ Authentication example, see [vite-plugin-ssr.com/auth](https://vite-plugin-ssr.c
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/auth/
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```

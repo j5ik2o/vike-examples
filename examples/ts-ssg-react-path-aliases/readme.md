@@ -21,6 +21,6 @@ To run the example:
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/path-aliases/
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```

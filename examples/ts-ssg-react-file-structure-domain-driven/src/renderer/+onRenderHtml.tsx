@@ -2,7 +2,6 @@ import ReactDOMServer from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import { PageLayout } from "./PageLayout";
 import { PageContextServer } from "./types";
-import React from "react";
 
 const onRenderHtml = (pageContext: PageContextServer) => {
   const { Page, routeParams } = pageContext;

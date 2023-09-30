@@ -16,7 +16,7 @@ See [vite-plugin-ssr.com/cloudflare-workers](https://vite-plugin-ssr.com/cloudfl
 ```bash
 git clone git@github.com:brillout/vite-plugin-ssr
 cd vite-plugin-ssr/examples/cloudflare-workers-react-full/
-npm install
+pnpm install
 ```
 
 Develop:
@@ -24,7 +24,7 @@ Develop:
 > For increased development speed, we use an Express.js development server instead of a worker.
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Preview the worker locally:
@@ -32,12 +32,12 @@ Preview the worker locally:
 > You'll need to login/create a Cloudflare account.
 
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 Deploy the worker to Cloudflare:
 ```bash
-npm run deploy
+pnpm run deploy
 ```
 
 

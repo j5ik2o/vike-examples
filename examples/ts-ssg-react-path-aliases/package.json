@@ -4,19 +4,19 @@
     "#root/*": "./src/*.ts"
   },
   "scripts": {
-    "test": "npm run test:e2e",
+    "test": "pnpm run test:e2e",
     "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix": "pnpm run fix:prettier && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write \"**/*.{vue,js,ts,jsx,tsx,json}\"",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "preview": "vite build && vite preview",
-    "prod:static": "npm run build && npm run server:static",
+    "prod:static": "pnpm run build && pnpm run server:static",
     "server:static": "serve dist/client/ --listen 3000"
   },
   "dependencies": {

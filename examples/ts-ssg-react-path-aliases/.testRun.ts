@@ -8,10 +8,12 @@ import {
   test,
 } from "@brillout/test-e2e";
 
-function testRun(cmd: "npm run dev" | "npm run prod" | "npm run prod:static") {
+function testRun(
+  cmd: "pnpm run dev" | "pnpm run prod" | "pnpm run prod:static",
+) {
   run(cmd);
 
-  const isProd = cmd !== "npm run dev";
+  const isProd = cmd !== "pnpm run dev";
 
   test(`Counter works`, async () => {
     page.goto(`${getServerUrl()}/`);
