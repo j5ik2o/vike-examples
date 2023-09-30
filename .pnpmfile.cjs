@@ -5,9 +5,13 @@ const versions = {
   vike: "^0.4.142",
   express: "^4.18.2",
   compression: "^1.7.4",
+  sirv: "^2.0.3",
+  "cross-fetch": "^4.0.0",
+  "node-fetch": "^3.3.2",
 };
 
 const devVersions = {
+  "@types/node-fetch": "^2.6.4",
   "@types/compression": "^1.7.2",
   "@types/express": "4.17.17",
   "@types/node": "^20.5.6",

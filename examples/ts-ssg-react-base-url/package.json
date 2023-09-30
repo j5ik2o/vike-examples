@@ -21,8 +21,8 @@
     "vike": "workspace:override"
   },
   "devDependencies": {
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "workspace:override",
+    "@types/react-dom": "workspace:override",
     "@typescript-eslint/eslint-plugin": "workspace:override",
     "@typescript-eslint/parser": "workspace:override",
     "@vitejs/plugin-react": "workspace:override",
