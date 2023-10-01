@@ -37,6 +37,9 @@
     "prettier-plugin-organize-imports": "workspace:override",
     "rimraf": "workspace:override",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "ts-node": "workspace:override",
+    "typescript": "workspace:override",
+    "@brillout/test-e2e": "workspace:override"
   }
 }

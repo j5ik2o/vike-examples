@@ -45,6 +45,7 @@
     "rimraf": "workspace:override",
     "ts-node": "workspace:override",
     "typescript": "workspace:override",
+    "@brillout/test-e2e": "workspace:override",
     "wrangler": "^3.5.0"
   }
 }

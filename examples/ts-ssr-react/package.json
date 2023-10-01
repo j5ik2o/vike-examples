@@ -40,6 +40,7 @@
     "prettier": "workspace:override",
     "prettier-plugin-organize-imports": "workspace:override",
     "rimraf": "workspace:override",
-    "typescript": "workspace:override"
+    "typescript": "workspace:override",
+    "@brillout/test-e2e": "workspace:override"
   }
 }
