@@ -4,6 +4,7 @@
   "private": true,
   "description": "",
   "scripts": {
+    "test": "pnpm -r run test",
     "build": "pnpm -r run build",
     "fix": "pnpm -r run fix",
     "lint": "pnpm -r run lint"

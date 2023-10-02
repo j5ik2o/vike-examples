@@ -1,6 +1,8 @@
 {
   "type": "module",
   "scripts": {
+    "test": "pnpm run test:e2e",
+    "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "deploy": "export LLVM_SYMBOLIZER=$(which llvm-symbolizer) pnpm run build && wrangler publish",

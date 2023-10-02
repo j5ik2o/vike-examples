@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "test": "true",
     "build": "vite build",
     "clean": "rimraf ./dist",
     "fix": "pnpm run fix:prettier && pnpm run fix:eslint",

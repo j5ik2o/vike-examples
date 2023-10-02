@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "test": "true",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "pnpm run build && pnpm run serve",

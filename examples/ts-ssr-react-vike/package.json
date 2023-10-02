@@ -1,6 +1,8 @@
 {
   "type": "module",
   "scripts": {
+    "test": "pnpm run test:e2e",
+    "test:e2e": "test-e2e",
     "build": "tsc -p . && vite build",
     "clean": "rimraf ./dist",
     "dev": "pnpm run server:dev",
@@ -12,7 +14,8 @@
     "lint:prettier": "prettier --check \"**/*.{vue,js,ts,jsx,tsx,json}\"",
     "prod": "pnpm run lint && pnpm run build && pnpm run server:prod",
     "server:dev": "node --loader ts-node/esm ./src/server/index.ts",
-    "server:prod": "cross-env NODE_ENV=production node --loader ts-node/esm ./src/server/index.ts"
+    "server:prod": "cross-env NODE_ENV=production node --loader ts-node/esm ./src/server/index.ts",
+    "preview": "pnpm run build && vite preview --port ${PORT:-3000}"
   },
   "dependencies": {
     "compression": "workspace:override",
